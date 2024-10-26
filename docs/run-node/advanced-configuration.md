@@ -8,6 +8,10 @@ Configuration is managed via the `config.yml` file, located in the config direct
 
 If there are multiple options listed for a configuration value, the first one is the default value.
 
+## Enacting Config Changes
+
+Be sure to restart your node after making any configuration changes.
+
 ## Key Section
 
 The key section specifies the key provider configuration:
@@ -68,6 +72,7 @@ p2p:
   peerPrivKey: <hex string> | <string> – the private key for the node's networking, or named reference
   traceLogFile: <string> | "" – the path of the p2p networking log file, used for debugging
   minPeers: 6 | <int> – the number of peers to maintain for non-BlossomSub networking
+  directPeers: [<multiaddr>,...] – list of multiaddrs to use for direct connections
 ```
 
 ## Engine Section
@@ -147,4 +152,28 @@ engine:
   ]
 ```
 
-Be sure to restart your node after making this configuration change.
+## Direct Peers
+
+The directPeers field is used to specify a list of multiaddrs to use for direct connections.  This is useful for where you have one or more trusted peers that can aid in keeping in sync or bringing your node up to date.
+
+This needs to be specified in the config.yml file for all connecting nodes. Otherwise the recipient will start scoring the sender really low for misbehavior.
+
+For instance, if you have two nodes, peerA and peerB, you would edit the config.yml file for both peerA and peerB to include the other peer in the directPeers field.
+
+This is useful for if you already have a node running and want to add a new node to the network.  It will allow the new node to quickly sync up with the existing network due peering with your already up-to-date node.
+
+Both nodes do not need to be on at the same time or be started/stopped together.  The only requirement is that they are both defined in the other node's .p2p.directPeers list.
+
+### Example
+```
+p2p:
+  directPeers:
+    - /ip4/192.168.1.100/udp/8336/quic-v1/p2p/Qm1234567890abcdef
+    - /ip4/192.168.1.101/tcp/8336/p2p/Qm1234567890abcdef
+```
+
+## Using yq to update the config.yml file
+
+The `yq` command line tool can be used to update the config.yml file.  This tool is useful for making changes to the config.yml file without having to manually edit the file.
+
+Install help and examples can be found on [yq docs](https://mikefarah.gitbook.io/yq).
