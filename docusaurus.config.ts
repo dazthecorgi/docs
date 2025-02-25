@@ -2,6 +2,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import tailwindPlugin from "./plugins/tailwind-config.cjs"
+import 'dotenv/config';
 
 const COPYRIGHT = `
 Copyright © ${new Date().getFullYear()} Quilibrium, Inc. \
@@ -18,6 +19,11 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
+
+  // custom fields for the site
+  customFields: {
+    apiTesterEnabled: process.env.ENABLE_API_TESTER === 'true',
+  },
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -65,32 +71,38 @@ const config: Config = {
       logo: {
         alt: 'Quilibrium Logo',
         src: 'img/qlogopink.png',
-        srcDark: 'img/qlogo.png',
+        srcDark: 'img/qlogo-circle.png',
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'build',
           position: 'left',
-          label: 'Build',
+          label: 'Build Applications',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'api',
+          position: 'left',
+          label: 'API Docs',
         },
         {
           type: 'docSidebar',
           sidebarId: 'run',
           position: 'left',
-          label: 'Run',
+          label: 'Run a Node',
         },
         {
           type: 'docSidebar',
           sidebarId: 'learn',
           position: 'left',
-          label: 'Learn',
+          label: 'Learn Quilibrium',
         },
         {
           type: 'docSidebar',
           sidebarId: 'blockchain-users',
           position: 'left',
-          label: 'Blockchain Users',
+          label: 'Network Users',
         },
         {
           label: 'Quilibrium Website',
@@ -98,7 +110,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          label: 'GitHub',
+          label: 'Code',
           href: 'https://github.com/QuilibriumNetwork',
           position: 'right',
         },
@@ -111,15 +123,19 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Build',
-              to: '/docs/build/running-applications',
+              label: 'Build Applications',
+              to: '/docs/category/applications',
             },
             {
-              label: 'Run',
+              label: 'API Docs',
+              to: '/docs/build/q-services/overview',
+            },
+            {
+              label: 'Run a Node',
               to: '/docs/run-node/quick-start',
             },
             {
-              label: 'Learn',
+              label: 'Learn Quilibrium',
               to: '/docs/learn/communication/',
             },
           ],
@@ -149,7 +165,7 @@ const config: Config = {
               href: 'https://paragraph.xyz/@quilibrium.com',
             },
             {
-              label: 'GitHub',
+              label: 'Code',
               href: 'https://github.com/QuilibriumNetwork',
             },
           ],

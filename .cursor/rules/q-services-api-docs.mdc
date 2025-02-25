@@ -1,0 +1,67 @@
+---
+description: Documentations for QServices
+globs: docs/api/**/*.md
+alwaysApply: false
+---
+Make sure the parameters and headers and body are made in an array and passed to components such that maintanence and modifications are easy and done in one place rather than in multiple spots, as well as ease of passing to the @index.js component to generate API requests.
+
+Service subdomain:
+QStorage: qstorage.
+QKMS: qkms.
+
+Fully qualified domains:
+QStorage: qstorage.quilibrium.com
+QKMS: qstorage.quilibrium.com
+
+Any ARNs that define a region should use `q-world-1` by default. 
+
+Docs should have both the Docusaurus formatting labeling the title and label.  Both the title and label should be the same, in CamelCase, in between 3 dashes, like so: 
+---
+title: FileName
+lable: FileName
+---
+
+When using components, make sure to import them, see [create-bucket.md](mdc:docs/api/03-q-storage/02-api-reference/01-bucket-operations/create-bucket.md) for example.
+
+use the [ParamsTable.tsx](mdc:src/components/ParamsTable.tsx) component to list headers, URI parameters, and Body elements for both requests and responses.
+
+define whether is, errors, response, or request table `type` prop.
+
+[ParamsTable.tsx](mdc:src/components/ParamsTable.tsx) uses the parameters prop to pass in the data:
+```md
+<ParamsTable parameters={RESPONSE_HEADERS} type="response" />
+```
+
+Any header, URI parameters, body elements, errors, etc. data should be set as arrays at the top of the file with appropriate variable names and passed to the [ParamsTable.tsx](mdc:src/components/ParamsTable.tsx) table component.
+
+Make sure that each header and uri parameter gets listed unless noted otherwise.
+
+Request/Reponse Elements should be listed in arrays and passed to the [ParamsTable.tsx](mdc:src/components/ParamsTable.tsx) as well as to the [index.js](mdc:src/components/ApiTester/index.js) component (resusing).
+
+Permissions should be listed as soon as possible, with Full Examples coming after the syntax, like the following:
+
+Data Types that have their own files for their documentation should always be linked to when referenced. Location is in the same directory as [bucket.md](mdc:docs/api/03-q-storage/02-api-reference/09-data-types/bucket.md).
+
+Data Types should be capitalized, e.g. String, Integer, Boolean
+
+if the type has a data type file, use html to link it, e.g. <a href=\"/docs/api/q-storage/data-types/object\">Object</a>
+
+When creating Request Syntax, note the `Host:` urls in request syntax are in the format of `<bucket-name>.<service>.quilibrium.com`.  So if the QStorage bucket name as `example-bucket`, the Request Syntax would have `Host: example-bucket.qstorage.quilibrium.com`.
+
+Name
+Description
+Permissions
+---
+Request Headers
+Request URI Params
+Request Body (always note if none rather than show nothing)
+Request Syntax
+---
+Response Headers
+Response Body
+Response Errors
+---
+Full Request/Response Examples
+---
+API Test component [index.js](mdc:src/components/ApiTester/index.js)
+
