@@ -53,7 +53,7 @@ Start the node
 service ceremonyclient start
 ```
 
-Now the node will start automaytically after each reboot.
+Now the node will start automatically after each reboot.
 
 ## Useful node commands
 
