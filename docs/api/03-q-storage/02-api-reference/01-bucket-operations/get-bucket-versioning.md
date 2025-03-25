@@ -62,7 +62,7 @@ A bucket's versioning state can be one of the following:
 - Suspended - Versioning was previously enabled but is currently suspended
 - Unversioned - Versioning has never been enabled on the bucket
 
-For more information about versioning, see [Object Versioning](../../../concepts/object-versioning.md).
+For more information about versioning, see [Object Versioning](/docs/api/03-q-storage/01-user-manual/object-versioning.md).
 
 :::note
 - To use this operation, you must have permission to perform the `s3:GetBucketVersioning` action.
