@@ -4,7 +4,7 @@ Quilibrium's APIs are designed to provide access to the Quilibrium Network, offe
 
 Each API is built with privacy-first principles and takes full advantage of Quilibrium's open-source, privacy-respecting, decentralized infrastructure to deliver enterprise-grade functionality without compromising on security or user/developer autonomy.
 
-To learn more about how this is accomplished, read more in the [Learn](/docs/learn/intro) section.
+To learn more about how this is accomplished, read more in the [Learn](/docs/discover/intro) section.
 
 ## Service Credentials
 To access and manage resources on the Quilibrium Network, you'll need to set up and use QConsole credentials. These credentials follow a hierarchical structure that allows for fine-grained access control and permission management.
