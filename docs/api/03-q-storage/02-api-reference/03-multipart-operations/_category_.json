@@ -1,0 +1,9 @@
+{
+    "label": "Multipart Operations",
+    "position": 3,
+    "link": {
+      "type": "generated-index",
+      "description": "Multipart operations are a way to upload and download large files in a single request."
+    }
+  }
+  

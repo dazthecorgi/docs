@@ -1,0 +1,38 @@
+---
+description: When building out QStorage documentation
+globs: docs/api/03-q-storage/**/*.md
+alwaysApply: false
+---
+
+when doing QStorage/S3 API documentation remember this:
+
+In reference to x-amz-server-side-* headers:
+
+x-amz-server-side-encryption:aws:kms is not functional as we don't have an unencrypted storage of data.
+x-amz-server-side-encryption-aws-kms-key-id will use the specified QKMS key
+x-amz-server-side-encryption-context provides additional authenticated data for AEAD, must be in base64 encoded json format
+
+aws:kms should be replaced with it's synonym: verenc
+
+x-amz-server-side-encryption-customer-algorithm, x-amz-server-side-encryption-customer-key, x-amz-server-side-encryption-customer-key-MD5
+are also supported, with the caveat that the data stored is still encrypted again despite the encryption used with the provided key
+
+Headers that are used for locks, like x-amz-bucket-object-lock-enabled, are supported, so make sure to include them when relevant.
+
+QStorage does not support any replication functionality, as regionally, there is only one massive region on Quilibrium and we aren't implementing multi-bucket replication at this time.
+
+References/integrations to AWS-speficic serves, such as AWS Lambda should be removed, unless otherwise noted.
+
+QStorage does integrate with QKMS.
+
+We intend to allow users to test the API calls on each documentation page to a local instance/WASM of QKMS and QStorage.  This will prevent abuse of the API.
+
+QStorage does not support directory buckets because it is one big region.  Do not reference directory buckets.
+
+QStorage is AWS S3-compatible and should be a direct replacement unless otherwise noted.
+
+Make sure the parameters and headers and body are made in an array and passed to components such that maintanence and modifications are easy and done in one place rather than in multiple spots, as well as ease of passing to the [index.js](mdc:src/components/ApiTester/index.js) component to generate API requests.
+
+When creating Request Syntax, note the `Host:` urls in request syntax are in the format of `<bucket-name>.qstorage.quilibrium.com`.  So if the bucket name as `example-bucket`, the Request Syntax would have `Host: example-bucket.qstorage.quilibrium.com`.
+
+
