@@ -1,0 +1,8 @@
+{
+  "label": "Object Operations",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "API operations for managing objects in QStorage."
+  }
+} 

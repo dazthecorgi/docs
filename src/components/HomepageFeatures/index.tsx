@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 
 const features = [
   {
-    href: '/docs/build/running-applications',
+    href: '/docs/category/applications',
     icon: '🛠️',
     title: 'Build',
     description: 'How to develop applications on the Quilibrium network',

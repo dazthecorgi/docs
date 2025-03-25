@@ -1,0 +1,47 @@
+.api-example {
+  margin: 1rem 0;
+  font-family: monospace;
+}
+
+.api-example-section {
+  margin-bottom: 1.5rem;
+}
+
+.api-example-note {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--ifm-color-secondary-darkest);
+}
+
+.api-example-section h4 {
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.api-example-content {
+  background-color: var(--ifm-pre-background);
+  padding: 1rem;
+  border-radius: 6px;
+  line-height: 1.5;
+}
+
+.api-example-separator {
+  height: 1px;
+  background-color: var(--ifm-color-emphasis-300);
+  margin: 0.5rem 0;
+}
+
+.api-example-content div {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.api-example-user-input {
+  color: var(--ifm-color-primary);
+  font-style: italic;
+}
+
+.api-example-variable {
+  color: var(--ifm-color-success);
+  font-style: italic;
+} 

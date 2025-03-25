@@ -1,0 +1,8 @@
+---
+description: 
+globs: *.md
+alwaysApply: false
+---
+Any text taken from AWS documentation should be paraphrased to avoid direct copying.
+
+Try to group together related documentation, e.g. Delete, Get, Put
