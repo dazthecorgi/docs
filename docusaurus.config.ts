@@ -11,7 +11,7 @@ Built with Docusaurus.`
 
 const config: Config = {
   title: 'Quilibrium Docs',
-  tagline: 'Learn how to get started building on the network, run a node or just understand the technology',
+  tagline: 'Learn how to get started building on the network, run a node, or just understand the technology',
   favicon: 'img/favicon.png',
 
   // Set the production url of your site here
@@ -94,15 +94,9 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'learn',
+          sidebarId: 'discover',
           position: 'left',
-          label: 'Learn Quilibrium',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'blockchain-users',
-          position: 'left',
-          label: 'Network Users',
+          label: 'Discover',
         },
         {
           label: 'Quilibrium Website',
@@ -135,8 +129,8 @@ const config: Config = {
               to: '/docs/run-node/quick-start',
             },
             {
-              label: 'Learn Quilibrium',
-              to: '/docs/learn/communication/',
+              label: 'Discover',
+              to: '/docs/discover/FAQ/',
             },
           ],
         },
@@ -163,6 +157,10 @@ const config: Config = {
             {
               label: 'Blog',
               href: 'https://paragraph.xyz/@quilibrium.com',
+            },
+            {
+              label: 'X',
+              href: 'https://x.com/QuilibriumInc',
             },
             {
               label: 'Code',

@@ -8,7 +8,7 @@ Quilibrium's APIs are designed to provide access to the Quilibrium Network, offe
 
 Each API is built with privacy-first principles and takes full advantage of Quilibrium's open-source, privacy-respecting, decentralized infrastructure to deliver enterprise-grade functionality without compromising on security or user/developer autonomy.
 
-To learn more about how this is accomplished, read more in the [Learn](/docs/learn/intro) section.
+To learn more about how this is accomplished, read more in the [Learn](/docs/discover/intro) section.
 
 ## API Documentation
 
