@@ -11,19 +11,18 @@ No, Quilibrium doesn't use traditional wallets. Instead, it uses passkeys built 
 ### Is there a Q explorer (like Etherscan)?
 
 Not yet, but there can be one to a limited degree.
-The network has overall active proof state, prover rings, total supply.
-These are things that anyone can see. 
+The network has overall active proof state, prover rings, total supply. These are things that anyone can see. 
 The contents of transactions or their settled states are however invisible unless you possess relevant key material to the transaction. 
 It is likely someone will build an explorer, and it will be globally less useful than Monero's explorers for transaction info, but could be made useful for individuals running multi-legged auth operations to see their own personal state.
 Note the above applies only to native QUIL. 
 wQUIL remains queryable via block explorers.
 
-### What happens to wQUIL (ERC20) after the 2.0 launch?
+### What happens to wQUIL (ERC20) after the 2.1 launch?
 
 wQUIL will remain active and transferrable/tradable as it is today. 
 QUIL holders will continue to be able to bridge to wQUIL as they wish, and wQUIL holders will be able to bridge back to native QUIL with the 2.0 launch.
 
-### What is next on the Q roadmap after 2.0?
+### What is next on the Q roadmap after 2.1?
 
 After the 2.0 launch, the focus will be building out developer documentation and the fundamental services of the Internet that people enjoy such as file storage (i.e., S3), executable code, and domain services.
 
@@ -31,16 +30,20 @@ After the 2.0 launch, the focus will be building out developer documentation and
 
 Yes.
 
-### What are the official Q socials? How come there is no official X, Telegram, Discord?
+### What are the official Q socials? How come there is no official Telegram, Discord?
 
-The [Discourse forum](https://quilibrium.discourse.group/) is intended to be the primary communications channel for the near 
-term. 
+We have an official account on X for Q Inc: [@QuilibriumInc](https://x.com/QuilibriumInc).
+The [Discourse forum](https://quilibrium.discourse.group/) is intended to be the primary communication channel in the near term for long-form discussions.  
+[Quorum Messenger](https://www.quorummessenger.com/) (the first fully private messaging app developed on Q) will serve as the official channel for short-form discussions, acting as an alternative to Telegram and Discord.  
 It was a decision early in the project to embrace as much decentralized tools as possible, and if not present, that their absence serves as a forcing function to make them exist. 
-Discord especially, as the project started from a discord alternative. 
+Discord especially, as the project started from a discord alternative.
 
 ### How fast is Quilibrium?
 
-Quilibrium was designed to support ultra-scale applications like Discord fully onchain.
+Quilibrium was designed to support ultra-scale applications like social networks and messaging apps fully on-chain.  
+The network has been tested to handle up to 100 million messages per second (MPS). While MPS is not exactly the same as transactions per second (TPS), they are closely related. The actual TPS depends on the number of nodes available to handle the load. Initial estimates, based on previous node count statistics, suggest a realistic upper bound of 1.5–2.5 million TPS. Transaction finality: 0.2–10 seconds, depending on transaction complexity and hardware optimization.
+
+Note: These figures will need to be confirmed when apps begin to be hosted on Quilibrium, starting with v2.1.
 
 ### How does Quilibrium balance privacy with preventing criminal activities?
 
@@ -53,14 +56,14 @@ This approach aims to preserve user privacy while providing compliance measures 
 
 ### How does Quilibrium prevent centralization?
 
-1. Not requiring expensive hardware for consensus - even a Raspberry Pi can perform necessary calculations.
-2. Allowing various types of hardware to participate in mining due to flexible application complexity.
-3. Enforcing minimum replication thresholds for core shards, inducing halts if they fall below the threshold.
-4. Designing its architecture to alleviate centralization pressures in areas like wallets and indexers.
+1. Not requiring expensive hardware for consensus— even a Raspberry Pi can perform the necessary calculations.  
+2. Allowing various types of hardware to participate in mining due to flexible application complexity.  
+3. Enforcing minimum replication thresholds for core shards, inducing halts if they fall below the threshold.  
+4. Designing its tokenomics to allow new miners to participate when the network reaches certain thresholds.
 
 ### What are people building on Q right now?
 
-Not everything is ready to share publicly just yet but several public community projects include collectables/NFTs, node managers, Howler (flagship demo app, Discord alternative) and decentralized exchanges.
+Not everything is ready to share publicly just yet but several public community projects include collectables/NFTs, node managers, Quorum (flagship demo app, Discord alternative) and decentralized exchanges.
 
 ### What types of applications can be developed on Quilibrium?
 
