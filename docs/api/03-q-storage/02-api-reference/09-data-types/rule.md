@@ -42,19 +42,7 @@ export const RULE_ELEMENTS = [
     type: "<a href=\"/docs/api/q-storage/data-types/noncurrent-version-expiration\">NoncurrentVersionExpiration</a>",
     description: "Specifies when noncurrent object versions expire. Upon expiration, QStorage permanently deletes the noncurrent object versions. You set this lifecycle configuration action on a bucket that has versioning enabled (or suspended) to request that QStorage delete noncurrent object versions at a specific period in the object's lifetime.",
     required: false
-  },
-  <!-- {
-    name: "NoncurrentVersionTransition",
-    type: "<a href=\"/docs/api/q-storage/data-types/noncurrent-version-transition\">NoncurrentVersionTransition</a>",
-    description: "Container for the transition rule that describes when noncurrent objects transition to different storage classes. If your bucket is versioning-enabled (or versioning is suspended), you can set this action to request that QStorage transition noncurrent object versions to a different storage class at a specific period in the object's lifetime.",
-    required: false
-  },
-  {
-    name: "Transition",
-    type: "<a href=\"/docs/api/q-storage/data-types/transition\">Transition</a>",
-    description: "Specifies when an object transitions to a specified storage class.",
-    required: false
-  } -->
+  }
 ];
 
 # Rule
