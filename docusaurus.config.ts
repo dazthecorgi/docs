@@ -61,6 +61,7 @@ const config: Config = {
   
   plugins: [
     tailwindPlugin,
+    require.resolve('docusaurus-lunr-search'),
   ],
 
   themeConfig: {
