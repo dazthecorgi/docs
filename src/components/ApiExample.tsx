@@ -6,16 +6,17 @@ interface ApiExampleProps {
     method: string;
     path: string;
     headers?: Record<string, string>;
-    body?: string;
+    body?: any;
   };
   response: {
     status?: number;
     headers?: Record<string, string>;
-    body?: string;
+    body?: any;
   };
+  showTitle?: boolean;
 }
 
-export default function ApiExample({ request, response }: ApiExampleProps): JSX.Element {
+export default function ApiExample({ request, response, showTitle = false }: ApiExampleProps): JSX.Element {
   const formatValue = (value: string | number | undefined, isResponse: boolean = false) => {
     if (typeof value !== 'string') {
       return value;
@@ -60,38 +61,44 @@ export default function ApiExample({ request, response }: ApiExampleProps): JSX.
     if (typeof body === 'string') {
       return formatValue(body, isResponse);
     }
-    return body;
+    // Check if the body is JSON and format it with proper indentation
+    try {
+      // Try to parse the body as JSON
+      const jsonObj = JSON.parse(JSON.stringify(body));
+      return JSON.stringify(jsonObj, null, 2);
+    } catch (e) {
+      // If it's not valid JSON, return the original string
+      return body;
+    }
   };
 
   const hasResponse = response && (response.status || response.headers || response.body);
   const hasRequest = request && (request.method || request.path || request.headers || request.body);
 
   return (
-
     <div className="api-example">
       {hasRequest && (
         <div className="api-example-section">
-          <h4>Example Request</h4>
-        <div className="api-example-content">
-          <div>{request.method} {formatValue(request.path)} HTTP/1.1</div>
-          {formatHeaders(request.headers)}
-          {request.body && (
-            <>
-              <div className="api-example-separator"></div>
-              <div>{formatBody(request.body)}</div>
-            </>
-          )}
-        </div>
-        <div className="api-example-note">
+          {showTitle && <h4>Example Request</h4>}
+          <div className="api-example-content">
+            <div>{request.method} {formatValue(request.path)} HTTP/1.1</div>
+            {formatHeaders(request.headers)}
+            {request.body && (
+              <>
+                <div className="api-example-separator"></div>
+                <div>{formatBody(request.body)}</div>
+              </>
+            )}
+          </div>
+          <div className="api-example-note">
             <i>Values in <span className="api-example-user-input">italics</span> indicate user input and should be replaced with actual values.</i>
-          </div>  
-      </div>
-    
+          </div>
+        </div>
       )}
 
       {hasResponse && (
         <div className="api-example-section">
-          <h4>Example Response</h4>
+          {showTitle && <h4>Example Response</h4>}
           <div className="api-example-content">
             <div>HTTP/1.1 {response.status} {response.status === 200 ? 'OK' : ''}</div>
             {formatHeaders(response.headers, true)}

@@ -27,39 +27,45 @@ export const HEADER_PARAMETERS = [
 export const REQUEST_PARAMETERS = [
   {
     name: "KeyId",
-    type: "string",
+    type: "text",
     description: "The unique identifier for the KMS key that the grant applies to.",
-    required: true
+    required: true,
+    placeholder: "1234abcd-12ab-34cd-56ef-1234567890ab"
   },
   {
     name: "GranteePrincipal",
-    type: "string",
+    type: "text",
     description: "The principal that is given permission to perform the operations that the grant permits.",
-    required: true
+    required: true,
+    placeholder: "arn:aws:iam::111122223333:role/ExampleRole"
   },
   {
     name: "Operations",
-    type: "array[string]",
-    description: "A list of operations that the grant permits.",
-    required: true
+    type: "text",
+    description: "A list of operations that the grant permits (as JSON array).",
+    required: true,
+    placeholder: '["Decrypt", "Encrypt"]'
   },
   {
     name: "RetiringPrincipal",
-    type: "string",
+    type: "text",
     description: "The principal that is given permission to retire the grant by using RetireGrant operation.",
-    required: false
+    required: false,
+    placeholder: "arn:aws:iam::111122223333:role/RetireRole"
   },
   {
     name: "Constraints",
-    type: "object",
-    description: "A structure that you can use to allow the operations permitted by the grant only when the grant request includes particular encryption context keys or values.",
-    required: false
+    type: "text",
+    description: "A structure that you can use to allow the operations permitted by the grant only when the grant request includes particular encryption context keys or values (as JSON object).",
+    required: false,
+    placeholder: '"{\"EncryptionContextSubset\": {\"Department\": \"Finance\"}}"'
   },
   {
     name: "Name",
-    type: "string",
+    type: "text",
     description: "A friendly name for identifying the grant. Use the same name to refer to the same grant in subsequent requests.",
-    required: false
+    required: false,
+    placeholder: "ExampleGrant"
   }
 ];
 
@@ -86,11 +92,11 @@ A grant gives AWS principals long-term permissions to use KMS keys in cryptograp
 
 ### Headers
 
-<ParamsTable parameters={HEADER_PARAMETERS} />
+<ParamsTable parameters={HEADER_PARAMETERS} type="request" />
 
 ### Request Body
 
-<ParamsTable parameters={REQUEST_PARAMETERS} />
+<ParamsTable parameters={REQUEST_PARAMETERS} type="request" />
 
 <ApiExample
   request={{
@@ -100,7 +106,7 @@ A grant gives AWS principals long-term permissions to use KMS keys in cryptograp
       "Content-Type": "application/x-amz-json-1.1",
       "X-Amz-Target": "TrentService.CreateGrant"
     },
-    body: {
+    body: `{
       "KeyId": "1234abcd-12ab-34cd-56ef-1234567890ab",
       "GranteePrincipal": "arn:aws:iam::111122223333:role/ExampleRole",
       "Operations": [
@@ -108,7 +114,7 @@ A grant gives AWS principals long-term permissions to use KMS keys in cryptograp
         "Encrypt"
       ],
       "Name": "ExampleGrant"
-    }
+    }`
   }}
   response={{}}
 />
@@ -129,7 +135,7 @@ A grant gives AWS principals long-term permissions to use KMS keys in cryptograp
       "Content-Type": "application/x-amz-json-1.1",
       "X-Amz-Target": "TrentService.CreateGrant"
     },
-    body: {
+    body: `{
       "KeyId": "1234abcd-12ab-34cd-56ef-1234567890ab",
       "GranteePrincipal": "arn:aws:iam::111122223333:role/ExampleRole",
       "Operations": [
@@ -137,23 +143,23 @@ A grant gives AWS principals long-term permissions to use KMS keys in cryptograp
         "Encrypt"
       ],
       "Name": "ExampleGrant"
-    }
+    }`
   }}
   response={{
     status: 200,
     headers: {
       "Content-Type": "application/x-amz-json-1.1"
     },
-    body: {
+    body: `{
       "GrantId": "0c237476b39f8bc44e45212e08498fbe3151305030726c0590dd8d3e9f3d6a60",
       "GrantToken": "AQpAM2RhZTk1MGMyNTk2ZmCjsrRInph6PxKRieR4..."
-    }
+    }`
   }}
 />
 
 ### Example 2: Create a grant with encryption context constraints
 
-<ApiExample
+<!-- <ApiExample
   request={{
     method: "POST",
     path: "/",
@@ -187,7 +193,7 @@ A grant gives AWS principals long-term permissions to use KMS keys in cryptograp
       "GrantToken": "AQpAM2RhZTk1MGMyNTk2ZmCjsrRInph6PxKRieR4..."
     }
   }}
-/>
+/> -->
 
 ## Special Errors
 
@@ -213,7 +219,10 @@ To use the \`CreateGrant\` operation, you must have the following permissions:
 <ApiTester
   operation="CreateGrant"
   description="Create a grant for a KMS key to allow specific cryptographic operations."
-  parameters={REQUEST_PARAMETERS}
+  parameters={[
+    ...HEADER_PARAMETERS,
+    ...REQUEST_PARAMETERS,
+  ]}
   exampleResponse={{
     "GrantId": "0c237476b39f8bc44e45212e08498fbe3151305030726c0590dd8d3e9f3d6a60",
     "GrantToken": "AQpAM2RhZTk1MGMyNTk2ZmCjsrRInph6PxKRieR4..."

@@ -70,7 +70,7 @@ The `ImportKeyMaterial` operation imports key material into a KMS key. This oper
 - The key material must be encrypted with the public key from a `GetParametersForImport` response.
 - The import token must be from the same `GetParametersForImport` response.
 - The public key, import token, and encrypted key material must be from the same `GetParametersForImport` response.
-- For more information about importing key material, see [Importing Key Material](../../../03-guides/importing-key-material.md).
+- For more information about importing key material, see [Importing Key Material](/docs/api/q-kms/user-manual/importing-key-material).
 :::
 
 ## Request Syntax

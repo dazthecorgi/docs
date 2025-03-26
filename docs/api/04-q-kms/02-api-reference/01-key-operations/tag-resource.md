@@ -33,23 +33,9 @@ export const REQUEST_PARAMETERS = [
   },
   {
     name: "Tags",
-    type: "array",
-    description: "One or more tags. Each tag consists of a tag key and a tag value.",
-    required: true,
-    children: [
-      {
-        name: "TagKey",
-        type: "string",
-        description: "The key of the tag. Tag keys must be unique for the KMS key.",
-        required: true
-      },
-      {
-        name: "TagValue",
-        type: "string",
-        description: "The value of the tag.",
-        required: true
-      }
-    ]
+    type: "Array of Tags",
+    description: "One or more tags. Each tag consists of a tag key and a tag value. Consists of TagKey and TagValue pairs.",
+    required: true
   }
 ];
 
@@ -82,18 +68,18 @@ You cannot use the same tag key more than once per KMS key. If you specify a tag
       "X-Amz-Target": "TrentService.TagResource"
     },
     body: {
-      "KeyId": "1234abcd-12ab-34cd-56ef-1234567890ab",
-      "Tags": [
-        {
-          "TagKey": "Purpose",
-          "TagValue": "Test"
-        },
-        {
-          "TagKey": "Environment",
-          "TagValue": "Production"
-        }
-      ]
-    }
+    "KeyId": "1234abcd-12ab-34cd-56ef-1234567890ab",
+    "Tags": [
+      {
+        "TagKey": "Purpose",
+        "TagValue": "Test"
+      },
+      {
+        "TagKey": "Environment",
+        "TagValue": "Production"
+      }
+    ]
+}
   }}
   response={{}}
 />

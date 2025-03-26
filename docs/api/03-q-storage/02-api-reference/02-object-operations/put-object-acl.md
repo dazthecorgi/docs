@@ -100,51 +100,58 @@ You need the following permissions to use this operation:
 
 ### Request Headers
 
-<ParamsTable parameters={requestHeaders} />
+<ParamsTable parameters={requestHeaders} type="request" />
 
 ### Request URI Parameters
 
-<ParamsTable parameters={uriParameters} />
+<ParamsTable parameters={uriParameters} type="request" />
 
 ### Request Body
 
 The request accepts the following XML elements:
 
-<ParamsTable parameters={requestBodyElements} />
+<ParamsTable parameters={requestBodyElements} type="request" />
 
 ### Request Syntax
 
-```http
-PUT /ObjectName?acl HTTP/1.1
-Host: bucket.qstorage.example
-x-amz-acl: ACL
-Content-MD5: MD5
-Authorization: authorization string
-Date: date
-
-<?xml version="1.0" encoding="UTF-8"?>
+<ApiExample
+  request={{
+    method: "PUT",
+    path: "/_ObjectKey_?acl&versionId=_VersionId_",
+    headers: {
+      "Host": "_BucketName_.qstorage.quilibrium.com",
+      "x-amz-acl": "_private_",
+      "Content-MD5": "_Base64EncodedMD5_",
+      "Authorization": "_authorization string_",
+      "Date": "_Date_",
+      "x-amz-request-payer": "requester",
+      "x-amz-expected-bucket-owner": "_OwnerAccountId_"
+    },
+    body: `<?xml version="1.0" encoding="UTF-8"?>
 <AccessControlPolicy>
    <Owner>
-      <ID>ID</ID>
-      <DisplayName>DisplayName</DisplayName>
+      <ID>_OwnerID_</ID>
+      <DisplayName>_OwnerName_</DisplayName>
    </Owner>
    <AccessControlList>
       <Grant>
          <Grantee>
-            <ID>ID</ID>
-            <DisplayName>DisplayName</DisplayName>
+            <ID>_GranteeID_</ID>
+            <DisplayName>_GranteeName_</DisplayName>
          </Grantee>
-         <Permission>Permission</Permission>
+         <Permission>_Permission_</Permission>
       </Grant>
    </AccessControlList>
-</AccessControlPolicy>
-```
+</AccessControlPolicy>`
+  }}
+  response={{}}
+/>
 
 ## Response
 
 ### Response Headers
 
-<ParamsTable parameters={responseHeaders} />
+<ParamsTable parameters={responseHeaders} type="response" />
 
 ### Response Body
 
@@ -152,7 +159,7 @@ This operation does not return a response body.
 
 ### Response Errors
 
-<ParamsTable parameters={responseErrors} />
+<ParamsTable parameters={responseErrors} type="response" />
 
 ## Examples
 
@@ -160,39 +167,70 @@ This operation does not return a response body.
 
 This example sets the ACL on an object to grant full control to the owner.
 
-#### Sample Request
-
-```http
-PUT /example-object?acl HTTP/1.1
-Host: bucket.qstorage.example
-x-amz-acl: private
-Content-MD5: 6aKJsA2R/DqbxeJX7HaXzw==
-Date: Wed, 28 Oct 2023 22:32:00 GMT
-Authorization: authorization string
-
-<?xml version="1.0" encoding="UTF-8"?>
+<ApiExample
+  request={{
+    method: "PUT",
+    path: "/_example-object_?acl",
+    headers: {
+      "Host": "_my-bucket_.qstorage.quilibrium.com",
+      "x-amz-acl": "private",
+      "Content-MD5": "_6aKJsA2R/DqbxeJX7HaXzw==_",
+      "Date": "_Wed, 28 Oct 2023 22:32:00 GMT_",
+      "Authorization": "_authorization string_"
+    },
+    body: `<?xml version="1.0" encoding="UTF-8"?>
 <AccessControlPolicy>
    <Owner>
-      <ID>123456789abc</ID>
-      <DisplayName>owner-name</DisplayName>
+      <ID>_123456789abc_</ID>
+      <DisplayName>_owner-name_</DisplayName>
    </Owner>
    <AccessControlList>
       <Grant>
          <Grantee>
-            <ID>123456789abc</ID>
-            <DisplayName>owner-name</DisplayName>
+            <ID>_123456789abc_</ID>
+            <DisplayName>_owner-name_</DisplayName>
          </Grantee>
          <Permission>FULL_CONTROL</Permission>
       </Grant>
    </AccessControlList>
-</AccessControlPolicy>
-```
+</AccessControlPolicy>`
+  }}
+  response={{
+    status: 200,
+    headers: {
+      "x-amz-id-2": "_eftixk72aD6Ap51TnqcoF8eFidJG9Z/2mkiDFu8yU9AS1ed4OpIszj7UDNEHGran_",
+      "x-amz-request-id": "_318BC8BC148832E5_",
+      "Date": "_Wed, 28 Oct 2023 22:32:00 GMT_"
+    }
+  }}
+  showTitle={true}
+/>
 
-#### Sample Response
+### Set ACL Using a Canned ACL
 
-```http
-HTTP/1.1 200 OK
-x-amz-id-2: eftixk72aD6Ap51TnqcoF8eFidJG9Z/2mkiDFu8yU9AS1ed4OpIszj7UDNEHGran
-x-amz-request-id: 318BC8BC148832E5
-Date: Wed, 28 Oct 2023 22:32:00 GMT
-```
+This example sets a predefined (canned) ACL on an object.
+
+<ApiExample
+  request={{
+    method: "PUT",
+    path: "/example-object?acl",
+    headers: {
+      "Host": "_my-bucket_.qstorage.quilibrium.com",
+      "x-amz-acl": "public-read",
+      "Content-MD5": "_6aKJsA2R/DqbxeJX7HaXzw==_",
+      "Date": "_Wed, 28 Oct 2023 22:32:00 GMT_",
+      "Authorization": "_authorization string_"
+    }
+  }}
+  response={{
+    status: 200,
+    headers: {
+      "x-amz-id-2": "_eftixk72aD6Ap51TnqcoF8eFidJG9Z/2mkiDFu8yU9AS1ed4OpIszj7UDNEHGran_",
+      "x-amz-request-id": "_318BC8BC148832E5_",
+      "Date": "_Wed, 28 Oct 2023 22:32:00 GMT_"
+    }
+  }}
+  showTitle={true}
+/>
+
+## Try It Out

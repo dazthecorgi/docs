@@ -189,7 +189,7 @@ export const RESPONSE_HEADERS = [
 
 # UploadPart
 
-Uploads a part in a multipart upload. See [UploadPart](../09-data-types/upload-part.md) for more details about the operation and its parameters.
+Uploads a part in a multipart upload. See [UploadPart](../data-types/upload-part) for more details about the operation and its parameters.
 
 ## Description
 

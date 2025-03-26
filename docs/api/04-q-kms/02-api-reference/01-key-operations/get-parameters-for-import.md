@@ -76,7 +76,7 @@ The `GetParametersForImport` operation returns the parameters you need to import
 - This operation returns a public key and an import token. Use the public key to encrypt the key material that you want to import. Store the import token to send with a subsequent `ImportKeyMaterial` request.
 - The public key and import token from the same response must be used together. They can be used only with the KMS key specified in the request.
 - The public key and import token are valid only for the time specified in the response.
-- For more information about importing key material, see [Importing Key Material](/docs/api/04-q-kms/01-user-manual/importing-key-material.md).
+- For more information about importing key material, see [Importing Key Material](/docs/api/q-kms/user-manual/importing-key-material).
 :::
 
 ## Request Syntax

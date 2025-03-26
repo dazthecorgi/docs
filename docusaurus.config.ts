@@ -122,7 +122,7 @@ const config: Config = {
             },
             {
               label: 'API Docs',
-              to: '/docs/build/q-services/overview',
+              to: '/docs/api/overview',
             },
             {
               label: 'Run a Node',

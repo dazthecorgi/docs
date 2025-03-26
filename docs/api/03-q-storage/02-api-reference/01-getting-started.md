@@ -48,19 +48,19 @@ QStorage uses the same authentication mechanism as Amazon S3. You need to provid
 
 ## Available Operations
 
-QStorage supports the following API operations:
+QStorage supports the following basic API operations (see API Reference sections for extensive list):
 
 ### Object Operations
 
-* [PutObject](./02-put-object.md) - Adds an object to a bucket
-* [GetObject](./03-get-object.md) - Retrieves an object from a bucket
-* [CopyObject](./04-copy-object.md) - Creates a copy of an object
-* [DeleteObject](./05-delete-object.md) - Removes an object from a bucket
+* [PutObject](./object-operations/put-object) - Adds an object to a bucket
+* [GetObject](./object-operations/get-object) - Retrieves an object from a bucket
+* [CopyObject](./object-operations/copy-object) - Creates a copy of an object
+* [DeleteObject](./object-operations/delete-object) - Removes an object from a bucket
 
 ### Bucket Operations
 
-* [CreateBucket](./06-create-bucket.md) - Creates a new bucket
-* [DeleteBucket](./07-delete-bucket.md) - Deletes a bucket
+* [CreateBucket](./bucket-operations/create-bucket) - Creates a new bucket
+* [DeleteBucket](./bucket-operations/delete-bucket) - Deletes a bucket
 
 ## S3 Compatibility
 
@@ -88,9 +88,9 @@ Example error response:
 
 To get started with QStorage, you can:
 
-1. Create a bucket using the [CreateBucket](./06-create-bucket.md) operation
-2. Upload an object using the [PutObject](./02-put-object.md) operation
-3. Download an object using the [GetObject](./03-get-object.md) operation
-4. Copy an object using the [CopyObject](./04-copy-object.md) operation
-5. Delete an object using the [DeleteObject](./05-delete-object.md) operation
-6. Delete a bucket using the [DeleteBucket](./07-delete-bucket.md) operation 
+1. Create a bucket using the [CreateBucket](./bucket-operations/create-bucket) operation
+2. Upload an object using the [PutObject](./object-operations/put-object) operation
+3. Download an object using the [GetObject](./object-operations/get-object) operation
+4. Copy an object using the [CopyObject](./object-operations/copy-object) operation
+5. Delete an object using the [DeleteObject](./object-operations/delete-object) operation
+6. Delete a bucket using the [DeleteBucket](./bucket-operations/delete-bucket) operation 

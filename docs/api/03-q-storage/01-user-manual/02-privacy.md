@@ -10,7 +10,7 @@ QStorage is designed with privacy as a fundamental principle. When you use QStor
 
 ## Making QStorage Data Public
 
-While making Buckets or Objects public doesn't expose your decryption key, you do pass the network your key so that the [Public Bucket Proxy](docs/api/q-storage/user-manual/working-with-buckets/edit-bucket-visibility#public-bucket-proxy) can decrypt the necessary public data when an agent (user or program) requests it. 
+While making Buckets or Objects public doesn't expose your decryption key, you do pass the network your key so that the [Public Bucket Proxy](/docs/api/q-storage/user-manual/working-with-buckets/edit-bucket-visibility#public-bucket-proxy) can decrypt the necessary public data when an agent (user or program) requests it. 
 
 This key is still not visible to other parties, as the decryption is handled behind the proxy and those requesting the data receive the unencrypted data on the other side of the proxy.
 

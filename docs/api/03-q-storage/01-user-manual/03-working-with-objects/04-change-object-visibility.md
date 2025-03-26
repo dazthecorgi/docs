@@ -15,7 +15,7 @@ QStorage provides several ways to control access to your objects:
 
 ## Making Objects Public
 
-You can make an object publicly accessible, allowing anyone to read it without authentication. [Read more about privacy here](docs/api/q-storage/user-manual/privacy).
+You can make an object publicly accessible, allowing anyone to read it without authentication. [Read more about privacy here](/docs/api/q-storage/user-manual/privacy).
 
 <Tabs>
   <TabItem value="qcli" label="Using Q's CLI Tooling" default>

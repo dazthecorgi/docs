@@ -27,25 +27,25 @@ export const HEADER_PARAMETERS = [
 export const REQUEST_PARAMETERS = [
   {
     name: "CiphertextBlob",
-    type: "blob",
+    type: "Blob",
     description: "The ciphertext to decrypt.",
     required: true
   },
   {
     name: "KeyId",
-    type: "string",
+    type: "String",
     description: "Specifies the KMS key that QKMS uses to decrypt the ciphertext. This value can be the key ID or key ARN of the KMS key.",
     required: false
   },
   {
     name: "EncryptionContext",
-    type: "object",
+    type: "Object",
     description: "Specifies the encryption context to use when decrypting the data. The same encryption context that was used to encrypt the data must be provided.",
     required: false
   },
   {
     name: "GrantTokens",
-    type: "array[string]",
+    type: "Array<string>",
     description: "A list of grant tokens that represent grants that were used to encrypt the ciphertext.",
     required: false
   }
@@ -75,7 +75,7 @@ Decrypts ciphertext that was encrypted by a KMS key using any of the encryption 
 The \`Decrypt\` operation decrypts ciphertext that was encrypted by a KMS key using any of the following operations: \`Encrypt\`, \`GenerateDataKey\`, or \`GenerateDataKeyWithoutPlaintext\`. You can use this operation to decrypt data outside of QKMS that was encrypted with a KMS key in QKMS.
 
 :::note
-- The KMS key that you use for this operation must be in a compatible key state. For details, see [Key states required for operations](../../../concepts/key-states.md).
+- The KMS key that you use for this operation must be in a compatible key state. For details, see [Key states required for operations](/docs/api/q-kms/user-manual/key-states).
 - The ciphertext must have been encrypted under the specified KMS key.
 - If the ciphertext was encrypted under a symmetric KMS key, you must use the same KMS key to decrypt it.
 - If you use an asymmetric KMS key to encrypt a message, you must use the correct asymmetric KMS key to decrypt the message.
@@ -172,9 +172,4 @@ To use the \`Decrypt\` operation, you must have the following permissions:
   operation="Decrypt"
   description="Decrypt ciphertext that was encrypted by a KMS key."
   parameters={REQUEST_PARAMETERS}
-  exampleResponse={{
-    "KeyId": "arn:verenc:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab",
-    "Plaintext": "SGVsbG8gV29ybGQ=",
-    "EncryptionAlgorithm": "SYMMETRIC_DEFAULT"
-  }}
 /> 

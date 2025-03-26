@@ -6,7 +6,7 @@ sidebar_position: 2
 
 Quilibrium utilizes Oblivious Transfer, a technique for providing garbled circuits that enable computation to confidentially and securely occur between two or more parties, as well as provide a substrate for proof creation and verification that the circuit's execution and outputs are correct for the application.
 
-Quilibrium utilizes a subset of golang, called Q Compute Language (QCL), and an associated compiler, Bedlam, for producing these circuits, as well as defining the schema of the data for serialization on the network, and any relationships the data may have over the [oblivious hypergraph](/docs/discover/oblivious-hypergraph/rdf-storage.md).
+Quilibrium utilizes a subset of golang, called Q Compute Language (QCL), and an associated compiler, Bedlam, for producing these circuits, as well as defining the schema of the data for serialization on the network, and any relationships the data may have over the [oblivious hypergraph](/docs/discover/oblivious-hypergraph/rdf-storage).
 
 ## Types
 
@@ -20,7 +20,7 @@ Bedlam also has support for testing the evaluation of circuits without having to
 
 ## RDF
 
-Structs that are stored on the hypergraph must have corresponding [RDF](/docs/discover/oblivious-hypergraph/rdf-storage.md) schema. Generally, it is easier to start from the RDF, and use the generated QCL types. As an example, we will define a simple RDF class holding 256 bytes, saving it to a file named `byteblock.rdf`:
+Structs that are stored on the hypergraph must have corresponding [RDF](/docs/discover/oblivious-hypergraph/rdf-storage) schema. Generally, it is easier to start from the RDF, and use the generated QCL types. As an example, we will define a simple RDF class holding 256 bytes, saving it to a file named `byteblock.rdf`:
 
 ```
 BASE <https://types.quilibrium.com/schema-repository/>

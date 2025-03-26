@@ -249,7 +249,7 @@ It's important to understand the differences between bucket tags and object tags
 3. **Quantity**: Buckets can have up to 50 tags, while objects can have up to 10 tags
 4. **Use cases**: Bucket tags are typically used for broad categorization, while object tags are used for fine-grained organization
 
-For information about object tagging, see [Using Object Tags](../working-with-objects/08-organizing-and-listing-objects/04-using-tags.md).
+For information about object tagging, see [Using Object Tags](/docs/api/q-storage/user-manual/working-with-objects/organizing-and-listing-objects/using-tags).
 
 ## Best Practices for Bucket Tagging
 

@@ -180,7 +180,7 @@ This operation does not have a request body.
 |------|------|-------------|-----------|
 | AnalyticsConfiguration | Container | Container for the analytics configuration | Yes |
 | Id | String | The ID that identifies the analytics configuration | Yes |
-| Filter | [AnalyticsFilter](../09-data-types/analytics-filter.md) | Container for the filter used to describe a set of objects for analyses | No |
+| Filter | [AnalyticsFilter](../data-types/analytics-filter) | Container for the filter used to describe a set of objects for analyses | No |
 
 ## Special Errors
 

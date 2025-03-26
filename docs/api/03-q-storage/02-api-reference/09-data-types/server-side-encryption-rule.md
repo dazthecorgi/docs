@@ -111,8 +111,8 @@ export const serverSideEncryptionByDefaultParams = [
 
 The ServerSideEncryptionRule type is used in operations that manage default encryption for buckets, such as:
 
-- [PutBucketEncryption](../01-bucket-operations/put-bucket-encryption.md)
-- [GetBucketEncryption](../01-bucket-operations/get-bucket-encryption.md)
+- [PutBucketEncryption](../bucket-operations/put-bucket-encryption)
+- [GetBucketEncryption](../bucket-operations/get-bucket-encryption)
 
 :::note
 By default, all buckets have encryption enabled with QStorage-managed keys (SSE-S3).

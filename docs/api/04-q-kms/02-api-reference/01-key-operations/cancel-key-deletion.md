@@ -48,10 +48,10 @@ Cancels the deletion of a KMS key.
 
 The \`CancelKeyDeletion\` operation cancels the deletion of a KMS key. When this operation succeeds, the key state changes to \`Disabled\`. To enable the key, you must use the \`EnableKey\` operation.
 
-This operation is part of the key deletion process. For more information about deleting keys, see [Deleting Keys](../../../../../concepts/deleting-keys.md).
+This operation is part of the key deletion process. For more information about deleting keys, see [Deleting Keys](/docs/api/q-kms/user-manual/deleting-keys).
 
 :::note
-- The KMS key that you use for this operation must be in a compatible key state. For details, see [Key states required for operations](../../../../../concepts/key-states.md).
+- The KMS key that you use for this operation must be in a compatible key state. For details, see [Key states required for operations](/docs/api/q-kms/user-manual/key-states).
 - After a key deletion is canceled, the key is still disabled. You must enable it before you can use it again.
 :::
 

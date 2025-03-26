@@ -57,11 +57,11 @@ export const RESPONSE_ELEMENTS = [
   },
   {
     name: "Grants",
-    description: "A list of Grants.<br/><br />See <a href='/docs/build/02-q-services/03-q-storage/02-api-reference/09-data-types/grant'>Grant</a> data type."
+    description: "A list of Grants.<br/><br />See <a href='/docs/api/q-storage/api-reference/data-types/grant'>Grant</a> data type."
   },
   {
     name: "Owner",
-    description: "Container for the bucket owner's ID.<br/><br />See <a href='/docs/build/02-q-services/03-q-storage/02-api-reference/09-data-types/owner'>Owner</a> data type."
+    description: "Container for the bucket owner's ID.<br/><br />See <a href='/docs/api/q-storage/api-reference/data-types/owner'>Owner</a> data type."
   },
 ];
 

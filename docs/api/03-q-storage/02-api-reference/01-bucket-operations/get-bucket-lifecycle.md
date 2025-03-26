@@ -52,7 +52,7 @@ export const RESPONSE_ELEMENTS = [
 # GetBucketLifecycle
 
 :::warning Deprecated
-For an updated version of this API, see [GetBucketLifecycleConfiguration](docs/build/02-q-services/03-q-storage/02-api-reference/01-bucket-operations/get-bucket-lifecycle-configuration.md). If you configured a bucket lifecycle using the `filter` element, you should use the updated version. This topic is provided for backward compatibility.
+For an updated version of this API, see [GetBucketLifecycleConfiguration](/docs/api/q-storage/api-reference/bucket-operations/get-bucket-lifecycle-configuration). If you configured a bucket lifecycle using the `filter` element, you should use the updated version. This topic is provided for backward compatibility.
 :::
 
 Returns the lifecycle configuration information set on the bucket.

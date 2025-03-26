@@ -25,7 +25,7 @@ When considering how QStorage handles billing, it's important to understand how 
 
 - **Granularity**: Billing is calculated based on the aggregate storage used across all objects in your buckets, not on a per-object basis. This means QStorage tracks the total storage consumption rather than billing for each object individually.
 
-For specific details about current billing rates and how storage is calculated, please refer to the [QStorage pricing documentation](../02-pricing.md).
+For specific details about current billing rates and how storage is calculated, please refer to the [QStorage pricing documentation](/docs/api/q-storage/user-manual/pricing).
 
 
 There are two categories of system metadata:

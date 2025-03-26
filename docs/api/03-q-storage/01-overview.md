@@ -6,10 +6,10 @@ Being that it is built leveraging the Quilibrium Network, QStorage respects your
 
 ## Documentation
 
-### [User Manual](01-user-manual/01-getting-started.md)
+### [User Manual](user-manual/getting-started)
 A comprehensive guide for getting started with QStorage, including setup instructions, basic operations, and best practices for optimal usage.
 
-### [API Reference](02-api-reference/01-getting-started.md) 
+### [API Reference](api-reference/getting-started) 
 Detailed technical documentation of all QStorage API endpoints, request/response formats, and example implementations.
 
 ### [Block Storage on the Quilibrium Network](/docs/discover/block-storage)

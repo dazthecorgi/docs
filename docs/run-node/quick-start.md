@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## System Requirements
 
-Please see the [system requirements](./system-requirements.md) section for details.
+Please see the [system requirements](system-requirements) section for details.
 
 ## Default Port to Open on Firewall
 
@@ -16,7 +16,7 @@ Port 8336 must be open for UDP/TCP traffic in order to join the network.
 
 If you're running the node at your home (on a residential ISP), then you must additionally set up [port forwarding](https://portforward.com/router.htm) in order for your node to be reachable by the network.
 For this use case, it's recommended to use TCP connection for your node.
-This can be achieved by setting `listenMultiaddr` to `/ip4/0.0.0.0/tcp/8336` in the [p2p section](./advanced-configuration.md#peer-to-peer-networking-section) of the config.
+This can be achieved by setting `listenMultiaddr` to `/ip4/0.0.0.0/tcp/8336` in the [p2p section](./advanced-configuration#peer-to-peer-networking-section) of the config.
 
 :::
 
