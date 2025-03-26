@@ -110,7 +110,7 @@ Gets a list of all grants for which the specified principal is the retiring prin
 
 ## Description
 
-The `ListRetirableGrants` operation returns a list of all grants for which the specified principal is the retiring principal. A retiring principal is a principal that can retire a grant. For more information about grants, see [Using Grants](/docs/api/04-q-kms/01-user-manual/using-grants.md).
+The `ListRetirableGrants` operation returns a list of all grants for which the specified principal is the retiring principal. A retiring principal is a principal that can retire a grant. For more information about grants, see [Using Grants](/docs/api/q-kms/user-manual/using-grants).
 
 :::note
 - The retiring principal must be specified.

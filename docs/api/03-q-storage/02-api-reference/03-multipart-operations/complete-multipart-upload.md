@@ -27,7 +27,7 @@ export const REQUEST_BODY = [
   },
   {
     name: "Part",
-    description: "Array of <a href=\"/docs/build/02-q-services/03-q-storage/02-api-reference/09-data-types/completed-part\">CompletedPart</a> data types.<br/><br/>If you do not supply a valid Part with your request, the service sends back an HTTP 400 response.",
+    description: "Array of <a href=\"/docs/api/q-storage/api-reference/data-types/completed-part\">CompletedPart</a> data types.<br/><br/>If you do not supply a valid Part with your request, the service sends back an HTTP 400 response.",
     required: false,
   }
 ];

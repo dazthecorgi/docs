@@ -41,7 +41,7 @@ Deletes the imported key material from a KMS key that was created with imported 
 
 ## Description
 
-The \`DeleteImportedKeyMaterial\` operation deletes the imported key material from the specified KMS key. This operation makes the KMS key unusable. For more information about importing key material into KMS keys, see [Importing Key Material](../../../03-guides/importing-keys.md).
+The \`DeleteImportedKeyMaterial\` operation deletes the imported key material from the specified KMS key. This operation makes the KMS key unusable. For more information about importing key material into KMS keys, see [Importing Key Material](/docs/api/q-kms/user-manual/importing-key-material).
 
 :::note
 - When this operation is complete, the KMS key's key state changes to \`PendingImport\`.

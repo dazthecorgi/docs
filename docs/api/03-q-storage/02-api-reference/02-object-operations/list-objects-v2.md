@@ -139,7 +139,7 @@ export const RESPONSE_ELEMENTS = [
   },
   {
     name: "Contents",
-    description: "Contains information about each <a href=\"docs/build/02-q-services/03-q-storage/02-api-reference/09-data-types/object.md\">Object</a> returned. Each Object is returned as a Contents element"
+    description: "Contains information about each <a href=\"/docs/api/q-storage/api-reference/data-types/object\">Object</a> returned. Each Object is returned as a Contents element"
   },
   {
     name: "Key",

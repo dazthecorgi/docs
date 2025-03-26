@@ -21,13 +21,13 @@ export const RULE_ELEMENTS = [
   },
   {
     name: "AbortIncompleteMultipartUpload",
-    type: "<a href=\"/docs/api/q-storage/data-types/abort-incomplete-multipart-upload\">AbortIncompleteMultipartUpload</a>",
+    type: "<a href=\"/docs/api/q-storage/api-reference/data-types/abort-incomplete-multipart-upload\">AbortIncompleteMultipartUpload</a>",
     description: "Specifies the days since the initiation of an incomplete multipart upload that QStorage will wait before permanently removing all parts of the upload.",
     required: false
   },
   {
     name: "Expiration",
-    type: "<a href=\"/docs/api/q-storage/data-types/lifecycle-expiration\">LifecycleExpiration</a>",
+    type: "<a href=\"/docs/api/q-storage/api-reference/data-types/lifecycle-expiration\">LifecycleExpiration</a>",
     description: "Specifies the expiration for the lifecycle of the object.",
     required: false
   },
@@ -39,7 +39,7 @@ export const RULE_ELEMENTS = [
   },
   {
     name: "NoncurrentVersionExpiration",
-    type: "<a href=\"/docs/api/q-storage/data-types/noncurrent-version-expiration\">NoncurrentVersionExpiration</a>",
+    type: "<a href=\"/docs/api/q-storage/api-reference/data-types/noncurrent-version-expiration\">NoncurrentVersionExpiration</a>",
     description: "Specifies when noncurrent object versions expire. Upon expiration, QStorage permanently deletes the noncurrent object versions. You set this lifecycle configuration action on a bucket that has versioning enabled (or suspended) to request that QStorage delete noncurrent object versions at a specific period in the object's lifetime.",
     required: false
   }
@@ -47,13 +47,13 @@ export const RULE_ELEMENTS = [
 
 # Rule
 
-Specifies lifecycle rules for a QStorage bucket. For more information, see [PutBucketLifecycle](/docs/api/q-storage/bucket-operations/put-bucket-lifecycle).
+Specifies lifecycle rules for a QStorage bucket. For more information, see [PutBucketLifecycle](/docs/api/q-storage/api-reference/bucket-operations/put-bucket-lifecycle).
 
 ## Elements
 
 <ParamsTable parameters={RULE_ELEMENTS} type="response" />
 
 ## See Also
-- [GetBucketLifecycle](/docs/api/q-storage/bucket-operations/get-bucket-lifecycle)
-- [PutBucketLifecycle](/docs/api/q-storage/bucket-operations/put-bucket-lifecycle)
-- [DeleteBucketLifecycle](/docs/api/q-storage/bucket-operations/delete-bucket-lifecycle) 
+- [GetBucketLifecycle](/docs/api/q-storage/api-reference/bucket-operations/get-bucket-lifecycle)
+- [PutBucketLifecycle](/docs/api/q-storage/api-reference/bucket-operations/put-bucket-lifecycle)
+- [DeleteBucketLifecycle](/docs/api/q-storage/api-reference/bucket-operations/delete-bucket-lifecycle) 

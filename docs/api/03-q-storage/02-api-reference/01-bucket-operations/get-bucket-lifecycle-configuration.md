@@ -179,7 +179,7 @@ This operation does not have a request body.
 | Name | Description |
 |------|-------------|
 | LifecycleConfiguration | Root level tag for the LifecycleConfiguration parameters. |
-| Rule | Container for a lifecycle rule. See [LifecycleRule](/docs/api/03-q-storage/02-api-reference/09-data-types/lifecycle-rule.md) for details. |
+| Rule | Container for a lifecycle rule. See [LifecycleRule](/docs/api/q-storage/api-reference/data-types/lifecycle-rule) for details. |
 
 ## Special Errors
 

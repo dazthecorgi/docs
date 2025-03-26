@@ -63,7 +63,7 @@ The \`PutKeyPolicy\` operation attaches a key policy to the specified KMS key. I
 - Currently, QKMS supports only one key policy per KMS key.
 - The only valid policy name is "default".
 - The key policy size limit is 32 kilobytes (32768 bytes).
-- For help writing and formatting a key policy, see [Key Policies](/docs/api/04-q-kms/01-user-manual/key-policies.md).
+- For help writing and formatting a key policy, see [Key Policies](/docs/api/q-kms/user-manual/key-policies).
 - Changes to the key policy take effect immediately.
 :::
 

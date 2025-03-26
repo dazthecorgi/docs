@@ -269,19 +269,4 @@ To use the \`CreateKey\` operation, you must have the following permissions:
   operation="CreateKey"
   description="Create a new KMS key in your QConsole account."
   parameters={REQUEST_PARAMETERS}
-  exampleResponse={{
-    "KeyMetadata": {
-      "AccountId": "111122223333",
-      "KeyId": "1234abcd-12ab-34cd-56ef-1234567890ab",
-      "Arn": "arn:verenc:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab",
-      "CreationDate": "2023-12-01T00:00:00-07:00",
-      "Enabled": true,
-      "Description": "Example KMS key",
-      "KeyUsage": "ENCRYPT_DECRYPT",
-      "KeyState": "Enabled",
-      "Origin": "QKMS",
-      "CustomerMasterKeySpec": "SYMMETRIC_DEFAULT",
-      "MultiRegion": false
-    }
-  }}
 /> 

@@ -11,7 +11,7 @@ Creating a bucket is necessary to start uploading Objects.
     1. Log in to your QConsole account
     2. Navigate to the QStorage service section
     3. Click on the "Create Bucket" button
-    4. Enter a bucket name, for naming help and guidelines refer to the [Naming documentation](./01-bucket-names.md)
+    4. Enter a bucket name, for naming help and guidelines refer to the [Naming documentation](bucket-names)
        - Plan for a unique name if it will be public
     5. Configure any additional settings as needed
     6. Click "Create" to finalize the bucket creation

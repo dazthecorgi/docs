@@ -8,7 +8,7 @@ Quilibrium's APIs are designed to provide access to the Quilibrium Network, offe
 
 Each API is built with privacy-first principles and takes full advantage of Quilibrium's open-source, privacy-respecting, decentralized infrastructure to deliver enterprise-grade functionality without compromising on security or user/developer autonomy.
 
-To learn more about how this is accomplished, read more in the [Learn](/docs/discover/intro) section.
+To learn more about how Q accomplishes this, read more in the [Discover](/docs/discover/q-story) section.
 
 ## API Documentation
 
@@ -18,17 +18,17 @@ For comprehensive documentation on all Quilibrium services and APIs, please visi
 ## Service Credentials
 To access and manage resources on the Quilibrium Network, you'll need to set up and use QConsole credentials. These credentials follow a hierarchical structure that allows for fine-grained access control and permission management.
 
-For detailed instructions on how to set up and manage your credentials, see the [QConsole Credentials](api/02-credentials.md) guide.
+For detailed instructions on how to set up and manage your credentials, see the [QConsole Credentials](/docs/api/credentials) guide.
 
 
 ## Available Services
 
-### [QStorage](api/03-q-storage/01-overview.md)
+### [QStorage](/docs/api/q-storage/overview)
 A robust object storage service that leverages the Quilibrium Network's distributed architecture to provide secure, scalable, and high-performance data storage and retrieval capabilities.
 #### S3 Compatibility
 This is a S3-compatible service, meaning developers can leverage other S3-compatible SDK or CLI tooling by pointing it to Quilibrium's endpoint with little to no changes. 
 
-### [QKMS (Key Management System)](api/04-q-kms/01-overview.md)
+### [QKMS (Key Management System)](/docs/api/q-kms/overview)
 A sophisticated key management system designed for secure multi-party key management, providing a foundation for cryptographic operations within the Quilibrium ecosystem.
 #### KMS Compatibility
 Similarly to the S3 service, this can use existing KMS toolsets by changing their endpoints to Quilibrium's.
