@@ -1,5 +1,6 @@
-
-
+---
+sidebar_position: 6
+---
 
 # Linux Configuration
 ## Running the node via service file
