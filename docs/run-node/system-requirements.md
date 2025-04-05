@@ -58,3 +58,20 @@ The bandwidth requirements are case-dependent.
 Higher bandwidth is not necessarily better, as the amount needed is more around supply/demand and how much storage the shard is using that the node is proving over.
 
 In the case that a shard has a high amount of storage, a node would need more bandwidth to send/receive the data on demand.
+
+## Changes in Quilibrium v2.1
+
+Quilibrium v2.1 changes how hardware impacts rewards compared to v2.0. In v2.0, faster CPUs increased rewards by supporting more worker processes, but v2.1 introduces higher memory and storage demands per worker, reducing the CPU’s primary role. A balanced setup—following the **1 CPU core to 2 GB RAM to 4 GB storage** ratio—is now recommended for v2.1’s long-term design, making earlier over-allocation less effective. Low-end options like Raspberry Pis function (with modest rewards and clustering potential), while modern hardware like AMD Ryzen, Apple Silicon (e.g., Mac Minis), and high-core servers excel; older Xeons typically underperform. As network features evolve, support for ASICs, GPUs, FPGAs, or even quantum computing may emerge, requiring case-by-case testing to optimize performance.
+
+### Hardware Expected Performance in v2.1
+The table below summarizes expected performance for common hardware types in v2.1, assuming the 1:2:4 ratio:
+
+| Hardware Type                  | Expected Performance (v2.1) | Notes                                      |
+|--------------------------------|-----------------------------|--------------------------------------------|
+| Raspberry Pi                   | Low                        | Viable for testing or clusters; modest rewards |
+| Older Xeon (2000s)             | Very Low to Unusable       | Struggles with slow memory/disks; needs optimization |
+| AMD Ryzen/7702 Series          | Moderate to High           | Strong in v2.0; still good but less dominant |
+| Apple Silicon (e.g., M1/M2, Mac Mini) | High                | Efficient, integrated; excels standalone or clustered |
+| High-Core Server               | High                       | Best with modern CPUs, ample RAM/storage   |
+
+Performance varies by model and setup. Clustering or custom tweaks can enhance results—adjust based on your specific needs and testing.
