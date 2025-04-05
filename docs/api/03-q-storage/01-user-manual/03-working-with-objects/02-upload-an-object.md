@@ -51,6 +51,15 @@ aws s3 cp /path/to/large/file.txt s3://bucket-name/ --endpoint-url https://qstor
   </TabItem>
 </Tabs>
 
+## Success
+You should see a list of files that were uploaded and the end destination:
+```bash
+upload: relative/path/to/file.txt to s3://bucket-name/file.txt 
+```
+
+## Listing Uploaded Content
+To verify that your content is uploaded see: 
+
 ## Organizing Objects Using Folders
 
 When you upload objects to QStorage, you can organize them using folders. In QStorage, folders are represented as prefixes that appear in the object key name.
@@ -58,3 +67,16 @@ When you upload objects to QStorage, you can organize them using folders. In QSt
 For example, if you upload an object named `sample1.jpg` to a folder named `images`, the key name is `images/sample1.jpg`. The object is displayed as `sample1.jpg` in the `images` folder.
 
 When you upload a folder, QStorage uploads all of the files and subfolders from the specified folder to your bucket. It then assigns an object key name that is a combination of the uploaded file name and the folder name.
+
+### Using MetaData to Tag your Objects
+You can further use your own tags on Object uploads to organize your content:
+```bash
+<cli-upload-command> --metadata '{"key1":"value1","key2":"value2"}'
+```
+
+See [Working with Metadata](/docs/api/q-storage/user-manual/working-with-objects/working-with-metadata) for more information.
+
+## Related Functions
+
+- [Delete an Object](/docs/api/q-storage/user-manual/working-with-objects/delete-an-object)
+- [Working with Metadata](/docs/api/q-storage/user-manual/working-with-objects/working-with-metadata)

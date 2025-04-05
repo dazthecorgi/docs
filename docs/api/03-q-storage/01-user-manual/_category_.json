@@ -1,6 +1,6 @@
 {
   "label": "QStorage User Manual",
-  "position": 1,
+  "position": 3,
   "link": {
     "type": "generated-index",
     "description": "Getting started with the Quilibrium S3-compatible API"

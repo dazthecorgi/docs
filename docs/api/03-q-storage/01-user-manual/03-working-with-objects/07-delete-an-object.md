@@ -91,6 +91,12 @@ done
   </TabItem>
 </Tabs>
 
+## Success
+The response you should see upon Object deletion is a list of files deleted:
+```
+delete: s3://qstorage-demo-bucket/file.txt
+```
+
 ## Considerations When Deleting Objects
 
 1. **Permissions**: Ensure you have the necessary permissions to delete objects.

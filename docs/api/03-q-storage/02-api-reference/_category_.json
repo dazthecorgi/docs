@@ -1,6 +1,6 @@
 {
   "label": "QStorage API Reference",
-  "position": 2,
+  "position": 4,
   "link": {
     "type": "generated-index",
     "description": "Detailed technical documentation of all QStorage API endpoints, request/response formats, and example implementations."
