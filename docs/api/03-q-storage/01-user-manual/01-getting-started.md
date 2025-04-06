@@ -49,8 +49,8 @@ Being that QStorage is a object store, it utilizes standard S3 terminology adapt
     ```bash
     aws configure
     # Set your QStorage credentials:
-    # AWS Access Key ID: QmPublicAddress (Qmabc123 format)
-    # AWS Secret Access Key: 0xprivatekey (hex format)
+    # AWS Access Key ID: ABC123 (Alpha-numeric format)
+    # AWS Secret Access Key: mYad+fa332/daefad (string format)
     # Default region name: (leave empty)
     # Default output format: json (or your preference)
     ```

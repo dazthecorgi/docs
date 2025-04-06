@@ -35,8 +35,8 @@ QStorage uses the same authentication mechanism as Amazon S3. You need to provid
     ```bash
     # Configure AWS CLI with your QConsole credentials
     aws configure
-    # AWS Access Key ID: QmPublicAddress (Qmabc123 format)
-    # AWS Secret Access Key: 0xprivatekey (hex format)
+    # AWS Access Key ID: ABC123 (alpha-numeric format)
+    # AWS Secret Access Key: Adadf4dad/adsf+da4 (string format)
     # Default region name: (leave empty)
     # Default output format: json (or your preference)
     
