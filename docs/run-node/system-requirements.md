@@ -1,4 +1,3 @@
-
 ---
 sidebar_position: 1
 ---
@@ -60,11 +59,11 @@ You can increase your rewards by using larger CPUs or VDS plans with more cores 
 
 ### Renting vs Owning
 
-Many people use VDS's or rent servers from service providers, however it should be noted that this may not be the best long-term strategy as it generally is more cost-prohibative than purchasing hardware and using co-location services.
+Many people use VDS's or rent servers from service providers, however it should be noted that this may not be the best long-term strategy as it generally is more cost-prohibitive than purchasing hardware and using co-location services.
 
-Using VPS services to run a node is not recommnded at all due to poor performance and many service providers throttle your hardware either due to other shared software and how performance intense Node resource usage can be.
+Using VPS services to run a node is not recommended at all due to poor performance and many service providers throttle your hardware either due to other shared software and how performance intense Node resource usage can be.
 
-VDS's offer better performance, but often are price prohibative than renting bare-metal (dedicated hardware for rent) or outright purchasing your own hardware.
+VDS's offer better performance, but often are price prohibitive than renting bare-metal (dedicated hardware for rent) or outright purchasing your own hardware.
 
 Some bare-metal providers (for renting entire servers) offer low prices, but often are kept secret due to competitive reasons, so some amount of leg-work to find suitable price-points is needed. Also, cheaper is rarely better in terms of reliability and node runners who choose to engage in bottom-dollar dealers may find themselves scammed, poor customer service, and/or poorly configured servers.
 
@@ -91,7 +90,7 @@ When a node must provide a computation, it needs to submit it's proofs in a rela
 
 With the above in mind, some hardware may not even be able to fulfill this computation speed requirement even using the minimum specs if too slow/old.
 
-Hardware that supports AVX2 or AVX512 intrinsics perform significanly better than hardware that does not 
+Hardware that supports AVX2 or AVX512 intrinsics perform significanly better than hardware that does not.
 
 Hardware that has more tightly integrated CPU/RAM and caching, such as Apple Silicon or AMD Ryzen 9 series also tend to be more efficient due to vendor-specific hardware optimizations and improvements.
 

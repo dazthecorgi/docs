@@ -8,15 +8,15 @@ sidebar_position: 1
 
 Please see the [system requirements](system-requirements) section for details.
 
-## Default Port to Open on Firewall
+## Default Ports to Open on Firewall
 
-Port 8336 must be open for UDP/TCP traffic in order to join the network.
+Ports 8336 and 8340 must be open for UDP or TCP traffic in order to join the network. Additionally, for as many individual workers enumerated by the ports 50000 and 60000, e.g. for four worker processes, the ports 50000, 50001, 50002, 50003, 60000, 60001, 60002, 60003 need to be open.
 
 :::info
 
 If you're running the node at your home (on a residential ISP), then you must additionally set up [port forwarding](https://portforward.com/router.htm) in order for your node to be reachable by the network.
 For this use case, it's recommended to use TCP connection for your node.
-This can be achieved by setting `listenMultiaddr` to `/ip4/0.0.0.0/tcp/8336` in the [p2p section](./advanced-configuration#peer-to-peer-networking-section) of the config.
+This can be achieved by setting `listenMultiaddr` to `/ip4/0.0.0.0/tcp/8336` and `streamListenMultiaddr` to `/ip4/0.0.0.0/tcp/8340` in the [p2p section](./advanced-configuration#peer-to-peer-networking-section) of the config, and `dataWorkerBaseListenMultiaddr` to `/ip4/0.0.0.0/tcp/%d` (don't omit the `%d`) in the [engine section](./advanced-configuration#engine-section).
 
 :::
 
