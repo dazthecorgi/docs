@@ -1,8 +1,8 @@
 {
   "label": "Communication",
-  "position": 10,
+  "position": 2,
   "link": {
     "type": "doc",
-    "id": "discover/communication/index"
+    "id": "learn/communication/index"
   }
 }

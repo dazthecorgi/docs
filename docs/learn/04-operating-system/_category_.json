@@ -1,8 +1,8 @@
 {
   "label": "Operating System",
-  "position": 12,
+  "position": 4,
   "link": {
     "type": "doc",
-    "id": "discover/operating-system/index"
+    "id": "learn/operating-system/index"
   }
 }
