@@ -1,8 +1,8 @@
 {
   "label": "Block Storage",
-  "position": 9,
+  "position": 1,
   "link": {
     "type": "doc",
-    "id": "discover/block-storage/index"
+    "id": "learn/block-storage/index"
   }
 }

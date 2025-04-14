@@ -1,8 +1,8 @@
 {
   "label": "Oblivious Hypergraph",
-  "position": 11,
+  "position": 3,
   "link": {
     "type": "doc",
-    "id": "discover/oblivious-hypergraph/index"
+    "id": "learn/oblivious-hypergraph/index"
   }
 }

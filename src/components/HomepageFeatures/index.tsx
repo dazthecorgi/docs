@@ -16,7 +16,7 @@ const features = [
     description: 'How to run a node on the Quilibrium network',
   },
   {
-    href: '/docs/discover/communication',
+    href: '/docs/learn/communication',
     icon: '📚',
     title: 'Learn',
     description: 'How the Quilibrium network works',

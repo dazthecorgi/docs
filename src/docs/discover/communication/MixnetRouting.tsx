@@ -41,7 +41,7 @@ const MixnetRouting = () => {
         To give a visual understanding of this process in the scope of a logical clique (cluster), click the phases in the diagram below:
       </p>
       <div className="p-6 my-6 block rounded-xl dark:bg-white/10 bg-pink-50 border border-white/20 drop-shadow-xl justify-center flex flex-col">
-        <img src={"/img/docs/discover/communication/SLRP" + slrp + ".png"}/>
+        <img src={"/img/docs/learn/communication/SLRP" + slrp + ".png"}/>
         <div className="text-xl text-center text-black">
           <span onClick={() => setSLRP(0)} className={(slrp === 0 ? "bg-pink-400 border-pink-600 " : "") + "cursor-pointer inline-block py-1 px-3 bg-slate-100 border border-slate-200 rounded-md my-2 mx-2"}>All Phases</span> ▶
           <span onClick={() => setSLRP(1)} className={(slrp === 1 ? "bg-pink-400 border-pink-600 " : "") + "cursor-pointer inline-block py-1 px-3 bg-slate-100 border border-slate-200 rounded-md my-2 mx-2"}> Message Collection</span> ▶

@@ -181,13 +181,13 @@ const Addressing = () => {
         Let's walk through this with a simplified example where the planted clique is directly extracted from the graph as the private key. A clique is a collection of nodes within a graph that are fully connected to one another. Pictured is a graph of twelve nodes. Can you find the 5-clique in the graph?
       </p>
       <div className="pt-10 text-center">
-        <img className="lg:max-w-lg lg:min-w-lg md:max-w-md sm:max-w-sm inline-block" src={"/img/docs/discover/communication/PCAS-unlit.png"}/>
+        <img className="lg:max-w-lg lg:min-w-lg md:max-w-md sm:max-w-sm inline-block" src={"/img/docs/learn/communication/PCAS-unlit.png"}/>
       </div>
       <p>
         Even with twelve nodes and a 5-clique and asymmetric adjacency counts, it can still be pretty tough to simply spot it. Algorithmically, when using a random graph with a planted clique, it's an NP-complete problem. But when you know the specific clique, it takes no time at all:
       </p>
       <div className="pt-10 text-center">
-        <img className="lg:max-w-lg lg:min-w-lg md:max-w-md sm:max-w-sm inline-block" src={"/img/docs/discover/communication/PCAS-lit.png"}/>
+        <img className="lg:max-w-lg lg:min-w-lg md:max-w-md sm:max-w-sm inline-block" src={"/img/docs/learn/communication/PCAS-lit.png"}/>
       </div>
       <p>
         Representing this as an adjacency matrix, the graph would look like this (clique <span className="text-pink-400">highlighted</span>), compacted, and then serialized:

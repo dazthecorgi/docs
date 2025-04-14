@@ -31,7 +31,7 @@ const E2EE = () => {
         and thus both parties can agree to a shared value others cannot deduce, as others do not possess either parties' private key scalar. Let's walk through a protocol that uses only ECDH and assess what properties it provides:
       </p>
       <p className="py-4 text-center">
-        <img className="xl:max-w-xl lg:max-w-lg sm:max-w-full inline-block rounded-xl drop-shadow-xl" src={"/img/docs/discover/communication/SimpleECDH.png"}/>
+        <img className="xl:max-w-xl lg:max-w-lg sm:max-w-full inline-block rounded-xl drop-shadow-xl" src={"/img/docs/learn/communication/SimpleECDH.png"}/>
       </p>
       <p className="pb-4 text-justify">
         In this simple example both parties agree to a singular symmetric key via ECDH. Let's revisit our desired properties – does this approach have these?
@@ -174,7 +174,7 @@ const E2EE = () => {
         To perform Diffie-Hellman over this distributed key, swap the generator point with the other party's public key and perform the above DKG process. To visually summarize, here is an example of the entire Triple-Ratchet algorithm exchange, in a 3-of-4 threshold configuration:
       </p>
       <p className="">
-        <img src={"/img/docs/discover/communication/TripleRatchet.png"}/>
+        <img src={"/img/docs/learn/communication/TripleRatchet.png"}/>
       </p>
     </div>
   </div>;

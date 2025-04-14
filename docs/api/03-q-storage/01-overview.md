@@ -15,7 +15,7 @@ A comprehensive guide for getting started with QStorage, including setup instruc
 ### [API Reference](api-reference/getting-started) 
 Detailed technical documentation of all QStorage API endpoints, request/response formats, and example implementations.
 
-### [Block Storage on the Quilibrium Network](/docs/discover/block-storage)
+### [Block Storage on the Quilibrium Network](/docs/learn/block-storage)
 Explore the underlying technology that powers QStorage.
 
 ### [AWS S3 Documentation](https://docs.aws.amazon.com/s3/)

@@ -18,7 +18,7 @@ This key is still not visible to other parties, as the decryption is handled beh
 
 Quilibrium Inc. and the underlying network do not have access to any metadata and the billing is done by the network.
 
-All other metadata is encrypted and inaccessible to Quilibrium or the network operators. Only public data (data that you have explicitly made public) is visible to others. For more information on how QStorage handles data privacy and encryption, please check out the [Learn section on block storage](/docs/discover/block-storage).
+All other metadata is encrypted and inaccessible to Quilibrium or the network operators. Only public data (data that you have explicitly made public) is visible to others. For more information on how QStorage handles data privacy and encryption, please check out the [Learn section on block storage](/docs/learn/block-storage).
 
 ## User Control
 

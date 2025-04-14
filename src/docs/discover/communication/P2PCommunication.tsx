@@ -7,7 +7,7 @@ const P2PCommunication = () => {
       <h2 className="text-xl pt-10 pb-4 font-medium">Peer Discovery</h2>
       <p className="pb-4 text-justify">Peer discovery is achieved through an open peer exchange, where nodes will offer a score-indexed list of peers in terms of ip address and public route keys, or graph address and capabilities.</p>
       <div className="p-6 my-6 block rounded-xl dark:bg-white/10 bg-pink-50 drop-shadow-xl justify-center flex flex-col">
-        <img className="pt-10" src={"/img/docs/discover/communication/BlossomSub.png"} alt="A diagram depicting the high level network structure"/>
+        <img className="pt-10" src={"/img/docs/learn/communication/BlossomSub.png"} alt="A diagram depicting the high level network structure"/>
         <div className="text-sm text-center">
           A depiction of a SLRP cluster under BlossomSub – each black circle corresponds to a node, a box with arrows indicates a participant, and 3, 2, and 1 nested circles indicate remaining envelope depth
         </div>
