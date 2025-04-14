@@ -8,9 +8,9 @@ Interacting with applications on Quilibrium take different forms based on the ar
 
 ## Simple QCL Applications
 
-Interacting with a simple QCL Application is achieved via [packed](/docs/discover/oblivious-hypergraph/query-evaluator) messages on the network, and will vary based on whether the request is offline (already proven) or online (needs to be proven).
+Interacting with a simple QCL Application is achieved via [packed](/docs/learn/oblivious-hypergraph/query-evaluator) messages on the network, and will vary based on whether the request is offline (already proven) or online (needs to be proven).
 
-Given the application's address and referential inputs, the query evaluator picks up either the [rendezvous](/docs/discover/communication/mixnet-routing) request or offline request, and emits state updates (if relevant) with related [dispatches](/docs/discover/communication/e2ee).
+Given the application's address and referential inputs, the query evaluator picks up either the [rendezvous](/docs/learn/communication/mixnet-routing) request or offline request, and emits state updates (if relevant) with related [dispatches](/docs/learn/communication/e2ee).
 
 ## Multi-Party QCL Applications
 

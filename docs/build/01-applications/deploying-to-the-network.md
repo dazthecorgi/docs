@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Deploying to the Network
 
-After you have built and tested your application, you can deploy it to the network. Deployment requires publishing the [RDF](/docs/discover/oblivious-hypergraph/rdf-storage) schema (if applicable), compiling the QCL code, and paying a fee for the deployment. The qclient CLI tool will do this all in one step for you.
+After you have built and tested your application, you can deploy it to the network. Deployment requires publishing the [RDF](/docs/learn/oblivious-hypergraph/rdf-storage) schema (if applicable), compiling the QCL code, and paying a fee for the deployment. The qclient CLI tool will do this all in one step for you.
 
 ## Deploying
 
