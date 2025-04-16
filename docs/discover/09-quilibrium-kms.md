@@ -40,7 +40,7 @@ Unlike some services that claim to use MPC but merely split keys across servers,
 ### 3. Purpose-Bound Cryptographic Keys
 
 * Every key managed by Quilibrium KMS is tied to a specific function (e.g., "sign this transaction" or "approve this smart contract").
-* Even if a hacker gained access to key fragments, they couldn’t misuse them for unauthorized actions.
+* Even if a hacker gained access to а key fragment, they couldn’t misuse it for unauthorized actions.
 
 ### 4. Programmable "Warm" Key Management
 
