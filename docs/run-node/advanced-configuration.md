@@ -105,18 +105,15 @@ engine:
   pendingCommitWorkers:  – The number of goroutines used to perform worker operations
   minimumPeersRequired: 3 – Minimum number of peers required for the node to function
   statsMultiaddr:  – The multiaddress for the stats server
-  dataWorkerBaseListenMultiaddr: "/ip4/127.0.0.1/tcp/%d" – Format string for worker listen addresses (pre-2.1), switches to a default of "/ip4/0.0.0.0/tcp/%d` after 2.1
-  dataWorkerBaseListenPort: 40000 – Starting port number for worker processes (pre-2.1)
-  dataWorkerBaseP2PPort: 50000 – Starting port number for worker p2p communication (2.1+)
-  dataWorkerBaseStreamPort: 60000 – Starting port number for worker streaming (2.1+)
+  dataWorkerBaseListenMultiaddr: "/ip4/0.0.0.0/tcp/%d" – Format string for worker listen addresses, if the prior default using localhost addresses is present, it will switch to the new default automatically.
+  dataWorkerBaseP2PPort: 50000 – Starting port number for worker p2p communication
+  dataWorkerBaseStreamPort: 60000 – Starting port number for worker streaming
   dataWorkerMemoryLimit: 1880981504 – Memory limit for each worker process (1.75 GiB)
-  dataWorkerMultiaddrs: <string[]> – Manual specification of worker multiaddresses (ignored after 2.1 cutoff)
-  dataWorkerP2PMultiaddrs: <string[]> – Manual specification of worker p2p multiaddresses (2.1+)
-  dataWorkerStreamMultiaddrs: <string[]> – Manual specification of worker stream multiaddresses (2.1+)
-  dataWorkerFilters: <string[]> – Manual specification of shard filters chosen by workers (2.1+)
+  dataWorkerP2PMultiaddrs: <string[]> – Manual specification of worker p2p multiaddresses
+  dataWorkerStreamMultiaddrs: <string[]> – Manual specification of worker stream multiaddresses
+  dataWorkerFilters: <string[]> – Manual specification of shard filters chosen by workers
   dataWorkerCount:  – Number of data worker processes to spawn
   multisigProverEnrollmentPaths: <string[]> – Paths to enrollment keys for multisig proving
-  fullProver: false – Whether to fully verify execution (false enables light prover, 2.0 only)
   autoMergeCoins: false – Whether to automatically merge coins after minting
   syncTimeout: 4s – Maximum wait time for frame downloads from peers
   syncCandidates: 8 – Number of candidate peers per category to sync with
@@ -155,16 +152,7 @@ listenRESTMultiaddr: <multiaddr> - the multiaddr this node listen on for REST re
 
 ## 2.0 Combined Seniority Prover Keys
 
-> **Important**
-> 
-> When 2.0 is released, there will be a 24 hour stasis lock where no actions on the network can take place, and no tokens can be moved. This is the ideal time to perform prover key combination (merging), as there is ample time to get ahead of prover enrollment without being late to the stasis unlock. Merging can be done after the unlock period, but if you are running the auto-upgrade script, you will want to be sure to do this before the stasis lock period ends, as once keys have been enrolled for a prover, they cannot be merged, and the node will do this automatically after the stasis lock is lifted. QClient binaries will be simultaneously available with the updated node software, and the latest releases for qclient can always be found at https://releases.quilibrium.com/qclient-release.
-
-The upgrade to 2.0 introduces the concept of seniority with respect to precedence in joining prover rings. Seniority is a special global-level value which the network uses to resolve conflicts on enrollment attempts on a prover ring. During the first 24 hours of the upgrade's release, no transactions can happen on the network, and no prover ring enrollment occurs. Afterwards, when the network is unlocked, nodes will automatically attempt to join the prover rings they are capable of supporting, based on the data workers of the node. This process requires no action on the part of the node operator, unless you specifically wish to combine keys previously used to increase seniority.
-
-If you are upgrading to 2.0 and wish to combine historic keys from different eras of the network for improved seniority, you will need:
-
-- For keys prior to 1.4.19, the config.yml and keys.yml files in the .config folder
-- After 1.4.19, the entire .config folder
+The upgrade to 2.0 introduced the concept of seniority with respect to precedence in joining prover rings. Seniority is a special global-level value which the network uses to resolve conflicts on enrollment attempts on a prover ring. During the first 24 hours of the upgrade's release, no transactions can happen on the network, and no prover ring enrollment occurs. Afterwards, when the network is unlocked, nodes will automatically attempt to join the prover rings they are capable of supporting, based on the data workers of the node. This process requires no action on the part of the node operator, unless you specifically wish to combine keys previously used to increase seniority.
 
 Note, you can only combine _one_ set of keys from 1.4.19 and above with older keys, and seniority of the older keys is not a pure summation – overlapping ranges are not counted multiple times, and their use for prover enrollment can only occur _once_ (you cannot use older keys twice for multiple sets of 1.4.19 keys). If you use multiple sets of keys from after 1.4.19, only one will be used for seniority for post-1.4.19 seniority.
 
