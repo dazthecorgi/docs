@@ -10,7 +10,13 @@ Please see the [system requirements](system-requirements) section for details.
 
 ## Default Ports to Open on Firewall
 
-Ports 8336 and 8340 must be open for UDP or TCP traffic in order to join the network. Additionally, for as many individual workers enumerated by the ports 50000 and 60000, e.g. for four worker processes, the ports 50000, 50001, 50002, 50003, 60000, 60001, 60002, 60003 need to be open.
+| **Port Range**       | **Protocol** | **Purpose**                          | **Notes**                                                                 |
+|----------------------|--------------|--------------------------------------|---------------------------------------------------------------------------|
+| 8336, 8340           | UDP or TCP   | Network connectivity                | Must be open to join the network.                                        |
+| 50000-50003* | UDP or TCP   | Worker processes libp2p communication      | Port range must be opened based on the number of worker processes. |
+| 60000-60003* (example for 4 workers) | UDP or TCP   | Worker processes streaming communication      | Port range must be opened based on the number of worker processes. |
+
+*Using an example of 4 workers, 1 port for each, starting from the base port.
 
 :::info
 
@@ -20,9 +26,34 @@ This can be achieved by setting `listenMultiaddr` to `/ip4/0.0.0.0/tcp/8336` and
 
 :::
 
-## Autorun
+## Node Install
 
-The release autorun script will automatically download the latest release binary, run the node and periodically check for new releases. You can run the script as follows:
+### Recommended Install Method
+To install and manage a node, the long-term supported method is to [download and install via qclient](/docs/run-node/qclient/setup#scripted-installation).
+
+Then run:
+```bash
+sudo qclient node install
+```
+
+#### Enabling Node Auto-Updates via QClient
+You can enable/disable qclient auto-updates with:
+```bash
+qclient node auto-update enable
+```
+
+:::note
+There may be some early-bugs that may cause this method to not work for you, as this method is recently released.
+
+If you have issues, the autorun solution below can be used in the meantime.
+:::
+
+### Legacy Auto-run Install
+This is a legacy solution and not actively maintained anymore, but may be used.
+
+It should work, but there are flaws with it.
+
+The release auto-run script will automatically download the latest release binary, run the node and periodically check for new releases. You can run the script as follows:
 
 ```bash
 git clone --depth 1 --branch release https://github.com/QuilibriumNetwork/ceremonyclient.git
@@ -33,13 +64,31 @@ cd ceremonyclient/node
 
 This script is intended to help get started quickly, but for robust deployments it is recommended to use some service orchestration solution (e.g. `systemd` on Linux).
 
-## Backups
+## Key and Store Backups
 
-The node's configuration, private keys and database must be backed up in order to claim rewards. 
+In order to access rewards or make token operations for your account, you must maintain your set of keys and it is recommended that you back them up.
+
+Keys are included in a node's configuration file set, and both the `config.yml` and `keys.yml` file should be saved.
+
+Data for each worker should also be backed up, to make restoration faster and avoid penalization.
+
+All of this data will be found in your config folder:
+
+```
+/path/to/config/
+/path/to/config/keys.yml
+/path/to/config/config.yml
+/path/to/config/worker-store/[worker-id]/
+
+### QClient Install Data Locations
+If you installed via QClient, the the config keysets and worker stores will be found in `~/.quilibrium/configs/[config-name]`
+
+### Auto-run or Manual Install Data Locations
 
 If you followed the instructions in the [Autorun](#autorun) section, this data will be stored in the `ceremonyclient/node/.config` directory. It's recommended to back up this entire directory. 
 
 The `.config/keys.yml` and `.config/config.yml` files contain private keys and should be encrypted in backups. If you back up the entire directory, it's easiest to encrypt the entire backup.
+
 
 
 
