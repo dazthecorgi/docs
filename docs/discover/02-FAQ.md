@@ -137,6 +137,25 @@ These technologies work together to create a secure, private, and efficient dece
 
 CPU power is just one factor influencing node rewards, and its role shifts significantly between Quilibrium 2.0 and 2.1. In 2.0, a faster, more efficient CPU allows a node to run more workers—additional processes that boost reward generation—making CPU performance a key driver of earnings. The more workers you can stack, the higher the rewards, directly tying output to CPU capability. However, the 2.1 upgrade changes this dynamic. It introduces substantial memory and storage requirements for each worker, shifting the bottleneck away from CPU power. While a more efficient CPU still helps, you can’t simply max out workers to leverage it as in 2.0—memory and storage demands now play a larger role, reducing the CPU’s dominance in determining rewards.
 
+### If Q is fully encrypted, how can you prove that some data actually exists?  
+
+**Cryptography-based Answer**
+
+- Create a Shamir split of the plaintext block (the data is cut into smaller pieces) as a **Feldman verifiable secret share**.
+- Encrypt each split using **ElGamal encryption**.
+- Apply a **Fiat-Shamir transform** to the encryption process to create a challenge that picks random indices to reveal partial shares. (These revealed shares are insufficient to reconstruct the full data, but enough to set a high statistical security threshold.)
+- Verification confirms the Fiat-Shamir transform is valid, reconstitutes ciphertexts from revealed indices, confirms Lagrange interpolation of polynomial from ciphertext statements is equal to the statement of the proof.
+
+**Non-Cryptography-based (Simple Analogy)**
+
+- Imagine cutting a valuable object into multiple pieces.
+- Lock each piece inside its own secure lockbox.
+- Take a picture showing all the closed lockboxes.
+- Split the photo into pieces, where each piece corresponds to a lockbox — like faces on fair dice.
+- Roll the dice to decide which lockboxes to open and reveal.
+- By revealing only certain lockboxes you can't see the whole object, but you have enough proof that the object inside is real and intact, **without** ever needing to fully open or disclose it.
+
+
 ## Quorum Questions
 
 ### What is Quorum Messenger and how do I start using it?
