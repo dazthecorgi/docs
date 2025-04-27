@@ -4,7 +4,9 @@
 
 This article is a VERY SIMPLIFIED summary of a longer talk by Cassandra Heart (Quilibrium founder). Watch the video below to dive deeper into the topic.
 
-:::<div class="video-responsive">
+:::
+
+<div class="video-responsive">
   <iframe 
     src="https://www.youtube.com/embed/GeuZsX6dC08" 
     title="YouTube video player" 
