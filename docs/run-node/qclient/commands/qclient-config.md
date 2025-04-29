@@ -62,3 +62,7 @@ Description:
 The `signature-check` command allows you to persist a signature check setting for all future QClient commands. 
 
 Use `enable` to enable signature checking or `disable` to disable it.
+
+## Using Account Aliases
+
+Alias Commands are listed [here](./alias).
