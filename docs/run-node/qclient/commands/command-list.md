@@ -83,3 +83,12 @@ Please see the [QClient 101](/docs/run-node/qclient/qclient-101) guide for detai
 | **Public RPC**                     | `qclient config public-rpc [true\|false]`                            | Sets the configuration to always use a public RPC endpoint for network interactions.                    |
 | **Set Custom RPC**                 | `qclient config set-custom-rpc <endpoint>`             | Overrides the default light client RPC (the Quilibrium's public RPC).                          |
 | **Signature Check**                | `qclient config signature-check [enable\|disable]`                       | Allows you to persist a signature check disable for all future QClient commands.               |
+
+### Local Alias Commands
+| **Command**                        | **Syntax**                                              | **Description**                                                                                   |
+|------------------------------------|--------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+| **Add**                            | `qclient config alias add <alias> <address>`                | Adds a new alias for a given address, making it easier to reference in commands.                 |
+| **Create**                         | `qclient config alias create <alias> <address>`             | Creates a new alias for a specified address (synonymous with 'add').                             |
+| **Update**                         | `qclient config alias update <alias> <new-address>`         | Updates an existing alias to point to a new address.                                             |
+| **Delete**                         | `qclient config alias delete <alias>`                       | Removes an alias from the list, deleting the reference to the associated address.                |
+| **List**                           | `qclient config alias list`                                 | Displays all configured aliases and their corresponding addresses, also returns addresses for local node accounts that have been imported.                               |
