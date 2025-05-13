@@ -1,54 +1,9 @@
----
-sidebar_position: 7
----
+# Token Commands
+This is a list of Token specific operations, like querying balances, split/merge, accept/receive.
 
-# How to use the qclient
+For a list of all qclient commands, see [QClient Commands](command-list).
 
-The qclient is an application that allows you to manage QUIL tokens through various operations (send/receive, split/merge, accept/reject).
-
-## Installing the client
-
-### Install the qclient Binary
-
-1. Check the latest release [here](https://releases.quilibrium.com/qclient-release).
-2. Download and install the binary, the digest and the signatures according to your os and architecture from:  
-   ```
-   https://releases.quilibrium.com/<filename>
-   ```
-
-### First-Time Setup
-
-- When you run a qclient command for the first time, it will automatically generate a `.config` folder containing your keys.
-- If you already have existing keys, you need to manually create a `.config` folder with your keys in the same directory as the qclient binary.
-- If your `.config` folder is located elsewhere, you can use the `--config path-to-config` flag in the qclient commands to specify its location.
-- To use the public RPC you can also add the flag `--public-rpc`
-
-### How to run the qclient commands
-
-To run the qclient commands, you need to execute your qclient binary, followed by the command and optional flags.
-
-
-Here is an example of a command:
-
-```bash
-./qclient-version-os-arch command --config /path/to/config --public-rpc
-```
-
-This translates to the following for v2.0.1 on Linux:
-
-```bash
-./qclient-2.0.1-linux-amd64 token balance --config $HOME/ceremonyclient/node/.config --public-rpc
-```
-
-:::tip
-
-Every time you see `qclient` in the commands below, it actually refers to something like `./qclient-version-os-arch`
-
-:::
-
-## Qclient Commands
-
-### Querying Balance and Account Address
+## Querying Balance and Account Address
 
 The command line tool accepts arguments in either decimal (xx.xxxxx) format or raw unit (0x00000) format. Note that raw units are a multiple of QUIL: 1 QUIL = 0x1DCD65000 units
 
@@ -86,33 +41,11 @@ qclient token coins metadata
 ```
 ---
 
-### Creating a Pending Transaction
+## Creating a Pending Transaction
 
 Quilibrium's token application has two modes: a two-stage transfer/accept (or reject), or a single-stage mutual transfer.
 
-#### Command in Qclient v2.0.x
-
-* In qclient version v2.0.x it's only possible to send an entire coin, not an amount. The amount feature will be added in version v2.1.x
-* In qclient v2.0.x the transaction will be immediately sent. You will not receive any transation ID and the receiver will not have to approve it.
-* In qclient v2.0.x specifying a refund account is not supported
-
-
-Here is the command you run to send a full coin:
-
-```bash
-qclient token transfer <ToAccount> <OfCoin>
-```
-:::tip
-
-Account and Coin addresses have a simlar format. Be careful not to send a coin to another coin's address, or your funds will be lost.
-
-:::
-
-#### Command in qclient v2.1.x
-
-From qclient v2.1.x you can send more complex commands and you will receive a more complete response
-
-Command:
+### Command:
 
 ```bash
 qclient token transfer <ToAccount> <RefundAccount> <Amount|OfCoin>
@@ -136,9 +69,8 @@ Using `Amount` a user-friendly version of a transfer, similar to what account-ba
 
 Using `Ofcoin` is an application-aware version of a transfer, similar to what UTXO-based networks like Bitcoin do, where you operate on the raw coin balance under a specific address. If you have good reason to manage coins separately (yet under the control of the same managing account), you will want to use the second option in conjunction with split/merge operations if needed.
 
----
 
-### Splitting and merging commands
+## Splitting and merging commands
 
 :::tip
 
@@ -146,27 +78,20 @@ Both `token merge` and `token split` support also operating on up to 100 coins o
 
 :::
 
-Split command:
+### Split command:
 
 ```bash
 qclient token split <OfCoin> <LeftAmount> <RightAmount>
 ```
 
-Merge comand:
+### Merge command:
 
 ```bash
 qclient token merge <LeftCoin> <RightCoin>
 ```
 ---
 
-### Accepting a Pending Transaction
-
-:::info
-
-Not available in In qclient 2.0.x\
-Transaction will be recieved without the need for approval.
-
-:::
+## Accepting a Pending Transaction
 
 To accept a pending transaction, you simply run:
 
@@ -184,13 +109,6 @@ Rejecting a transaction creates a separate pending transaction because if the re
 
 
 ### Performing a Mutual Transfer
-
-:::warning
-
-Not available in qclient v2.0.x
-
-:::
-
 Pending transactions add friction, but without it, users risk receiving unwanted coins or interacting with unknown addresses. If both parties agree beforehand, they can perform a mutual transfer. This requires both parties to be online, but avoids the two-phase transaction. It's ideal for privacy (both accounts remain private) and ensures the transaction completes quickly:
 
 1. **Receiver's Action**:  
