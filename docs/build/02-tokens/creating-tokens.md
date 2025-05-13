@@ -158,7 +158,7 @@ The resulting addresses of the deployed files will then be incorporated in the m
 
 Deploying the token with a 1 QUIL to mint fee:
 
-`qclient deploy token Behavior=Mintable MintStrategy.Behavior=MintWithPayment MintStrategy.PaymentAddress=<Fund Recipient Address> MintStrategy.FeeBasis.Type=PerUnit MintStrategy.FeeBasis.Baseline=8000000000 AdditionalReference=<Address of file 0>,<Address of file 1>,<...>`
+`qclient deploy token Behavior=Mintable MintStrategy.Behavior=MintWithPayment MintStrategy.PaymentAddress=<Fund Recipient Address> MintStrategy.FeeBasis.Type=PerUnit MintStrategy.FeeBasis.Baseline=8000000000 AdditionalReference=<Address of file 0>,<Address of file 1>,<...> Supply=1000 Name="Example Collectible" Symbol=EXAMPLECOLLECTIBLE`
 
 Users can then mint out the token via the token application:
 
