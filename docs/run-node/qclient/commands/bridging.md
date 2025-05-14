@@ -20,7 +20,7 @@ The `cross-mint` command initiates a cross-mint operation for token management a
 
 ## How to bridge QUIL (native token) to wQUIL (Ethereum token)
 
-::: warning
+:::warning
 
 Beware of phishing sites. Before initiating a bridging operation, always double-check that you are on the correct bridge page: https://quilibrium.com/bridge. If you have never bridged before, it's a good idea to test with a small amount first until you feel confident.
 

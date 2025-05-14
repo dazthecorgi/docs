@@ -1,6 +1,6 @@
 # The Illusion of Decentralization in Crypto, and Quilibrium’s Radical Alternative.
 
-::: info
+:::info
 
 This article is an extract from [this live stream](https://www.youtube.com/watch?v=7yEoxju-1zI) with Cassandra Heart (Quilibrium founder)
 

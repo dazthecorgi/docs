@@ -1,4 +1,3 @@
-
 # How Quilibrium Protects Privacy Without Enabling Crime
 
 Quilibrium is designed to **protect user privacy** while also ensuring that it isn’t misused for illegal activities. Each coin in the network includes a special cryptographic marker that allows users to prove their funds are **not from illicit or sanctioned sources**. This means the system maintains both **privacy and compliance**—ensuring legitimate use without compromising security.
