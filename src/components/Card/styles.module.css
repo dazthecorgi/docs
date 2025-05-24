@@ -8,15 +8,17 @@
   --ifm-link-hover-color: var(--ifm-color-emphasis-700);
   --ifm-link-hover-decoration: none;
 
-  box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 15%);
-  border: 1px solid var(--ifm-color-emphasis-200);
-  transition: all var(--ifm-transition-fast) ease;
-  transition-property: border, box-shadow;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
+  transition: background-color var(--ifm-transition-fast) ease;
+  border-radius:0.5rem;
 }
 
 .cardContainer:hover {
-  border-color: var(--ifm-color-primary);
-  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
+  background-color: var(--light-pink);
+}
+
+[data-theme='dark'] .cardContainer:hover {
+  background-color: var(--burgundy);
 }
 
 .cardContainer *:last-child {
@@ -28,5 +30,5 @@
 }
 
 .cardDescription {
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
