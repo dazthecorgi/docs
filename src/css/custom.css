@@ -68,7 +68,12 @@
   --ifm-color-primary-lightest: #ff87b0;
 
   /* Code highlights */
-  --docusaurus-highlighted-code-line-bg: rgba(255, 5, 109, 0.05); /* subtle pink tint */
+  --docusaurus-highlighted-code-line-bg: rgba(
+    255,
+    5,
+    109,
+    0.05
+  ); /* subtle pink tint */
 
   /* Custom valid-value */
   --valid-value-bg: rgba(255, 5, 109, 0.12);
@@ -76,29 +81,27 @@
   --valid-value-border: rgba(255, 5, 109, 0.3);
 }
 
-/* -------------------------------------------------- */
-/* -------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
 /* Brand-Based Theming (Light + Soft Dark) */
-/* -------------------------------------------------- */
-/* -------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
 
 :root {
   /* Light Theme */
   --bg-navbar-light: #f8f8f8;
   --bg-sidebar-light: #f0e9e4;
   --bg-page-light: #f8f8f8;
-  --bg-footer-light: #40001b;
+  --bg-footer-light: #6d012e;
   --bg-card-light: #ffffff;
 
-  /* Dark Theme */
-  --bg-navbar-dark: #261217;
-  --bg-sidebar-dark: #2f1a1f;
-  --bg-page-dark: #392327;
-  --bg-footer-dark: #2a1319;
-  --bg-card-dark: #3e2a2f;
+  /* Dark Theme (Soft Black-based) */
+  --bg-navbar-dark: #151415;      /* soft black */
+  --bg-sidebar-dark: #1b1a1c;
+  --bg-page-dark: #1e1d1f;
+  --bg-footer-dark: #161517;
+  --bg-card-dark: #252426;
 }
 
-/* Active theme resolution */
+/* Theme Variable Mapping */
 [data-theme='light'] {
   --bg-navbar: var(--bg-navbar-light);
   --bg-sidebar: var(--bg-sidebar-light);
@@ -113,10 +116,71 @@
   --bg-page: var(--bg-page-dark);
   --bg-footer: var(--bg-footer-dark);
   --bg-card: var(--bg-card-dark);
+  --border-subtle: rgba(255, 255, 255, 0.06); /* softened for dark base */
 }
 
-[data-theme='dark'] {
-  --border-subtle: rgba(255, 255, 255, 0.1); /* or use --dark-grey if you want */
+
+/* SOFT DARK THEME - BURGUNDY VARIATION */
+
+@media not all {
+  :root {
+    /* Light Theme */
+    --bg-navbar-light: #f8f8f8;
+    --bg-sidebar-light: #f0e9e4;
+    --bg-page-light: #f8f8f8;
+    --bg-footer-light: #6d012e;
+    --bg-card-light: #ffffff;
+
+    /* Dark Theme */
+    --bg-navbar-dark: #261217;
+    --bg-sidebar-dark: #2f1a1f;
+    --bg-page-dark: #392327;
+    --bg-footer-dark: #2a1319;
+    --bg-card-dark: #3e2a2f;
+  }
+
+  /* Active theme resolution */
+  [data-theme="light"] {
+    --bg-navbar: var(--bg-navbar-light);
+    --bg-sidebar: var(--bg-sidebar-light);
+    --bg-page: var(--bg-page-light);
+    --bg-footer: var(--bg-footer-light);
+    --bg-card: var(--bg-card-light);
+  }
+
+  [data-theme="dark"] {
+    --bg-navbar: var(--bg-navbar-dark);
+    --bg-sidebar: var(--bg-sidebar-dark);
+    --bg-page: var(--bg-page-dark);
+    --bg-footer: var(--bg-footer-dark);
+    --bg-card: var(--bg-card-dark);
+  }
+
+  /* Code Block Custom Styling - Dark Theme */
+
+  [data-theme="dark"] .theme-code-block {
+    background-color: #26171e !important; /* soft burgundy dark */
+    border-radius: 8px;
+    box-shadow: none !important;
+  }
+
+  [data-theme="dark"] .theme-code-block pre,
+  [data-theme="dark"] .theme-code-block code {
+    background-color: transparent !important;
+  }
+}
+
+/* END SOFT DARK THEME - BURGUNDY VARIATION */
+
+
+
+[data-theme="dark"] {
+  --border-subtle: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* or use --dark-grey if you want */
 }
 
 /* Layout Targets (shared for both themes) */
@@ -137,13 +201,23 @@ body,
   background-color: var(--bg-page);
 }
 
-/* Footer */
-.footer--dark,
-.footer--light {
+/* Dark Theme Footer */
+[data-theme="dark"] .footer--dark {
   background-color: var(--bg-footer);
 }
 
+/* Light Theme Footer with gradient from pink to burgundy */
+[data-theme="light"] .footer--dark {
+  background: linear-gradient(
+    236deg,
+    var(--pink) -50%,
+    #6d012e 50%,
+    var(--burgundy) 120%
+  );
+}
+
 /* Panels excluding admonitions */
+
 .theme-doc-markdown:not(.theme-admonition),
 .theme-doc-content:not(.theme-admonition) {
   background-color: transparent;
@@ -151,26 +225,15 @@ body,
   border-radius: 0;
 }
 
-[data-theme='dark'] .theme-doc-markdown,
-[data-theme='dark'] .theme-doc-content,
-[data-theme='dark'] .theme-doc-markdown.markdown {
-  background-color: var(--bg-page-dark); /* Or hardcode to #392327 */
-}
-
-/* Code Block Custom Styling - Dark Theme */
-[data-theme='dark'] .theme-code-block {
-  background-color: #26171e !important; /* soft burgundy dark */
-  border-radius: 8px;
-  box-shadow: none !important;
-}
-
-[data-theme='dark'] .theme-code-block pre,
-[data-theme='dark'] .theme-code-block code {
-  background-color: transparent !important;
+[data-theme="dark"] .theme-doc-markdown,
+[data-theme="dark"] .theme-doc-content,
+[data-theme="dark"] .theme-doc-markdown.markdown {
+  background-color: var(--bg-page-dark);
 }
 
 /*borders*/
-[data-theme='dark'] {
+
+[data-theme="dark"] {
   /* Shared border color */
   table,
   td,
@@ -191,11 +254,9 @@ body,
   }
 }
 
-
 /* Cards */
 
-/* LIGHT THEME */
-[data-theme='light'] .card,
+[data-theme="light"] .card,
 .cardContainer {
   border: none;
   border-radius: 0.5rem;
@@ -203,14 +264,14 @@ body,
   transition: background-color var(--ifm-transition-fast) ease;
 }
 
-[data-theme='light'] .card:hover,
+[data-theme="light"] .card:hover,
 .cardContainer:hover {
   background-color: var(--light-pink);
   border: none;
 }
 
-[data-theme='dark'] .card,
-[data-theme='dark'] .cardContainer {
+[data-theme="dark"] .card,
+[data-theme="dark"] .cardContainer {
   border: none;
   background-color: var(--bg-card);
   border-radius: 0.5rem;
@@ -218,13 +279,11 @@ body,
   transition: background-color var(--ifm-transition-fast) ease;
 }
 
-[data-theme='dark'] .card:hover,
-[data-theme='dark'] .cardContainer:hover {
+[data-theme="dark"] .card:hover,
+[data-theme="dark"] .cardContainer:hover {
   background-color: var(--burgundy);
- border: none;
+  border: none;
 }
-
-
 
 /* -------------------------------------------------- */
 /* -------------------------------------------------- */
@@ -294,7 +353,7 @@ html {
 
     [data-theme="dark"] body {
       background: #121212;
-      color: var(--light-grey); 
+      color: var(--light-grey);
     }
   }
 
@@ -432,7 +491,6 @@ html {
   margin-left: 0.5rem;
   font-weight: 600;
 }
-
 
 /* Undo Docusaurus styling for code blocks in the learn section. */
 .learn-page code {
