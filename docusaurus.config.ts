@@ -71,8 +71,8 @@ const config: Config = {
       title: 'Quilibrium Docs',
       logo: {
         alt: 'Quilibrium Logo',
-        src: 'img/qlogopink.png',
-        srcDark: 'img/qlogo-circle.png',
+        src: 'img/q-symbol.png',
+        srcDark: 'img/q-symbol.png',
       },
       items: [
         {

@@ -3,7 +3,7 @@ import React from 'react';
 // Highlights text in pink in Markdown
 export default function HighlightPink({children, color}) {
     return (
-        <span className="text-pink-400">
+        <span className="text-pink/50">
           {children}
         </span>
     );
