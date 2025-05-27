@@ -74,8 +74,7 @@ QUIL is a utility token designed for use within the Quilibrium network. It is no
 ### What is the wQUIL (ERC20) token?
 
 wQUIL is the official token bridged to Ethereum, contract: `0x8143182a775c54578c8b7b3ef77982498866945d`
-
-Via the official bridge, users can bridge QUIL to wQUIL and viceversa.
+Via the [official bridge](https://quilibrium.com/bridge), users can bridge QUIL to wQUIL and viceversa.
 
 ### Is there a Q wallet?
 
@@ -91,11 +90,9 @@ Note the above applies only to native QUIL. wQUIL remains queryable via block ex
 
 ### Where can I download the logo kits for Quilibrium, Quorum, and Q Community?
 
-Right here!
+Right here! [Quilibrium logo kit](https://quilibrium.com/Quilibrium-logo.zip) - [Quorum logo kit](https://quilibrium.com/Quorum-logo.zip) - [Q Community logo kit](https://quilibrium.com/Q-Community-logo.zip)
 
-- [Quilibrium logo kit](https://quilibrium.com/Quilibrium-logo.zip)
-- [Quorum logo kit](https://quilibrium.com/Quorum-logo.zip)
-- [Q Community logo kit](https://quilibrium.com/Q-Community-logo.zip)
+---
 
 ## Quilibrium Inc. and Q Storage
 
@@ -121,6 +118,8 @@ For websites hosted via Q Storage’s public bucket proxy, fast loading relies o
 ### Can users migrate an existing website to Q Storage, and what’s needed?
 
 Yes, existing static websites can be migrated to Q Storage, though dynamic back-end services aren’t yet supported. Users need to buy a domain separately, as Q Storage doesn’t offer domain management, but it provides CNAME values to route the domain to the public bucket.
+
+---
 
 ## Technical Questions
 
@@ -163,6 +162,7 @@ CPU power is just one factor influencing node rewards, and its role shifts signi
 - Roll the dice to decide which lockboxes to open and reveal.
 - By revealing only certain lockboxes you can't see the whole object, but you have enough proof that the object inside is real and intact, **without** ever needing to fully open or disclose it.
 
+---
 
 ## Quorum Questions
 
