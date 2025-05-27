@@ -188,4 +188,4 @@ Quorum keeps your messages private through end-to-end encryption, ensuring only 
 
 ### What is Quorum Apex, and how does it work?
 
-Quorum Apex is an alternative to Discord Nitro, offering unique subscriber benefits on the Quorum platform. A key feature is revenue sharing: when a user subscribes to a space with Apex, the subscription fee (paid in QUIL tokens) is split, with a portion going to the space’s community. Users can subscribe to up to four spaces per Apex payment, similar to boosting servers on Discord, but with the added incentive of financially rewarding community creators.
+Quorum Apex is an alternative to Discord Nitro, offering unique subscriber benefits on the Quorum platform. A key feature is revenue sharing: when a user subscribes to a space with Apex, the subscription fee (paid in $QUIL tokens) is split, with a portion going to the space’s community. Users can subscribe to up to four spaces per Apex payment, similar to boosting servers on Discord, but with the added incentive of financially rewarding community creators.
