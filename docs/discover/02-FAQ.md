@@ -89,6 +89,14 @@ The network has overall active proof state, prover rings, total supply. These ar
 The contents of transactions or their settled states are however invisible unless you possess relevant key material to the transaction. 
 Note the above applies only to native QUIL. wQUIL remains queryable via block explorers.
 
+### Where can I download the logo kits for Quilibrium, Quorum, and Q Community?
+
+Right here!
+
+- [Quilibrium logo kit](https://quilibrium.com/Quilibrium-logo.zip)
+- [Quorum logo kit](https://quilibrium.com/Quorum-logo.zip)
+- [Q Community logo kit](https://quilibrium.com/Q-Community-logo.zip)
+
 ## Quilibrium Inc. and Q Storage
 
 Quilibrium Inc. is a company founded by Cassie Heart, Quilibrium's founder. It offers managed services such as the Quorum messenger, Q Storage (S3-compatible), and a Key Management Service (KMS). The company operates separately from the Quilibrium protocol itself. In fact, anyone can establish their own company and leverage the protocol to provide services.
@@ -180,4 +188,4 @@ Quorum keeps your messages private through end-to-end encryption, ensuring only 
 
 ### What is Quorum Apex, and how does it work?
 
-Quorum Apex is an alternative to Discord Nitro, offering unique subscriber benefits on the Quorum platform. A key feature is revenue sharing: when a user subscribes to a space with Apex, the subscription fee (paid in QUIL tokens) is split, with a portion going to the space’s community. Users can subscribe to up to four spaces per Apex payment, similar to boosting servers on Discord, but with the added incentive of financially rewarding community creators.
+Quorum Apex is an alternative to Discord Nitro, offering unique subscriber benefits on the Quorum platform. A key feature is revenue sharing: when a user subscribes to a space with Apex, the subscription fee (paid in $QUIL tokens) is split, with a portion going to the space’s community. Users can subscribe to up to four spaces per Apex payment, similar to boosting servers on Discord, but with the added incentive of financially rewarding community creators.
