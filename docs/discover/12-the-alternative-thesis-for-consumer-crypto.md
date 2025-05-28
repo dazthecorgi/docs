@@ -31,7 +31,7 @@ At Quilibrium, we believe that history doesn’t repeat, but it certainly rhymes
 
 In 1975, the Homebrew Computer Club in California envisioned a future where microcomputers would become widely accessible. At the time, computers were bulky, expensive, and required deep technical expertise to operate. Yet, visionaries such as Steve Jobs and Steve Wozniak saw beyond these barriers and introduced the Apple I, followed by the Apple II. Their innovations, which blended user-friendly hardware with an elegant software experience, reshaped the industry.
 
-IBM initially dismissed personal computers, believing them to be insignificant. However, by the early 1980s, it became clear that the consumer computing revolution was unstoppable. Apple’s commitment to usability and seamless hardware-software integration laid the foundation for modern personal computing, ultimately leading to the Macintosh in 1984—a device that truly transformed how people interacted with technology.
+IBM initially dismissed personal computers, believing them to be insignificant. However, by the early 1980s, it became clear that the consumer computing revolution was unstoppable. Apple’s commitment to usability and seamless hardware-software integration laid the foundation for modern personal computing, ultimately leading to the Macintosh in 1984 — a device that truly transformed how people interacted with technology.
 
 ### The Blockchain Revolution and Its Bottlenecks
 
@@ -41,7 +41,7 @@ Ethereum’s evolution, from its original proof-of-work model to its current pro
 
 ### Reimagining Crypto for Consumers: A New Approach
 
-At Quilibrium, we believe that consumer crypto needs to follow the same path as personal computing—by simplifying interactions, abstracting complexities, and integrating seamlessly with user experiences. Here’s how we’re achieving that:
+At Quilibrium, we believe that consumer crypto needs to follow the same path as personal computing — by simplifying interactions, abstracting complexities, and integrating seamlessly with user experiences. Here’s how we’re achieving that:
 
 1. **Efficient Storage and Computation** – By leveraging KZG commitments, we enable vast data storage that is both compact and verifiable. This removes unnecessary bottlenecks and reduces costs.
 2. **Single-Slot Finality** – Borrowing from cutting-edge cryptographic research, we’ve implemented single-slot finality, ensuring instant finalization of transactions without requiring excessive memory or historical data retention.
@@ -64,4 +64,4 @@ This unlocks new possibilities, including:
 
 Just as the Apple II and Macintosh revolutionized personal computing by prioritizing usability and integration, we believe Quilibrium is paving the way for the next generation of consumer crypto. By taking inspiration from computing history, we are designing a blockchain ecosystem that puts users first, simplifies interactions, and enables a richer, more secure digital experience.
 
-The future of consumer crypto isn’t about making finance more complex—it’s about making digital interactions more seamless, private, and accessible. At Quilibrium, we’re committed to building that future.
+The future of consumer crypto isn’t about making finance more complex — it’s about making digital interactions more seamless, private, and accessible. At Quilibrium, we’re committed to building that future.

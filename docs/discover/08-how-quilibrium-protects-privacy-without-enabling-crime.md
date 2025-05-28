@@ -1,12 +1,12 @@
 # How Quilibrium Protects Privacy Without Enabling Crime
 
-Quilibrium is designed to **protect user privacy** while also ensuring that it isn’t misused for illegal activities. Each coin in the network includes a special cryptographic marker that allows users to prove their funds are **not from illicit or sanctioned sources**. This means the system maintains both **privacy and compliance**—ensuring legitimate use without compromising security.
+Quilibrium is designed to **protect user privacy** while also ensuring that it isn’t misused for illegal activities. Each coin in the network includes a special cryptographic marker that allows users to prove their funds are **not from illicit or sanctioned sources**. This means the system maintains both **privacy and compliance** — ensuring legitimate use without compromising security.
 
 We do **not** support or promote criminal activity. Instead, Quilibrium has built-in safeguards to help users **legally and responsibly** maintain their privacy.
 
 ## **How Quilibrium’s Privacy Works**
 
-One of Quilibrium’s key privacy features is **“nescience”**—which means that the network itself doesn’t “see” the data it stores. This is similar to how encrypted messaging apps or cloud storage services work: **the provider has no direct access to user data**—or at least, they shouldn’t.
+One of Quilibrium’s key privacy features is **“nescience”** — which means that the network itself doesn’t “see” the data it stores. This is similar to how encrypted messaging apps or cloud storage services work: **the provider has no direct access to user data** — or at least, they shouldn’t.
 However, a completely hidden system **could** attract bad actors, so Quilibrium has built-in protections that prevent it from being abused. Let’s break it down.
 
 ## Security Measures Against Money Laundering
@@ -40,7 +40,7 @@ Before Quilibrium supports **any image hosting apps**, these safeguards will be 
 ## Preventing Criminal Use: Why Quilibrium Is a Bad Choice for Bad Actors
 
 
-As a basic consideration, most criminals take the **path of least resistance**—and Quilibrium is **not** the easiest option for illegal activities. Many crimes happen **in public, unencrypted chat groups** simply because it’s faster and easier.
+As a basic consideration, most criminals take the **path of least resistance** — and Quilibrium is **not** the easiest option for illegal activities. Many crimes happen **in public, unencrypted chat groups** simply because it’s faster and easier.
 
 That being said, if someone attempts to misuse Quilibrium for illegal activities, the network includes a unique mechanism to detect and isolate problematic content **without breaking encryption or compromising privacy**.
 
@@ -49,7 +49,7 @@ That being said, if someone attempts to misuse Quilibrium for illegal activities
 ### Identifying Problematic Shards Without Decryption
 
 Each shard in Quilibrium is **encrypted** by default, meaning its contents are hidden from everyone, including network operators.
-However, Quilibrium incorporates **verifiable encryption**—a cryptographic method that allows a third party (such as a compliance organization) to **confirm the presence of illegal content without decrypting the data**.
+However, Quilibrium incorporates **verifiable encryption** — a cryptographic method that allows a third party (such as a compliance organization) to **confirm the presence of illegal content without decrypting the data**.
 
 For example, a compliance entity like the **National Center for Missing & Exploited Children (NCMEC)** or a similar authority can verify that a shard contains illicit material based on pre-established cryptographic proofs.
 

@@ -16,7 +16,7 @@ No backend server is needed for serving static content.
 
 ## Building Dynamic Websites
 
-Dynamic behavior—like reading from or writing to storage, or performing private computations—is handled differently. Rather than maintaining a traditional backend server, your frontend can communicate directly with Quilibrium services using the provided SDKs:
+Dynamic behavior — like reading from or writing to storage, or performing private computations — is handled differently. Rather than maintaining a traditional backend server, your frontend can communicate directly with Quilibrium services using the provided SDKs:
 
 - **QStorage SDK**: for interacting with stored objects.
 - **QKMS SDK**: for managing key-based authentication and authorization.
@@ -24,7 +24,7 @@ Dynamic behavior—like reading from or writing to storage, or performing privat
 
 This approach lets you build full-featured dynamic applications without traditional cloud servers.
 
-If you only need basic data storage and retrieval, you can accomplish everything through the SDKs—**no QCL code is required**.
+If you only need basic data storage and retrieval, you can accomplish everything through the SDKs — **no QCL code is required**.
 
 However, if your application needs **private validation** (such as verifying conditions before writing data), you can optionally deploy small programs written in **QCL**.  
 QCL is Quilibrium’s computation language, designed for privacy and verifiability. It supports a curated subset of the Go standard library, focused on cryptographic, encoding, and mathematical operations.
@@ -55,4 +55,4 @@ Running your own Q node gives you full control over key management. Alternativel
 ## Summary
 
 For static sites, Quilibrium behaves much like a decentralized S3 bucket with a proxy.  
-For dynamic functionality, it replaces backend servers with secure SDKs and optional QCL programs for private logic—allowing your app to remain fully decentralized, yet dynamic and interactive.
+For dynamic functionality, it replaces backend servers with secure SDKs and optional QCL programs for private logic — allowing your app to remain fully decentralized, yet dynamic and interactive.

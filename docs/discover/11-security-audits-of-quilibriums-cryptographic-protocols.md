@@ -18,7 +18,7 @@ Quilibrium’s cryptographic backbone is built on established, battle-tested lib
 
 ### Quilibrium’s Unique Deployment: Timing an Audit
 
-While the individual libraries boast a solid audit legacy, their integration into Quilibrium’s MPC framework is an evolving endeavor. The network’s codebase remains in flux, adapting to the demands of a decentralized, privacy-preserving system. Conducting a comprehensive audit of this bespoke implementation now could be inefficient—both in terms of cost and relevance—given the ongoing changes. Instead, the optimal moment for a formal audit would come once Quilibrium’s protocol stack stabilizes, ensuring that resources are spent on a mature, finalized system.
+While the individual libraries boast a solid audit legacy, their integration into Quilibrium’s MPC framework is an evolving endeavor. The network’s codebase remains in flux, adapting to the demands of a decentralized, privacy-preserving system. Conducting a comprehensive audit of this bespoke implementation now could be inefficient — both in terms of cost and relevance — given the ongoing changes. Instead, the optimal moment for a formal audit would come once Quilibrium’s protocol stack stabilizes, ensuring that resources are spent on a mature, finalized system.
 
 ### wQUIL Wrapped Token Contract
 

@@ -2,7 +2,7 @@
 
 When you upload a file to QStorage, it is stored as an object. Objects consist of the file data and metadata that describes the object. You can have an unlimited number of objects in a bucket. Before you can upload files to a QStorage bucket, you need write permissions for the bucket.
 
-You can upload any file type—images, backups, data, movies, and so on—into a QStorage bucket. The maximum size of a file that you can upload depends on the method you use:
+You can upload any file type — images, backups, data, movies, and so on — into a QStorage bucket. The maximum size of a file that you can upload depends on the method you use:
 
 * Using the QStorage CLI: Up to 5 GB in a single operation
 * Using multipart upload: Up to 5 TB
