@@ -3,7 +3,7 @@
 \
 We believe that previous attempts to achieve this through trusted institutions have failed. This is evident from revelations by figures like Snowden, as well as the actions of companies like Cloudflare, whose role in deplatforming has raised concerns about their power to act as "internet cops."&#x20;
 
-**To address these issues, we need to decentralize the web securely—servers, storage, and traffic alike. This is no small challenge, and solving it requires robust, hard-tech solutions.**
+**To address these issues, we need to decentralize the web securely — servers, storage, and traffic alike. This is no small challenge, and solving it requires robust, hard-tech solutions.**
 
 [Cassandra Heart](https://warpcast.com/cassie), Q founder and lead dev, began to work on this idea in 2018 and since then a lot has been accomplished.
 
@@ -31,7 +31,7 @@ Q’s scaling design is inspired by the **“shared-nothing” architecture** us
 
 ### Structure
 
-Q is a **complete reinvention** of decentralized networks. Structurally, it doesn’t resemble a traditional blockchain. The closest comparison might be the **global proof sequencing** component, which functions more like a **timechain**—a term Satoshi Nakamoto originally used to describe Bitcoin’s blockchain. This design allows Q to operate in a fundamentally different way.
+Q is a **complete reinvention** of decentralized networks. Structurally, it doesn’t resemble a traditional blockchain. The closest comparison might be the **global proof sequencing** component, which functions more like a **timechain** — a term Satoshi Nakamoto originally used to describe Bitcoin’s blockchain. This design allows Q to operate in a fundamentally different way.
 
 ### Privacy
 

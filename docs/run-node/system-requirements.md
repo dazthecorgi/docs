@@ -126,7 +126,7 @@ Quilibrium v2.1 changes how hardware impacts rewards compared to v2.0.
 
 In v2.0, faster CPUs increased rewards by supporting more worker processes, but v2.1 introduces higher memory and storage demands per worker, reducing the CPU’s primary role. 
 
-A balanced setup—following the **1 CPU core to 2 GB RAM to 4 GB storage** ratio—is now recommended for v2.1’s long-term design, making earlier over-allocation less effective.
+A balanced setup — following the **1 CPU core to 2 GB RAM to 4 GB storage** ratio — is now recommended for v2.1’s long-term design, making earlier over-allocation less effective.
 
 Low-end options like Raspberry Pis function (with modest rewards and clustering potential), while modern hardware like AMD Ryzen, Apple Silicon (e.g., Mac Minis), and high-core servers excel; older Xeons typically underperform. 
 

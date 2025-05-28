@@ -6,9 +6,9 @@ Key management is one of the most critical aspects of security in the crypto and
 
 Most crypto organizations today use one of three common methods to store and manage private keys:
 
-- **Hot Wallets**: Keys live online—great for speed in exchanges or DeFi, but a magnet for malware and phishing.
+- **Hot Wallets**: Keys live online — great for speed in exchanges or DeFi, but a magnet for malware and phishing.
 - **Multisig Wallets**: Multiple signers and a smart contract split control, but phishing or code flaws (think Bybit’s fake interface trick) can unravel it.
-- **Cold Storage**: Offline keys in hardware or paper are secure until you need them—then it’s a slow, error-prone hassle, still open to insider theft.
+- **Cold Storage**: Offline keys in hardware or paper are secure until you need them — then it’s a slow, error-prone hassle, still open to insider theft.
 
 None of these methods provide a truly secure, scalable, and automated way to protect private keys.
 
@@ -44,11 +44,11 @@ Unlike some services that claim to use MPC but merely split keys across servers,
 
 ### 4. Programmable "Warm" Key Management
 
-Quilibrium’s MPC isn’t limited to hot or cold extremes. It introduces a "warm" configuration where keys can be programmed with strict rules—e.g., a key that only holds funds and can only sign a transaction moving them to a designated hot key. This deconstructs traditional categories, offering a hybrid of security and usability tailored to specific needs.
+Quilibrium’s MPC isn’t limited to hot or cold extremes. It introduces a "warm" configuration where keys can be programmed with strict rules — e.g., a key that only holds funds and can only sign a transaction moving them to a designated hot key. This deconstructs traditional categories, offering a hybrid of security and usability tailored to specific needs.
 
 ### 5. Flexible Security Configurations Without Manual Key Handling
 
-Traditional cold storage requires manually retrieving key backups to sign transactions, a slow and error-prone process. Quilibrium KMS eliminates the need to reconstruct keys manually by using MPC to sign transactions securely, regardless of whether the shards are custodied in a hot, cold, or intermediate "warm" configuration. While cold setups demand more effort to implement correctly, Quilibrium’s programmable MPC allows for tailored security rules—such as "warm" keys that only sign specific transactions—offering cold storage-like protection with greater flexibility.
+Traditional cold storage requires manually retrieving key backups to sign transactions, a slow and error-prone process. Quilibrium KMS eliminates the need to reconstruct keys manually by using MPC to sign transactions securely, regardless of whether the shards are custodied in a hot, cold, or intermediate "warm" configuration. While cold setups demand more effort to implement correctly, Quilibrium’s programmable MPC allows for tailored security rules — such as "warm" keys that only sign specific transactions — offering cold storage-like protection with greater flexibility.
 
 ## Why Quilibrium KMS is the Most Secure Key Management Solution
 
@@ -64,7 +64,7 @@ _\*Quilibrium can achieve cold storage-level security depending on shard custody
 
 :::info
 
-Tech alone isn’t enough—sloppy shard storage or social engineering can still bite. Pair KMS with tight practices for max strength.
+Tech alone isn’t enough — sloppy shard storage or social engineering can still bite. Pair KMS with tight practices for max strength.
 
 :::
 

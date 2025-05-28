@@ -8,7 +8,7 @@ Quilibrium (Q for short) is a protocol under active development with a core miss
 
 ### How long has Quilibrium been in development?
 
-Quilibrium’s origins date back about seven years (2018), starting as a hobby project aimed at creating an alternative to Discord. Initially, it was a federated system similar to Matrix, not yet peer-to-peer. Over the years, it evolved significantly into what it is today—an alternative to AWS—reflecting a substantial transformation from its early concept.
+Quilibrium’s origins date back about seven years (2018), starting as a hobby project aimed at creating an alternative to Discord. Initially, it was a federated system similar to Matrix, not yet peer-to-peer. Over the years, it evolved significantly into what it is today — an alternative to AWS — reflecting a substantial transformation from its early concept.
 
 ### What is Quilibrium's roadmap?
 
@@ -36,7 +36,7 @@ Additionally, node operators can maintain blacklists of troublesome core shards,
 
 Quilibrium’s permissionless protocol lets nodes run anywhere, using methods that make it harder to reveal identities compared to tools like Tor. Tor can be undermined by state actors in countries like the US or Germany, where they run many nodes to monitor traffic and unmask users, though this is less feasible in regions with fewer such nodes, like Brazil or Chile. 
 
-For users in restrictive environments relying on Q for activities like hosting sites or communicating, this could make IP tracking nearly impossible unless local state actors flood the network with nodes. However, complete safety isn’t guaranteed—websites on Q might still use JavaScript for browser fingerprinting, so users need to stay vigilant to avoid surveillance.
+For users in restrictive environments relying on Q for activities like hosting sites or communicating, this could make IP tracking nearly impossible unless local state actors flood the network with nodes. However, complete safety isn’t guaranteed — websites on Q might still use JavaScript for browser fingerprinting, so users need to stay vigilant to avoid surveillance.
 
 ### Can Quilibrium handle traffic from a big tech company with millions or billions of users?
 
@@ -109,7 +109,7 @@ Quilibrium aims to be highly competitive with AWS S3, particularly by emulating 
 
 ### What are the costs and options for hosting a website on Q Storage?
 
-Hosting a website on Quilibrium’s Q Storage service (provided by Quilibrium Inc.) includes a free tier of 5 GB, sufficient for minimal-payload static sites, with additional costs for larger sites based on tiered pricing. There are no extra fees for security, backups, or performance upgrades—replication and verifiable encryption are built into the protocol as standard features, not add-ons.
+Hosting a website on Quilibrium’s Q Storage service (provided by Quilibrium Inc.) includes a free tier of 5 GB, sufficient for minimal-payload static sites, with additional costs for larger sites based on tiered pricing. There are no extra fees for security, backups, or performance upgrades — replication and verifiable encryption are built into the protocol as standard features, not add-ons.
 
 ### How does Q Storage ensure fast website loading times?
 
@@ -142,7 +142,7 @@ These technologies work together to create a secure, private, and efficient dece
 
 ### How much does CPU power affect reward amounts in Quilibrium 2.0 versus 2.1?
 
-CPU power is just one factor influencing node rewards, and its role shifts significantly between Quilibrium 2.0 and 2.1. In 2.0, a faster, more efficient CPU allows a node to run more workers—additional processes that boost reward generation—making CPU performance a key driver of earnings. The more workers you can stack, the higher the rewards, directly tying output to CPU capability. However, the 2.1 upgrade changes this dynamic. It introduces substantial memory and storage requirements for each worker, shifting the bottleneck away from CPU power. While a more efficient CPU still helps, you can’t simply max out workers to leverage it as in 2.0—memory and storage demands now play a larger role, reducing the CPU’s dominance in determining rewards.
+CPU power is just one factor influencing node rewards, and its role shifts significantly between Quilibrium 2.0 and 2.1. In 2.0, a faster, more efficient CPU allows a node to run more workers — additional processes that boost reward generation — making CPU performance a key driver of earnings. The more workers you can stack, the higher the rewards, directly tying output to CPU capability. However, the 2.1 upgrade changes this dynamic. It introduces substantial memory and storage requirements for each worker, shifting the bottleneck away from CPU power. While a more efficient CPU still helps, you can’t simply max out workers to leverage it as in 2.0 — memory and storage demands now play a larger role, reducing the CPU’s dominance in determining rewards.
 
 ### If Q is fully encrypted, how can you prove that some data actually exists?  
 
@@ -158,7 +158,7 @@ CPU power is just one factor influencing node rewards, and its role shifts signi
 - Imagine cutting a valuable object into multiple pieces.
 - Lock each piece inside its own secure lockbox.
 - Take a picture showing all the closed lockboxes.
-- Split the photo into pieces, where each piece corresponds to a lockbox — like faces on fair dice.
+- Split the photo into pieces, where each piece corresponds to a lockbox  —  like faces on fair dice.
 - Roll the dice to decide which lockboxes to open and reveal.
 - By revealing only certain lockboxes you can't see the whole object, but you have enough proof that the object inside is real and intact, **without** ever needing to fully open or disclose it.
 
@@ -168,15 +168,15 @@ CPU power is just one factor influencing node rewards, and its role shifts signi
 
 ### What is Quorum Messenger and how do I start using it?
 
-[Quorum Messenger](https://www.quorummessenger.com/) is the world’s first secure, peer-to-peer, end-to-end encrypted (E2EE) group messaging app. It’s free to use, requires no phone number or payment, and lets you join conversations instantly. To start, simply open the app—no sign-up barriers or fees stand in your way, making it accessible for anyone looking to connect securely with groups or communities.
+[Quorum Messenger](https://www.quorummessenger.com/) is the world’s first secure, peer-to-peer, end-to-end encrypted (E2EE) group messaging app. It’s free to use, requires no phone number or payment, and lets you join conversations instantly. To start, simply open the app — no sign-up barriers or fees stand in your way, making it accessible for anyone looking to connect securely with groups or communities.
 
 ### How does Quorum support freedom of speech?
 
-Quorum champions freedom of speech by letting you speak freely within your communities without fear. Its Spaces are self-moderated, meaning your friend groups or communities—whether gamers, crypto enthusiasts, journalists, researchers, religious groups, political affiliates, or those avoiding politics—set their own rules. Unlike platforms with top-down censorship, Quorum hands control to users, ensuring your voice aligns with your community’s standards, not a central authority’s.
+Quorum champions freedom of speech by letting you speak freely within your communities without fear. Its Spaces are self-moderated, meaning your friend groups or communities — whether gamers, crypto enthusiasts, journalists, researchers, religious groups, political affiliates, or those avoiding politics — set their own rules. Unlike platforms with top-down censorship, Quorum hands control to users, ensuring your voice aligns with your community’s standards, not a central authority’s.
 
 ### What does it mean that Quorum is peer-to-peer?
 
-Quorum operates on a peer-to-peer system, meaning your chats don’t rely on a central server that could be shut down. Powered by Quilibrium and the libp2p stack, it connects users directly, letting you message from anywhere, anytime. It supports multiple protocols like TCP, QUIC, Websockets, and even LoRa, offering flexibility and resilience—no single point of failure can disconnect you.
+Quorum operates on a peer-to-peer system, meaning your chats don’t rely on a central server that could be shut down. Powered by Quilibrium and the libp2p stack, it connects users directly, letting you message from anywhere, anytime. It supports multiple protocols like TCP, QUIC, Websockets, and even LoRa, offering flexibility and resilience — no single point of failure can disconnect you.
 
 ### Why is Quorum being open source a big deal?
 
@@ -184,7 +184,7 @@ Quorum’s open-source nature means its code is public, free for anyone to inspe
 
 ### How private are my messages on Quorum?
 
-Quorum keeps your messages private through end-to-end encryption, ensuring only your intended recipients can read them—no one else, not even Quorum itself, can peek inside. Beyond that, its message brokering protocol hides who’s talking to whom, so even your contact list stays confidential. This dual-layer privacy protects both your words and your connections from prying eyes.
+Quorum keeps your messages private through end-to-end encryption, ensuring only your intended recipients can read them — no one else, not even Quorum itself, can peek inside. Beyond that, its message brokering protocol hides who’s talking to whom, so even your contact list stays confidential. This dual-layer privacy protects both your words and your connections from prying eyes.
 
 ### What is Quorum Apex, and how does it work?
 

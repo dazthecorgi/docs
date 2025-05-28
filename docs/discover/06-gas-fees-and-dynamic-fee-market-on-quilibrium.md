@@ -24,7 +24,7 @@ To keep fees fair, Quilibrium uses a **fee multiplier**. Here’s how it works:
 
 #### Why Is This Important?
 
-Without the multiplier system, fees could spike in high-demand situations, making transactions expensive or inaccessible. The **multiplier ensures fees stay balanced**, even if provers attempt to exploit demand. Provers can’t change their multipliers instantly—they must wait until the next proving window—adding stability to the market.
+Without the multiplier system, fees could spike in high-demand situations, making transactions expensive or inaccessible. The **multiplier ensures fees stay balanced**, even if provers attempt to exploit demand. Provers can’t change their multipliers instantly — they must wait until the next proving window — adding stability to the market.
 
 ### How High Can Fees Get?
 
