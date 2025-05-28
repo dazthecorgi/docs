@@ -4,9 +4,9 @@ One of the biggest problems in **blockchain mining** is **centralization** — w
 
 Quilibrium **2.1** introduces a new model called **Proof of Meaningful Work (PoMW)** that **fundamentally changes how mining works**. Instead of allowing **a few large players to dominate**, it ensures that mining rewards are **fairly distributed among many participants**, keeping the network **decentralized, secure, and resistant to manipulation**.
 
-## **The Problem: How Traditional PoW Leads to Centralization**
+## The Problem: How Traditional PoW Leads to Centralization
 
-### **How Bitcoin & Other PoW Networks Become Centralized**
+### How Bitcoin & Other PoW Networks Become Centralized
 
 * In **Bitcoin**, miners compete to solve **mathematical puzzles** to add blocks to the blockchain.
 * The **first miner to solve the puzzle wins** and gets the entire reward.
@@ -15,13 +15,13 @@ Quilibrium **2.1** introduces a new model called **Proof of Meaningful Work (PoM
   * Over time, **a few mining pools control most of the network**.
   * Today, **the top 6 Bitcoin mining pools** control **over 80% of the network**, making it less decentralized.
 
-### **Why This is Dangerous**
+### Why This is Dangerous
 
 * **51% Attack Risk** – If one or two mining pools control the majority of the network, they could **manipulate transactions** or **double-spend coins**.
 * **Power Concentration** – A few large entities effectively **decide how the network operates**.
 * **Hardware Barrier** – Small miners **can’t compete**, making mining **only profitable for big corporations**.
 
-### **Quilibrium’s Solution: Proof of Meaningful Work (PoMW)**
+### Quilibrium’s Solution: Proof of Meaningful Work (PoMW)
 
 Quilibrium **2.1** completely redesigns the mining system to prevent these issues. Instead of a **single winner-takes-all model**, it:
 
@@ -29,9 +29,9 @@ Quilibrium **2.1** completely redesigns the mining system to prevent these issue
 2. **Makes every miner do verifiable work**, preventing fake participation
 3. **Incentivizes decentralization by preventing mining pool dominance**
 
-## **How Quilibrium 2.1 Prevents Centralization**
+## How Quilibrium 2.1 Prevents Centralization
 
-### **Data Sharding – Distributing Mining Across the Network**
+### Data Sharding – Distributing Mining Across the Network
 
 Quilibrium 2.1 introduces a **sharded mining structure**, where the network is broken into **millions of potential shards** (approximately 2.5 million at the transition phase). Instead of having all miners compete to process the same dataset, **data is distributed across multiple shards, each containing a portion of the network state**. Miners can choose which shards to work on, but each shard has its own **unique proof structure**, making it computationally expensive to dominate multiple shards at once.
 
@@ -62,7 +62,7 @@ Quilibrium addresses this issue with a **dynamic issuance model** that adjusts m
 
 For example, when the number of verified computations reaches **100 million iterations**, Quilibrium will trigger the next generation of emissions, creating a temporary spike in mining rewards before they gradually taper off again. This is estimated to happen around 2033, and it ensures that mining remains profitable as technology advances, preventing an arms race where only those with the most sophisticated hardware can compete.
 
-### **How This Prevents Centralization**
+### How This Prevents Centralization
 
 * **Sustained Mining Incentives:** Rewards adjust dynamically, preventing a sharp decline in miner participation over time.
 * **Fair Entry for New Miners:** Unlike Bitcoin, where later miners face diminishing returns, Quilibrium ensures that new participants still have opportunities to mine profitably.
