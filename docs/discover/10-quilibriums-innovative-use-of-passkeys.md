@@ -1,5 +1,5 @@
 
-# Quilibrium's innovative use of passkeys
+# Quilibrium's Innovative Use of Passkeys
 
 In the evolving landscape of decentralized networks, Quilibrium has introduced a groundbreaking approach to user authentication and security by leveraging passkeys. This article delves into the intricacies of passkeys, their advantages over traditional crypto wallets, and how Quilibrium is implementing this technology to create a more secure and user-friendly decentralized ecosystem.
 
