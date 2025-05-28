@@ -4,7 +4,7 @@ Quilibrium is designed to **protect user privacy** while also ensuring that it i
 
 We do **not** support or promote criminal activity. Instead, Quilibrium has built-in safeguards to help users **legally and responsibly** maintain their privacy.
 
-## **How Quilibrium’s Privacy Works**
+## How Quilibrium’s Privacy Works
 
 One of Quilibrium’s key privacy features is **“nescience”** — which means that the network itself doesn’t “see” the data it stores. This is similar to how encrypted messaging apps or cloud storage services work: **the provider has no direct access to user data** — or at least, they shouldn’t.
 However, a completely hidden system **could** attract bad actors, so Quilibrium has built-in protections that prevent it from being abused. Let’s break it down.

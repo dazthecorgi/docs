@@ -3,11 +3,11 @@
 
 In the evolving landscape of decentralized networks, Quilibrium has introduced a groundbreaking approach to user authentication and security by leveraging passkeys. This article delves into the intricacies of passkeys, their advantages over traditional crypto wallets, and how Quilibrium is implementing this technology to create a more secure and user-friendly decentralized ecosystem.
 
-### Understanding Passkeys: A Simple Yet Powerful Authentication Method
+## Understanding Passkeys: A Simple Yet Powerful Authentication Method
 
 Passkeys represent a significant leap forward in authentication technology, offering a blend of security and convenience that surpasses traditional username-password combinations. To understand passkeys, it's helpful to compare them to a familiar authentication process: logging in with Google.
 
-#### The Google Login Example
+### The Google Login Example
 
 When you log into a website using your Google account, you're using a process called OpenID Connect. Here's how it typically works:
 
@@ -20,7 +20,7 @@ When you log into a website using your Google account, you're using a process ca
 
 This process links your Google identity with your Figma account, allowing for a seamless login experience across multiple platforms.
 
-#### How Passkeys Work
+### How Passkeys Work
 
 Passkeys operate on a similar principle but with some key differences:
 
@@ -30,7 +30,7 @@ Passkeys operate on a similar principle but with some key differences:
 4. When you return to the site, you're prompted to use your passkey for authentication.
 5. Your device uses the stored private key to sign a challenge from the server, proving your identity without ever transmitting the private key itself.
 
-### The Security Advantage: Passkeys vs. Crypto Wallets
+## The Security Advantage: Passkeys vs. Crypto Wallets
 
 Passkeys offer several security benefits over the private keys used in current crypto wallets:
 
@@ -40,7 +40,7 @@ Passkeys offer several security benefits over the private keys used in current c
 4. **Browser-Managed Security**: Passkeys are managed and secured by your browser or operating system, leveraging robust, built-in security features of your device.
 5. **Limited Scope of Risk**: In the worst-case scenario of a compromised passkey, the potential damage is limited to that specific account or application, not your entire digital asset portfolio.
 
-### Quilibrium's Implementation: A Wallet-Free Approach to Decentralized Networks
+## Quilibrium's Implementation: A Wallet-Free Approach to Decentralized Networks
 
 Quilibrium has taken a bold step by integrating passkeys into its decentralized network architecture. This approach offers several advantages:
 
@@ -50,7 +50,7 @@ Quilibrium has taken a bold step by integrating passkeys into its decentralized 
 4. **Decentralized Identity Management**: While each application on the Quilibrium network requires a separate passkey, the system allows for a form of decentralized identity management. Users can prove their identity across different applications without relying on a centralized authority.
 5. **Enhanced Fund Security**: By not relying on a single private key for all transactions, Quilibrium's approach significantly reduces the risk associated with managing cryptocurrency funds.
 
-### The Future of Decentralized Authentication
+## The Future of Decentralized Authentication
 
 Quilibrium's use of passkeys represents a significant step forward in making decentralized networks more accessible and secure. By adopting standards that are compatible with existing web infrastructure while leveraging the security benefits of decentralized systems, Quilibrium is paving the way for a new era of user-friendly, secure decentralized applications.
 
