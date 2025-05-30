@@ -1,23 +1,54 @@
 # How Quilibrium Protects Privacy Without Enabling Crime
 
-Quilibrium is designed to **protect user privacy** while also ensuring that it isn’t misused for illegal activities. Each coin in the network includes a special cryptographic marker that allows users to prove their funds are **not from illicit or sanctioned sources**. This means the system maintains both **privacy and compliance** — ensuring legitimate use without compromising security.
+Quilibrium is designed to **protect user privacy** while also ensuring that it isn’t misused for illegal activities.
 
-We do **not** support or promote criminal activity. Instead, Quilibrium has built-in safeguards to help users **legally and responsibly** maintain their privacy.
+Each coin in the network includes a special cryptographic marker that allows users to prove their funds are **not from illicit or sanctioned sources**. This means the system maintains both **privacy and compliance**—ensuring legitimate use without compromising security.
+
+We do **not** support or promote criminal activity.
+
+Instead, Quilibrium has built-in safeguards to help users **legally and responsibly** maintain their privacy.
 
 ## How Quilibrium’s Privacy Works
 
-One of Quilibrium’s key privacy features is **“nescience”** — which means that the network itself doesn’t “see” the data it stores. This is similar to how encrypted messaging apps or cloud storage services work: **the provider has no direct access to user data** — or at least, they shouldn’t.
-However, a completely hidden system **could** attract bad actors, so Quilibrium has built-in protections that prevent it from being abused. Let’s break it down.
+One of Quilibrium’s key privacy features is **“nescience”**—which means that the network itself doesn’t “see” the data it stores.
+
+This is similar to how encrypted messaging apps or cloud storage services work: **the provider has no direct access to user data**—or at least, they shouldn’t.
+
+However, a completely hidden system **could** attract bad actors, so Quilibrium has built-in protections that prevent it from being abused.
+
+Let’s break it down.
 
 ## Security Measures Against Money Laundering
 
 Quilibrium's built-in privacy creates a challenge: traditional banks and financial institutions won’t accept its coins unless there’s clear proof they’re legitimate, yet people still want to keep their financial details private.
 
-To address this, Quilibrium uses a special feature called a **bloom filter**. \
-Here’s how it works: when a coin is transferred, the bloom filter attaches the public address of the account holding it. If someone wants to check if the coin is linked to illegal activity (like money laundering), they can compare it to a public list of known bad actors, e.g. one provided by a financial institution.
+To address this, Quilibrium uses a special feature called a **bloom filter**.
 
-Based on this, they can choose to accept the coin or reject it. If rejected, the coin is sent back to a refund address. Coins can also be combined or split. When combined, their bloom filters merge, but this is the owner’s choice. When split, each new coin carries the same bloom filter as the original. This system helps protect privacy while offering a way to screen for suspicious activity, like money laundering, making it easier for users and institutions to cooperate.
+### Bloom Filters
+Bloom filters are used in the intersection data of the token, i.e. each time a token is transferred the accepting party computes their address through the hash function that maps to bits on the token's bloom filter.
 
+This could be thought of as a token's lineage, however it's not like a blockchain's ledger.
+
+If someone wants to check if the coin is linked to illegal activity (like money laundering), that token can be queried against a public (or private) list of known bad actors, e.g. one provided by a financial institution, and that query will result in a "yes" or "no" if the token has been owned by at least one address in that list.
+
+:::note
+When querying against a list, there response doesn't indicate which address (or addresses) it found in the list in the history, nor is there a way to tell when that happened.
+
+Also, if somebody were to query a list of one to try make a list of addresses a token has been owned by, it's limited by known account addresses.
+:::
+Based on the bloom filter's response (has it been associated any of these addresses on this list), a receiver can choose to accept the coin or reject it.
+
+If rejected, the coin is sent back to a refund address.
+
+### Further Bloom Filter Considerations During Token Operations
+Coins can also be combined or split:
+
+| Action | Token Bloom Filter Result | Note |
+|--------|---------------------|------|
+| Merge  | The final token will have bloom filters from all tokens included in the merge | The owner may explicitly exclude certain tokens with certain target addresses in their lineage as to avoid merging tainted tokens in with clean.|
+| Split | Resulting tokens have the same bloom filter as the original | `-` |
+
+This system helps protect privacy while offering a way to screen for suspicious activity, like money laundering, making it easier for users and institutions to cooperate.
 
 ## Balancing Privacy and Security in Different Use Cases
 

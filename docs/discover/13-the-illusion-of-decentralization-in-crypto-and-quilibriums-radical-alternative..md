@@ -6,7 +6,15 @@ This article is an extract from [this live stream](https://www.youtube.com/watch
 
 :::
 
-Decentralization has been the foundational promise of blockchain technology: a system where no single entity has control and power is distributed among participants. However, the reality of today’s major crypto networks tells a different story. The promise of decentralization has been steadily eroded due to several factors, including mining centralization, exchange dominance, financialization, and governance capture. Quilibrium recognizes these issues and is actively designing an alternative system that avoids these pitfalls.
+Decentralization has been the foundational promise of blockchain technology: a system where no single entity has control and power is distributed among participants. 
+
+However, the reality of today’s major crypto networks tells a different story. 
+
+The promise of decentralization has been steadily eroded due to several factors, including mining centralization, exchange dominance, financialization, and governance capture. 
+
+Quilibrium recognizes these issues and is actively designing an alternative system that avoids these pitfalls.
+
+## **Today's Blockchain Centralization**
 
 ### 1. Mining Centralization in Bitcoin
 
@@ -60,11 +68,11 @@ Examples include:
 
 ## Alternative to Blockchains: Why Quilibrium Takes a New Approach
 
-Recognizing the fundamental flaws in traditional blockchain networks, Quilibrium is pioneering an entirely new approach to decentralized infrastructure. Instead of relying on the limited and increasingly centralized blockchain model, Quilibrium is building a system that achieves global-scale decentralization without the bottlenecks of traditional chains.
+Recognizing the fundamental flaws in traditional blockchain networks, Quilibrium is pioneering an entirely new approach to decentralized infrastructure that achieves global-scale decentralization without blockchain bottlenecks.
 
 ### 1. Beyond Blockchain: A New Paradigm
 
-Quilibrium is not built on a traditional blockchain. Instead, it uses a network architecture based on parallelized, private execution to achieve instant finality at a global scale.
+Quilibrium uses a network architecture based on parallelized, private execution to achieve instant finality at a global scale.
 
 * **No Centralized Mining or Staking**: Unlike Bitcoin and Ethereum, Quilibrium does not rely on giant mining pools or staking mechanisms that lead to centralization.
 * **Parallel Processing**: The network is designed to handle massive amounts of data simultaneously, making it more scalable than blockchains that require every transaction to be serialized.
@@ -72,15 +80,19 @@ Quilibrium is not built on a traditional blockchain. Instead, it uses a network 
 
 ### 2. The Hypergraph Model
 
-Instead of using a traditional linear blockchain, Quilibrium organizes data in a hypergraph structure. This provides several advantages:
+Quilibrium organizes network data into a hypergraph structure which can be sharded out efficiently, rather than rely on a serialized, global ledger. 
 
-* **Scalability**: Data is stored and retrieved in a way that allows for exponential scaling.
+This provides several advantages:
+
+* **Scalability**: Network data is stored and retrieved in a way that allows for exponential scaling.
 * **Efficient Proofs**: Instead of relying on energy-intensive mining, Quilibrium uses verifiable cryptographic proofs that are lightweight and efficient.
 * **Decentralized Storage**: Unlike Ethereum, which struggles with high storage costs, Quilibrium allows data to be stored and accessed in a decentralized manner.
 
 ### 3. Decentralized API Services
 
-Quilibrium is focused on **real-world infrastructure** rather than speculative tokenomics. It is building decentralized alternatives to common cloud services:
+Quilibrium is focused on building a platform for **decentralized, real-world infrastructure** rather than trying to be yet another blockchain network. 
+
+Quilibrium-based solutions provide alternatives to common cloud services, such as:
 
 * **S3-Compatible Object Storage**: A decentralized equivalent to Amazon S3, allowing developers to store data securely.
 * **KMS (Key Management Service)**: A decentralized key management system that removes reliance on centralized custodians.
@@ -90,12 +102,15 @@ Quilibrium is focused on **real-world infrastructure** rather than speculative t
 
 Unlike many blockchain projects that allocate large portions of tokens to insiders, Quilibrium follows a fair launch model:
 
-* **No Pre-Mined Tokens**: Every participant starts on equal footing.
-* **Open Source Governance**: The project is licensed under AGPL to ensure its principles cannot be compromised.
-* **Community-Driven Growth**: Instead of relying on venture capital, Quilibrium is growing through grassroots adoption.
+* **No Pre-Mined Tokens**: When the network started, anyone could mine, not just a curated, private list of parties.
+* **Open Source Governance**: The project is licensed under AGPL which ensures its principles cannot be compromised.
+* **Community-Driven Growth**: Instead of relying primarily on venture capital to bootstrap the network with fancy ads and paid influencers, Quilibrium is growing through a base of authentic, grassroots-level engagement and development.
 
 ### 5. A Truly Decentralized Future
 
-By rejecting the flawed blockchain model and designing a truly scalable, privacy-preserving network, Quilibrium aims to achieve what Bitcoin and Ethereum originally set out to do but have since deviated from: a truly decentralized, censorship-resistant internet.
+By building a network without the shackles of a blockchain-first model, Quilibrium deploys a truly scalable, privacy-preserving, decentralized network that aims to achieve what Bitcoin and Ethereum originally set out to do, but have since deviated from: **a truly decentralized, censorship-resistant internet.**
 
-In conclusion, Quilibrium represents a fresh alternative to today’s increasingly centralized crypto landscape. By embracing a new architecture, it sidesteps the limitations of blockchain while still preserving the core ethos of decentralization, privacy, and security.
+## In Conclusion
+Quilibrium represents a fresh alternative to today’s increasingly centralized crypto landscape. 
+
+By embracing a new architecture, still steeped in proven cryptographic technology, it sidesteps the limitations of blockchain while still preserving the core ethos of decentralization, privacy, and security.
