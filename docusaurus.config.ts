@@ -1,171 +1,170 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
-import tailwindPlugin from "./plugins/tailwind-config.cjs"
-import 'dotenv/config';
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
+import tailwindPlugin from "./plugins/tailwind-config.cjs";
+import "dotenv/config";
 
 const COPYRIGHT = `
 Copyright © ${new Date().getFullYear()} Quilibrium, Inc. \
 <span>Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0.</a></span></br>
-Built with Docusaurus.`
+Built with Docusaurus.`;
 
 const config: Config = {
-  title: 'Quilibrium Docs',
-  tagline: 'Learn how to get started building on the network, run a node, or just understand the technology',
-  favicon: 'img/favicon.png',
+  title: "Quilibrium Docs",
+  tagline:
+    "Learn how to get started building on the network, run a node, or just understand the technology",
+  favicon: "img/favicon.png",
 
   // Set the production url of your site here
-  url: 'https://quilibrium.com',
+  url: "https://quilibrium.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
 
   // custom fields for the site
   customFields: {
-    apiTesterEnabled: process.env.ENABLE_API_TESTER === 'true',
+    apiTesterEnabled: process.env.ENABLE_API_TESTER === "true",
   },
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'QuilibriumNetwork', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+  organizationName: "QuilibriumNetwork", // Usually your GitHub org/user name.
+  projectName: "docs", // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: {
-          sidebarPath: './sidebars.ts',
+          sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/QuilibriumNetwork/docs/tree/main/',
+          editUrl: "https://github.com/QuilibriumNetwork/docs/tree/main/",
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
   ],
-  
-  plugins: [
-    tailwindPlugin,
-    require.resolve('docusaurus-lunr-search'),
-  ],
+
+  plugins: [tailwindPlugin, require.resolve("docusaurus-lunr-search")],
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/favicon.png',
+    image: "img/favicon.png",
     navbar: {
-      title: 'Quilibrium Docs',
+      title: "Quilibrium Docs",
       logo: {
-        alt: 'Quilibrium Logo',
-        src: 'img/q-symbol.png',
-        srcDark: 'img/q-symbol.png',
+        alt: "Quilibrium Logo",
+        src: "img/q-symbol.png",
+        srcDark: "img/q-symbol.png",
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'build',
-          position: 'left',
-          label: 'Build Applications',
+          type: "docSidebar",
+          sidebarId: "discover",
+          position: "left",
+          label: "Discover",
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'api',
-          position: 'left',
-          label: 'API Docs',
+          type: "docSidebar",
+          sidebarId: "learn",
+          position: "left",
+          label: "Learn",
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'run',
-          position: 'left',
-          label: 'Run a Node',
+          type: "docSidebar",
+          sidebarId: "build",
+          position: "left",
+          label: "Build",
+        },
+
+        {
+          type: "docSidebar",
+          sidebarId: "run",
+          position: "left",
+          label: "Run",
+        },
+
+        {
+          label: "Quilibrium Website",
+          href: "https://quilibrium.com",
+          position: "right",
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'discover',
-          position: 'left',
-          label: 'Discover',
-        },
-        {
-          label: 'Quilibrium Website',
-          href: 'https://quilibrium.com',
-          position: 'right',
-        },
-        {
-          label: 'Code',
-          href: 'https://github.com/QuilibriumNetwork',
-          position: 'right',
+          label: "Code",
+          href: "https://github.com/QuilibriumNetwork",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Docs',
+          title: "Docs",
           items: [
             {
-              label: 'Build Applications',
-              to: '/docs/category/applications',
+              label: "Build Applications",
+              to: "/docs/category/applications",
             },
             {
-              label: 'API Docs',
-              to: '/docs/api/overview',
+              label: "API Docs",
+              to: "/docs/api/overview",
             },
             {
-              label: 'Run a Node',
-              to: '/docs/run-node/quick-start',
+              label: "Run a Node",
+              to: "/docs/run-node/quick-start",
             },
             {
-              label: 'Discover',
-              to: '/docs/discover/FAQ/',
+              label: "Discover",
+              to: "/docs/discover/FAQ/",
             },
           ],
         },
         {
-          title: 'Community',
+          title: "Community",
           items: [
             {
-              label: 'Discourse Forum',
-              href: 'https://discourse.quilibrium.com/',
+              label: "Discourse Forum",
+              href: "https://discourse.quilibrium.com/",
             },
             {
-              label: 'Farcaster',
-              href: 'https://warpcast.com/~/channel/quilibrium',
+              label: "Farcaster",
+              href: "https://warpcast.com/~/channel/quilibrium",
             },
           ],
         },
         {
-          title: 'More',
+          title: "More",
           items: [
             {
-              label: 'Quilibrium Website',
-              href: 'https://quilibrium.com',
+              label: "Quilibrium Website",
+              href: "https://quilibrium.com",
             },
             {
-              label: 'Blog',
-              href: 'https://paragraph.xyz/@quilibrium.com',
+              label: "Blog",
+              href: "https://paragraph.xyz/@quilibrium.com",
             },
             {
-              label: 'X',
-              href: 'https://x.com/QuilibriumInc',
+              label: "X",
+              href: "https://x.com/QuilibriumInc",
             },
             {
-              label: 'Code',
-              href: 'https://github.com/QuilibriumNetwork',
+              label: "Code",
+              href: "https://github.com/QuilibriumNetwork",
             },
           ],
         },

@@ -4,6 +4,18 @@ import Icon from "@site/src/components/Icons"; // adjust path if needed
 import styles from "./styles.module.css";
 
 const features = [
+    {
+    href: "/docs/discover/what-is-quilibrium",
+    icon: "informationcircle",
+    title: "Discover",
+    description: "Quilibrium explained for everyone",
+  },
+    {
+    href: "/docs/learn/communication",
+    icon: "filebookmark",
+    title: "Learn",
+    description: "How the Quilibrium network works",
+  },
   {
     href: "/docs/category/applications",
     icon: "screwdriverwrench",
@@ -13,21 +25,10 @@ const features = [
   {
     href: "/docs/run-node/quick-start",
     icon: "sharingdata",
-    title: "Run a Node",
+    title: "Run",
     description: "How to run a node on the Quilibrium network",
   },
-  {
-    href: "/docs/learn/communication",
-    icon: "filebookmark",
-    title: "Learn",
-    description: "How the Quilibrium network works",
-  },
-  {
-    href: "/docs/discover/what-is-quilibrium",
-    icon: "informationcircle",
-    title: "Discover",
-    description: "Quilibrium explained for everyone",
-  },
+
 ];
 
 export default function HomepageFeatures(): JSX.Element {
