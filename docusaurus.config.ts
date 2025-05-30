@@ -97,6 +97,12 @@ const config: Config = {
           position: "left",
           label: "Run",
         },
+              {
+          type: "docSidebar",
+          sidebarId: "api",
+          position: "left",
+          label: "API",
+        },
 
         {
           label: "Quilibrium Website",
@@ -117,6 +123,14 @@ const config: Config = {
           title: "Docs",
           items: [
             {
+              label: "Discover Q",
+              to: "/docs/discover/FAQ/",
+            },
+            {
+              label: "Learn Q",
+              to: "/docs/learn/block-storage/",
+            },
+            {
               label: "Build Applications",
               to: "/docs/category/applications",
             },
@@ -124,13 +138,10 @@ const config: Config = {
               label: "API Docs",
               to: "/docs/api/overview",
             },
+
             {
               label: "Run a Node",
               to: "/docs/run-node/quick-start",
-            },
-            {
-              label: "Discover",
-              to: "/docs/discover/FAQ/",
             },
           ],
         },
