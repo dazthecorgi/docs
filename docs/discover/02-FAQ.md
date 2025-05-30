@@ -30,9 +30,13 @@ It also adopts a suboptimal default interaction model for core shards to deter a
 
 Additionally, node operators can maintain blacklists of troublesome core shards, identified by revealed decryption keys or compliance entity certifications, giving the community tools to curb exploitation. This approach preserves user privacy while weaving in compliance measures and deterrents against criminal use.
 
+Key material is never stored on the network, and nodes operate without access to user data. End-to-end encryption is performed client-side, preserving data integrity and confidentiality.
+
 *See also this [detailed article](how-quilibrium-protects-privacy-without-enabling-crime).*
 
 ### Can Quilibrium protect users in restrictive environments from government tracking?
+
+The network architecture includes mixnets and onion routing to obscure traffic patterns, making surveillance and traffic analysis significantly harder.
 
 Quilibrium’s permissionless protocol lets nodes run anywhere, using methods that make it harder to reveal identities compared to tools like Tor. Tor can be undermined by state actors in countries like the US or Germany, where they run many nodes to monitor traffic and unmask users, though this is less feasible in regions with fewer such nodes, like Brazil or Chile. 
 
@@ -40,25 +44,25 @@ For users in restrictive environments relying on Q for activities like hosting s
 
 ### Can Quilibrium handle traffic from a big tech company with millions or billions of users?
 
-Quilibrium’s shared-nothing architecture, similar to ScyllaDB, allows parallel transaction processing without resource conflicts, unlike Ethereum’s single-threaded model, which bottlenecks under high load. This design theoretically supports high traffic and is built to be as relatively conflict-free as possible. Quilibrium could support 100 million or even 2 billion daily active users (like Facebook), enabling massive scalability as long as transactions don’t conflict and the network grows sufficiently.
+Q’s shared-nothing architecture, similar to ScyllaDB, allows parallel transaction processing without resource conflicts, unlike Ethereum’s single-threaded model, which bottlenecks under high load. This design theoretically supports high traffic and is built to be as relatively conflict-free as possible. Quilibrium could support 100 million or even 2 billion daily active users (like Facebook), enabling massive scalability as long as transactions don’t conflict and the network grows sufficiently.
 
 ### How fast is Quilibrium?
 
-Quilibrium was designed to support ultra-scale applications like social networks and messaging apps fully on-chain.  
+Q was designed to support ultra-scale applications like social networks and messaging apps fully on-chain.  
 The network has been tested to handle up to 100 million messages per second (MPS). While MPS is not exactly the same as transactions per second (TPS), they are closely related. The actual TPS depends on the number of nodes available to handle the load. Initial estimates, based on previous node count statistics, suggest a realistic upper bound of 1.5–2.5 million TPS. Transaction finality: 0.2–10 seconds, depending on transaction complexity and hardware optimization.
 
 *Note: These figures will need to be confirmed when apps begin to be hosted on Quilibrium, starting with v2.1.*
 
 ### How does Quilibrium prevent centralization?
 
-Quilibrium prevents centralization by ensuring consensus doesn’t demand expensive hardware, making it possible for even a Raspberry Pi to handle the necessary calculations. It also embraces a range of hardware types for mining, thanks to the flexible complexity of its applications, opening participation to more users. To maintain decentralization, the network enforces minimum replication thresholds for core shards and halts operations if these drop too low, safeguarding data distribution. 
+Q prevents centralization by ensuring consensus doesn’t demand expensive hardware, making it possible for even a Raspberry Pi to handle the necessary calculations. It also embraces a range of hardware types for mining, thanks to the flexible complexity of its applications, opening participation to more users. To maintain decentralization, the network enforces minimum replication thresholds for core shards and halts operations if these drop too low, safeguarding data distribution. 
 Additionally, its tokenomics are crafted to welcome new miners when the network hits specific milestones, keeping entry barriers low and participation broad.
 
 *See also this [detailed article](how-does-quilibrium-maintain-decentralization).*
 
 ### What types of applications can be developed on Quilibrium?
 
-Quilibrium will be able to host any type of application, but the first generation of applications will probably fall in these categories:
+Q will be able to host any type of application, but the first generation of applications will probably fall in these categories:
 1. Social Media: image hosting, long-form content, social graphs
 2. Financial: tokenized assets, DeFi
 3. Common Web Dev: SPAs, file hosting
@@ -78,7 +82,7 @@ Via the [official bridge](https://quilibrium.com/bridge), users can bridge QUIL 
 
 ### Is there a Q wallet?
 
-Quilibrium doesn't use traditional wallets. Instead, it uses passkeys built into your browser or device. This system lets you interact directly with the network without a separate wallet app or seed phrases. It's designed to be more secure and user-friendly, working similarly to how you might log into websites with your Google account. This approach makes it easier for new users to join while keeping your digital assets safe.
+Q doesn't use traditional wallets. Instead, it uses passkeys built into your browser or device. This system lets you interact directly with the network without a separate wallet app or seed phrases. It's designed to be more secure and user-friendly, working similarly to how you might log into websites with your Google account. This approach makes it easier for new users to join while keeping your digital assets safe.
 That said, developers can still create applications  for managing QUIL tokens with an user experience similar to regular crypto wallets.
 
 ### Is there a Q explorer (like Etherscan)?
@@ -96,20 +100,20 @@ Right here! [Quilibrium logo kit](https://quilibrium.com/Quilibrium-logo.zip) - 
 
 ## Quilibrium Inc. and Q Storage
 
-Quilibrium Inc. is a company founded by Cassie Heart, Quilibrium's founder. It offers managed services such as the Quorum messenger, Q Storage (S3-compatible), and a Key Management Service (KMS). The company operates separately from the Quilibrium protocol itself. In fact, anyone can establish their own company and leverage the protocol to provide services.
+*Quilibrium Inc. is a company founded by Cassie Heart, Quilibrium's founder. It offers managed services such as the Quorum messenger, Q Storage (S3-compatible), and a Key Management Service (KMS). The company operates separately from the Quilibrium protocol itself. In fact, anyone can establish their own company and leverage the protocol to provide services.*
 
 ### How do customers pay for Quilibrium Inc.’s managed services?
 
-Customers can pay Quilibrium Inc. in fiat or stablecoins for predictable billing in their regional currency, easing the transition from platforms like AWS.
+Customers can pay Q Inc. in fiat or stablecoins for predictable billing in their regional currency, easing the transition from platforms like AWS.
 Quilibrium Inc. uses its own earned QUIL tokens (from running nodes) to settle network fees, ensuring the token retains utility for direct network interactions.
 
 ### How does Q Storage cost compare to AWS S3 or other cloud providers?
 
-Quilibrium aims to be highly competitive with AWS S3, particularly by emulating AWS’s free tier, offering 5 GB of storage at no cost, with additional tiers for subsequent data. Unlike AWS, where egress costs (charges for data retrieval) can escalate quickly, Quilibrium underwrites egress costs through its query execution model and upper-level caching for public S3 buckets. This makes it potentially cheaper than AWS for high-request scenarios, targeting competitiveness with Cloudflare’s R2, currently the cheapest S3 alternative.
+Q aims to be highly competitive with AWS S3, particularly by emulating AWS’s free tier, offering 5 GB of storage at no cost, with additional tiers for subsequent data. Unlike AWS, where egress costs (charges for data retrieval) can escalate quickly, Quilibrium underwrites egress costs through its query execution model and upper-level caching for public S3 buckets. This makes it potentially cheaper than AWS for high-request scenarios, targeting competitiveness with Cloudflare’s R2, currently the cheapest S3 alternative.
 
 ### What are the costs and options for hosting a website on Q Storage?
 
-Hosting a website on Quilibrium’s Q Storage service (provided by Quilibrium Inc.) includes a free tier of 5 GB, sufficient for minimal-payload static sites, with additional costs for larger sites based on tiered pricing. There are no extra fees for security, backups, or performance upgrades — replication and verifiable encryption are built into the protocol as standard features, not add-ons.
+Hosting a website on Q Storage includes a free tier of 5 GB, sufficient for minimal-payload static sites, with additional costs for larger sites based on tiered pricing. There are no extra fees for security, backups, or performance upgrades — replication and verifiable encryption are built into the protocol as standard features, not add-ons.
 
 ### How does Q Storage ensure fast website loading times?
 
@@ -139,6 +143,18 @@ For network native development, QCL, as a subset of GoLang, is the primary langu
 8. BlossomSub: Efficiently propagates messages across the network - [learn more](/docs/learn/communication/p2p-communication)
 
 These technologies work together to create a secure, private, and efficient decentralized network.
+
+### How are private keys stored on client devices?
+
+The storage of private keys depends on the client implementation. For example, Quilibrium's JavaScript SDK utilizes passkeys, which typically leverage secure enclaves or hardware security modules (HSMs) when available. This provides hardware-level protection for key material.
+
+### How does Quilibrium handle malicious nodes or network trust?
+
+Q uses a zero-trust model and includes one of the most maliciously secure consensus algorithms in the space. It minimizes the impact of adversarial nodes through cryptographic enforcement and protocol-level defenses.
+
+### Is Quilibrium resistant to quantum computing threats?
+
+Q currently uses elliptic curve cryptography (ECC) in some areas, which is not inherently post-quantum secure. However, these implementations use double the bit strength compared to typical networks, greatly increasing the computational cost of quantum attacks. As a result, less robust networks are likely to be compromised first, offering Quilibrium a critical early warning window. Thanks to its use of flexible proof systems like MPC-in-the-head, Quilibrium can migrate to post-quantum algorithms such as PICNIC with minimal disruption when the need arises.
 
 ### How much does CPU power affect reward amounts in Quilibrium 2.0 versus 2.1?
 
