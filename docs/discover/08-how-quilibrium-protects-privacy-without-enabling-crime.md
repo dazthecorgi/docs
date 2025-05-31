@@ -87,10 +87,10 @@ For example, a compliance entity like the **National Center for Missing & Exploi
 ### Blacklisting and Network-Wide Enforcement
 
 Once a shard is flagged as containing illegal content, **node operators can blacklist it**, preventing it from being replicated across the network.
+
 Quilibrium’s architecture allows **multiple blocklists to exist**, meaning different jurisdictions or compliance bodies can maintain their own lists, which network participants can synchronize with based on **local regulations**.
 
 Unlike **centralized social media**, where content moderation can be inconsistent or inefficient, Quilibrium's approach is **cryptographically verifiable and decentralized**, ensuring compliance without arbitrary censorship.
-
 
 By combining **privacy-preserving encryption** with **selective, verifiable blacklisting**, Quilibrium prevents illegal content from spreading while **preserving the privacy and integrity of legitimate users**.
 
