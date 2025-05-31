@@ -42,6 +42,13 @@ const config: Config = {
     locales: ["en"],
   },
 
+  future: {
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+      useCssCascadeLayers: true,
+    },
+  },
+
   presets: [
     [
       "classic",
