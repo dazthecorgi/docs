@@ -31,6 +31,8 @@ This could be thought of as a token's lineage, however it's not like a blockchai
 
 If someone wants to check if the coin is linked to illegal activity (like money laundering), that token can be queried against a public (or private) list of known bad actors, e.g. one provided by a financial institution, and that query will result in a "yes" or "no" if the token has been owned by at least one address in that list.
 
+Bloom filters are inherently probabilistic, but Q's modified Bloom filter works out that the probability of accidentally finding an address via a filter to be akin to specifying a single, specific atom and it's coordinates in a universe larger than our own.
+
 :::note
 When querying against a list, there response doesn't indicate which address (or addresses) it found in the list in the history, nor is there a way to tell when that happened.
 
