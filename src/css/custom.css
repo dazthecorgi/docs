@@ -1,296 +1,14 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Improved custom.css for Docusaurus + Tailwind CSS integration
+ * Optimized for better minification and maintainability
  */
 
+/* Tailwind directives - MUST be at the top */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* You can override the default Infima variables here. */
-:root {
-  /* Q Brand colors */
-  --white: #ffffff;
-  --pink: #ff056d;
-  --burgundy: #40001b;
-  --blue: #0287f2;
-  --purple: #6330ca;
-  --green: #22a941;
-  --orange: #ff6000;
-
-  --beige: #f0e9e4;
-  --dark-grey: #beb8b4;
-  --light-grey: #f8f8f8;
-
-  --light-pink: #ffe6f0;
-  --light-blue: #daeeff;
-  --light-purple: #e7ddff;
-  --light-green: #dbf4dc;
-  --light-orange: #ffe8df;
-
-  /* Docusaurus*/
-  --ifm-color-primary: var(--pink);
-  --ifm-color-primary-dark: #e60062;
-  --ifm-color-primary-darker: #cc0058;
-  --ifm-color-primary-darkest: #990043;
-
-  --ifm-color-primary-light: #ff2a7e;
-  --ifm-color-primary-lighter: #ff5594;
-  --ifm-color-primary-lightest: #ff87b0;
-
-  /* Custom valid-value properties - light theme */
-  --valid-value-bg: #f6f6f7;
-  --valid-value-color: #ff0172;
-  --valid-value-border: #e5e5e5;
-}
-
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme="dark"] {
-  /* Backgrounds */
-  --ifm-background-color: #1a0f15; /* dark burgundy-black base */
-  --ifm-background-surface-color: #2a101b; /* soft card contrast */
-  --bg-page: var(--ifm-background-color);
-  --bg-card: var(--ifm-background-surface-color);
-
-  /* Typography */
-  --ifm-font-color-base: #f0e9e4; /* beige-like soft text */
-  --ifm-color-content-secondary: #beb8b4; /* grey-muted text */
-
-  /* Primary (accents, links, hovers) */
-  --ifm-color-primary: var(--pink);
-  --ifm-color-primary-dark: #e6005f;
-  --ifm-color-primary-darker: #cc0055;
-  --ifm-color-primary-darkest: #990040;
-
-  --ifm-color-primary-light: #ff2a7e;
-  --ifm-color-primary-lighter: #ff5594;
-  --ifm-color-primary-lightest: #ff87b0;
-
-  /* Code highlights */
-  --docusaurus-highlighted-code-line-bg: rgba(
-    255,
-    5,
-    109,
-    0.05
-  ); /* subtle pink tint */
-
-  /* Custom valid-value */
-  --valid-value-bg: rgba(255, 5, 109, 0.12);
-  --valid-value-color: #ff85b4;
-  --valid-value-border: rgba(255, 5, 109, 0.3);
-}
-
-/* -------------------------------------------------------------------------- */
-/* Brand-Based Theming (Light + Soft Dark) */
-/* -------------------------------------------------------------------------- */
-
-:root {
-  /* Light Theme */
-  --bg-navbar-light: #f8f8f8;
-  --bg-sidebar-light: #f0e9e4;
-  --bg-page-light: #f8f8f8;
-  --bg-footer-light: #6d012e;
-  --bg-card-light: #ffffff;
-
-  /* Dark Theme (Soft Black-based) */
-  --bg-navbar-dark: #151415;      /* soft black */
-  --bg-sidebar-dark: #1b1a1c;
-  --bg-page-dark: #1e1d1f;
-  --bg-footer-dark: #161517;
-  --bg-card-dark: #252426;
-}
-
-/* Theme Variable Mapping */
-[data-theme='light'] {
-  --bg-navbar: var(--bg-navbar-light);
-  --bg-sidebar: var(--bg-sidebar-light);
-  --bg-page: var(--bg-page-light);
-  --bg-footer: var(--bg-footer-light);
-  --bg-card: var(--bg-card-light);
-}
-
-[data-theme='dark'] {
-  --bg-navbar: var(--bg-navbar-dark);
-  --bg-sidebar: var(--bg-sidebar-dark);
-  --bg-page: var(--bg-page-dark);
-  --bg-footer: var(--bg-footer-dark);
-  --bg-card: var(--bg-card-dark);
-  --border-subtle: rgba(255, 255, 255, 0.06); /* softened for dark base */
-}
-
-
-/* SOFT DARK THEME - BURGUNDY VARIATION */
-
-@media not all {
-  :root {
-    /* Light Theme */
-    --bg-navbar-light: #f8f8f8;
-    --bg-sidebar-light: #f0e9e4;
-    --bg-page-light: #f8f8f8;
-    --bg-footer-light: #6d012e;
-    --bg-card-light: #ffffff;
-
-    /* Dark Theme */
-    --bg-navbar-dark: #261217;
-    --bg-sidebar-dark: #2f1a1f;
-    --bg-page-dark: #392327;
-    --bg-footer-dark: #2a1319;
-    --bg-card-dark: #3e2a2f;
-  }
-
-  /* Active theme resolution */
-  [data-theme="light"] {
-    --bg-navbar: var(--bg-navbar-light);
-    --bg-sidebar: var(--bg-sidebar-light);
-    --bg-page: var(--bg-page-light);
-    --bg-footer: var(--bg-footer-light);
-    --bg-card: var(--bg-card-light);
-  }
-
-  [data-theme="dark"] {
-    --bg-navbar: var(--bg-navbar-dark);
-    --bg-sidebar: var(--bg-sidebar-dark);
-    --bg-page: var(--bg-page-dark);
-    --bg-footer: var(--bg-footer-dark);
-    --bg-card: var(--bg-card-dark);
-  }
-
-  /* Code Block Custom Styling - Dark Theme */
-
-  [data-theme="dark"] .theme-code-block {
-    background-color: #26171e !important; /* soft burgundy dark */
-    border-radius: 8px;
-    box-shadow: none !important;
-  }
-
-  [data-theme="dark"] .theme-code-block pre,
-  [data-theme="dark"] .theme-code-block code {
-    background-color: transparent !important;
-  }
-}
-
-/* END SOFT DARK THEME - BURGUNDY VARIATION */
-
-
-
-[data-theme="dark"] {
-  --border-subtle: rgba(
-    255,
-    255,
-    255,
-    0.1
-  ); /* or use --dark-grey if you want */
-}
-
-/* Layout Targets (shared for both themes) */
-
-/* Navbar */
-.navbar {
-  background-color: var(--bg-navbar);
-}
-
-/* Sidebar */
-.theme-doc-sidebar-container {
-  background-color: var(--bg-sidebar);
-}
-
-/* Main page wrapper + body fallback */
-body,
-.main-wrapper {
-  background-color: var(--bg-page);
-}
-
-/* Dark Theme Footer */
-[data-theme="dark"] .footer--dark {
-  background-color: var(--bg-footer);
-}
-
-/* Light Theme Footer with gradient from pink to burgundy */
-[data-theme="light"] .footer--dark {
-  background: linear-gradient(
-    236deg,
-    var(--pink) -50%,
-    #6d012e 50%,
-    var(--burgundy) 120%
-  );
-}
-
-/* Panels excluding admonitions */
-
-.theme-doc-markdown:not(.theme-admonition),
-.theme-doc-content:not(.theme-admonition) {
-  background-color: transparent;
-  box-shadow: none;
-  border-radius: 0;
-}
-
-[data-theme="dark"] .theme-doc-markdown,
-[data-theme="dark"] .theme-doc-content,
-[data-theme="dark"] .theme-doc-markdown.markdown {
-  background-color: var(--bg-page-dark);
-}
-
-/*borders*/
-
-[data-theme="dark"] {
-  /* Shared border color */
-  table,
-  td,
-  th,
-  .theme-doc-sidebar-container,
-  .pagination-nav__link {
-    border-color: var(--border-subtle);
-  }
-
-  /* Optional cleanup */
-  .theme-doc-markdown {
-    border-left: none;
-  }
-
-  /* Hover state override */
-  .pagination-nav__link:hover {
-    border-color: var(--pink);
-  }
-}
-
-/* Cards */
-
-[data-theme="light"] .card,
-.cardContainer {
-  border: none;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
-  transition: background-color var(--ifm-transition-fast) ease;
-}
-
-[data-theme="light"] .card:hover,
-.cardContainer:hover {
-  background-color: var(--light-pink);
-  border: none;
-}
-
-[data-theme="dark"] .card,
-[data-theme="dark"] .cardContainer {
-  border: none;
-  background-color: var(--bg-card);
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
-  transition: background-color var(--ifm-transition-fast) ease;
-}
-
-[data-theme="dark"] .card:hover,
-[data-theme="dark"] .cardContainer:hover {
-  background-color: var(--burgundy);
-  border: none;
-}
-
-/* -------------------------------------------------- */
-/* -------------------------------------------------- */
-/* Base Layout & Typography */
-/* -------------------------------------------------- */
-/* -------------------------------------------------- */
-
+/* Font Face Declarations - Early in the cascade */
 @font-face {
   font-family: "Inter";
   src: url("/fonts/Inter-Regular.woff2") format("woff2");
@@ -339,22 +57,91 @@ body,
   font-display: swap;
 }
 
-html {
-  scroll-behavior: smooth;
+/* ================================================
+   CSS CUSTOM PROPERTIES (Design System)
+   ================================================ */
+:root {
+  /* Q Brand Colors */
+  --white: #ffffff;
+  --pink: #ff056d;
+  --burgundy: #40001b;
+  --blue: #0287f2;
+  --purple: #6330ca;
+  --green: #22a941;
+  --orange: #ff6000;
+  --beige: #f0e9e4;
+  --dark-grey: #beb8b4;
+  --light-grey: #f8f8f8;
+  --light-pink: #ffe6f0;
+  --light-blue: #daeeff;
+  --light-purple: #e7ddff;
+  --light-green: #dbf4dc;
+  --light-orange: #ffe8df;
+
+  /* Docusaurus Theme Colors */
+  --ifm-color-primary: var(--pink);
+  --ifm-color-primary-dark: #e60062;
+  --ifm-color-primary-darker: #cc0058;
+  --ifm-color-primary-darkest: #990043;
+  --ifm-color-primary-light: #ff2a7e;
+  --ifm-color-primary-lighter: #ff5594;
+  --ifm-color-primary-lightest: #ff87b0;
+
+  /* Custom Component Properties */
+  --valid-value-bg: #f6f6f7;
+  --valid-value-color: #ff0172;
+  --valid-value-border: #e5e5e5;
+
+  /* Layout Background Variables */
+  --bg-navbar: #f8f8f8;
+  --bg-sidebar: #f0e9e4;
+  --bg-page: #f8f8f8;
+  --bg-footer: #6d012e;
+  --bg-card: #ffffff;
 }
 
-@layer base {
-  @layer base {
-    body {
-      background: var(--light-grey);
-      color: var(--burgundy);
-      font-family: var(--font-inter-sans);
-    }
+[data-theme="dark"] {
+  /* Dark Theme Backgrounds */
+  --ifm-background-color: #1a0f15;
+  --ifm-background-surface-color: #2a101b;
+  --ifm-font-color-base: #f0e9e4;
+  --ifm-color-content-secondary: #beb8b4;
 
-    [data-theme="dark"] body {
-      background: #121212;
-      color: var(--light-grey);
-    }
+  /* Dark Theme Primary Colors */
+  --ifm-color-primary: var(--pink);
+  --ifm-color-primary-dark: #e6005f;
+  --ifm-color-primary-darker: #cc0055;
+  --ifm-color-primary-darkest: #990040;
+  --ifm-color-primary-light: #ff2a7e;
+  --ifm-color-primary-lighter: #ff5594;
+  --ifm-color-primary-lightest: #ff87b0;
+
+  /* Dark Theme Custom Properties */
+  --valid-value-bg: rgba(255, 5, 109, 0.12);
+  --valid-value-color: #ff85b4;
+  --valid-value-border: rgba(255, 5, 109, 0.3);
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 5, 109, 0.05);
+
+  /* Dark Theme Layout Backgrounds */
+  --bg-navbar: #151415;
+  --bg-sidebar: #1b1a1c;
+  --bg-page: #1e1d1f;
+  --bg-footer: #161517;
+  --bg-card: #252426;
+}
+
+/* ================================================
+   BASE LAYER - Global base styles
+   ================================================ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Inter", sans-serif !important;
+    background-color: var(--bg-page);
   }
 
   h1,
@@ -363,15 +150,152 @@ html {
   h4,
   h5,
   h6 {
-    @apply font-heading;
+    font-family: "AtAero", sans-serif !important;
   }
 }
 
-/* -------------------------------------------------- */
-/* Utilities (spacing, layout, gradients, etc.) */
-/* -------------------------------------------------- */
+/* ================================================
+   COMPONENTS LAYER - Reusable component styles
+   ================================================ */
+@layer components {
+  /* Navigation */
+  .navbar {
+    background-color: var(--bg-navbar);
+  }
 
+  .navbar__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-left: 0.5rem;
+    font-family: "AtAero", sans-serif;
+  }
+
+  /* Sidebar */
+  .theme-doc-sidebar-container {
+    background-color: var(--bg-sidebar);
+  }
+
+  /* Main Layout */
+  .main-wrapper {
+    background-color: var(--bg-page);
+  }
+
+  /* Footer - Override the CSS custom property that Docusaurus uses */
+  .footer--dark {
+    --ifm-footer-background-color: transparent !important;
+    --ifm-footer-color: var(--white) !important;
+    --ifm-footer-link-color: var(--white) !important;
+    --ifm-footer-title-color: var(--white) !important;
+  }
+
+  [data-theme="dark"] .footer--dark {
+    --ifm-footer-color: var(--light-grey) !important;
+    --ifm-footer-link-color: var(--light-grey) !important;
+    --ifm-footer-title-color: var(--light-grey) !important;
+  }
+
+  /* Apply the gradient background with maximum specificity using bg-burgundy-pink-4 */
+  footer.footer.footer--dark,
+  .footer.footer--dark,
+  footer[class*="footer--dark"],
+  .theme-doc-footer-wrapper footer {
+    background: linear-gradient(
+      180deg,
+      var(--pink) -130%,
+      var(--burgundy) 120%
+    ) !important;
+    background-color: var(--burgundy) !important; /* fallback */
+  }
+
+  .footer--dark a {
+    color: inherit;
+  }
+
+  /* Cards */
+  .card,
+  .cardContainer {
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
+    transition: background-color 200ms;
+    padding: 1.5rem;
+    border: none;
+    background-color: var(--bg-card);
+  }
+
+  [data-theme="light"] .card:hover,
+  [data-theme="light"] .cardContainer:hover {
+    background-color: var(--light-pink);
+  }
+
+  [data-theme="dark"] .card:hover,
+  [data-theme="dark"] .cardContainer:hover {
+    background-color: var(--burgundy);
+  }
+
+  /* Custom Component: Valid Value Badge */
+  .valid-value {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.25rem;
+    transition: all 200ms;
+    font-family: var(--ifm-font-family-monospace);
+    background-color: var(--valid-value-bg);
+    color: var(--valid-value-color);
+    border: 1px solid var(--valid-value-border);
+  }
+
+  .valid-value:hover {
+    color: white;
+    background-color: var(--ifm-color-primary);
+    border-color: var(--ifm-color-primary);
+  }
+
+  /* Custom Component: Responsive Video */
+  .video-responsive {
+    position: relative;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  }
+
+  .video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Custom Component: Responsive Centered Image */
+  .responsive-centered-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Learn Page Code Block Override */
+  .learn-page code {
+    border: none;
+    background-color: transparent;
+  }
+
+  .learn-page pre {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+/* ================================================
+   UTILITIES LAYER - Single-purpose utility classes
+   ================================================ */
 @layer utilities {
+  /* Brand Gradient Utilities */
   .bg-burgundy-pink {
     background: linear-gradient(120deg, var(--burgundy), var(--pink));
   }
@@ -419,6 +343,7 @@ html {
     );
   }
 
+  /* Animated Gradient Text */
   .gradient-sweep {
     display: block;
     background-size: 200% auto;
@@ -451,101 +376,65 @@ html {
     );
   }
 
-  @keyframes gradient-sweep {
-    0% {
-      background-position: 200% center;
-    }
-    100% {
-      background-position: -200% center;
-    }
-  }
-
+  /* Shadow Utilities */
   .drop-shadow-box {
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.02);
   }
 
-  @keyframes spinner-animation {
-    0%,
-    100% {
-      transform: scale(0.9);
-      opacity: 0.3;
-    }
-    50% {
-      transform: scale(1.1);
-      opacity: 1;
-    }
-  }
-
+  /* Animation Utilities */
   .spinner-animation {
     animation: spinner-animation 3s ease-in-out infinite;
   }
 }
 
-/* -------------------------------------------------- */
-/* Other custom styles */
-/* -------------------------------------------------- */
-
-.navbar__title {
-  font-size: 1.25rem;
-  font-family: "AtAero", sans-serif;
-  margin-left: 0.5rem;
-  font-weight: 600;
+/* ================================================
+   KEYFRAMES - Animation definitions
+   ================================================ */
+@keyframes gradient-sweep {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
 }
 
-/* Undo Docusaurus styling for code blocks in the learn section. */
-.learn-page code {
-  border: none;
-  background-color: initial;
+@keyframes spinner-animation {
+  0%,
+  100% {
+    transform: scale(0.9);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
 }
 
-.learn-page pre {
-  border: none;
-  background-color: initial;
-  padding: initial;
-}
+/* ================================================
+   THEME-SPECIFIC OVERRIDES
+   ================================================ */
+[data-theme="dark"] {
+  /* Dark theme border colors */
+  table,
+  td,
+  th,
+  .theme-doc-sidebar-container,
+  .pagination-nav__link {
+    border-color: var(--border-subtle);
+  }
 
-/* Custom style for valid values in documentation */
-.valid-value {
-  display: inline-block;
-  padding: 0.2rem 0.5rem;
-  font-family: var(--ifm-font-family-monospace);
-  font-size: var(--ifm-code-font-size);
-  background-color: var(--valid-value-bg);
-  color: var(--valid-value-color);
-  border: 1px solid var(--valid-value-border);
-  border-radius: 4px;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
+  .theme-doc-markdown {
+    border-left: none;
+  }
 
-.valid-value:hover {
-  background-color: var(--ifm-color-primary);
-  color: white;
-  border-color: var(--ifm-color-primary);
-}
+  .pagination-nav__link:hover {
+    border-color: var(--pink);
+  }
 
-/* Responsive video */
-.video-responsive {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-}
-
-.video-responsive iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Responsive centered image */
-.responsive-centered-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  height: auto;
+  /* Dark theme content backgrounds */
+  .theme-doc-markdown,
+  .theme-doc-content {
+    background-color: var(--bg-page);
+  }
 }
