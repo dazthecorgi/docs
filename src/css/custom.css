@@ -344,17 +344,15 @@ html {
 }
 
 @layer base {
-  @layer base {
-    body {
-      background: var(--light-grey);
-      color: var(--burgundy);
-      font-family: var(--font-inter-sans);
-    }
+  body {
+    background: var(--light-grey);
+    color: var(--burgundy);
+    font-family: var(--font-inter-sans);
+  }
 
-    [data-theme="dark"] body {
-      background: #121212;
-      color: var(--light-grey);
-    }
+  [data-theme="dark"] body {
+    background: #121212;
+    color: var(--light-grey);
   }
 
   h1,
