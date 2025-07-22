@@ -8,7 +8,7 @@ Quilibrium (Q for short) is a protocol under active development with a core miss
 
 ### How long has Quilibrium been in development?
 
-Quilibrium’s origins date back about seven years (2018), starting as a hobby project aimed at creating an alternative to Discord. Initially, it was a federated system similar to Matrix, not yet peer-to-peer. Over the years, it evolved significantly into what it is today—an alternative to AWS—reflecting a substantial transformation from its early concept.
+Quilibrium’s origins date back about seven years (2018), starting as a hobby project aimed at creating an alternative to Discord. Initially, it was a federated system similar to Matrix, not yet peer-to-peer. Over the years, it evolved significantly into what it is today — an alternative to AWS — reflecting a substantial transformation from its early concept.
 
 ### What is Quilibrium's roadmap?
 
@@ -30,35 +30,39 @@ It also adopts a suboptimal default interaction model for core shards to deter a
 
 Additionally, node operators can maintain blacklists of troublesome core shards, identified by revealed decryption keys or compliance entity certifications, giving the community tools to curb exploitation. This approach preserves user privacy while weaving in compliance measures and deterrents against criminal use.
 
+Key material is never stored on the network, and nodes operate without access to user data. End-to-end encryption is performed client-side, preserving data integrity and confidentiality.
+
 *See also this [detailed article](how-quilibrium-protects-privacy-without-enabling-crime).*
 
 ### Can Quilibrium protect users in restrictive environments from government tracking?
 
+The network architecture includes mixnets and onion routing to obscure traffic patterns, making surveillance and traffic analysis significantly harder.
+
 Quilibrium’s permissionless protocol lets nodes run anywhere, using methods that make it harder to reveal identities compared to tools like Tor. Tor can be undermined by state actors in countries like the US or Germany, where they run many nodes to monitor traffic and unmask users, though this is less feasible in regions with fewer such nodes, like Brazil or Chile. 
 
-For users in restrictive environments relying on Q for activities like hosting sites or communicating, this could make IP tracking nearly impossible unless local state actors flood the network with nodes. However, complete safety isn’t guaranteed—websites on Q might still use JavaScript for browser fingerprinting, so users need to stay vigilant to avoid surveillance.
+For users in restrictive environments relying on Q for activities like hosting sites or communicating, this could make IP tracking nearly impossible unless local state actors flood the network with nodes. However, complete safety isn’t guaranteed — websites on Q might still use JavaScript for browser fingerprinting, so users need to stay vigilant to avoid surveillance.
 
 ### Can Quilibrium handle traffic from a big tech company with millions or billions of users?
 
-Quilibrium’s shared-nothing architecture, similar to ScyllaDB, allows parallel transaction processing without resource conflicts, unlike Ethereum’s single-threaded model, which bottlenecks under high load. This design theoretically supports high traffic and is built to be as relatively conflict-free as possible. Quilibrium could support 100 million or even 2 billion daily active users (like Facebook), enabling massive scalability as long as transactions don’t conflict and the network grows sufficiently.
+Q’s shared-nothing architecture, similar to ScyllaDB, allows parallel transaction processing without resource conflicts, unlike Ethereum’s single-threaded model, which bottlenecks under high load. This design theoretically supports high traffic and is built to be as relatively conflict-free as possible. Quilibrium could support 100 million or even 2 billion daily active users (like Facebook), enabling massive scalability as long as transactions don’t conflict and the network grows sufficiently.
 
 ### How fast is Quilibrium?
 
-Quilibrium was designed to support ultra-scale applications like social networks and messaging apps fully on-chain.  
+Q was designed to support ultra-scale applications like social networks and messaging apps fully on-chain.  
 The network has been tested to handle up to 100 million messages per second (MPS). While MPS is not exactly the same as transactions per second (TPS), they are closely related. The actual TPS depends on the number of nodes available to handle the load. Initial estimates, based on previous node count statistics, suggest a realistic upper bound of 1.5–2.5 million TPS. Transaction finality: 0.2–10 seconds, depending on transaction complexity and hardware optimization.
 
 *Note: These figures will need to be confirmed when apps begin to be hosted on Quilibrium, starting with v2.1.*
 
 ### How does Quilibrium prevent centralization?
 
-Quilibrium prevents centralization by ensuring consensus doesn’t demand expensive hardware, making it possible for even a Raspberry Pi to handle the necessary calculations. It also embraces a range of hardware types for mining, thanks to the flexible complexity of its applications, opening participation to more users. To maintain decentralization, the network enforces minimum replication thresholds for core shards and halts operations if these drop too low, safeguarding data distribution. 
+Q prevents centralization by ensuring consensus doesn’t demand expensive hardware, making it possible for even a Raspberry Pi to handle the necessary calculations. It also embraces a range of hardware types for mining, thanks to the flexible complexity of its applications, opening participation to more users. To maintain decentralization, the network enforces minimum replication thresholds for core shards and halts operations if these drop too low, safeguarding data distribution. 
 Additionally, its tokenomics are crafted to welcome new miners when the network hits specific milestones, keeping entry barriers low and participation broad.
 
 *See also this [detailed article](how-does-quilibrium-maintain-decentralization).*
 
 ### What types of applications can be developed on Quilibrium?
 
-Quilibrium will be able to host any type of application, but the first generation of applications will probably fall in these categories:
+Q will be able to host any type of application, but the first generation of applications will probably fall in these categories:
 1. Social Media: image hosting, long-form content, social graphs
 2. Financial: tokenized assets, DeFi
 3. Common Web Dev: SPAs, file hosting
@@ -74,12 +78,11 @@ QUIL is a utility token designed for use within the Quilibrium network. It is no
 ### What is the wQUIL (ERC20) token?
 
 wQUIL is the official token bridged to Ethereum, contract: `0x8143182a775c54578c8b7b3ef77982498866945d`
-
-Via the official bridge, users can bridge QUIL to wQUIL and viceversa.
+Via the [official bridge](https://quilibrium.com/bridge), users can bridge QUIL to wQUIL and viceversa.
 
 ### Is there a Q wallet?
 
-Quilibrium doesn't use traditional wallets. Instead, it uses passkeys built into your browser or device. This system lets you interact directly with the network without a separate wallet app or seed phrases. It's designed to be more secure and user-friendly, working similarly to how you might log into websites with your Google account. This approach makes it easier for new users to join while keeping your digital assets safe.
+Q doesn't use traditional wallets. Instead, it uses passkeys built into your browser or device. This system lets you interact directly with the network without a separate wallet app or seed phrases. It's designed to be more secure and user-friendly, working similarly to how you might log into websites with your Google account. This approach makes it easier for new users to join while keeping your digital assets safe.
 That said, developers can still create applications  for managing QUIL tokens with an user experience similar to regular crypto wallets.
 
 ### Is there a Q explorer (like Etherscan)?
@@ -89,22 +92,28 @@ The network has overall active proof state, prover rings, total supply. These ar
 The contents of transactions or their settled states are however invisible unless you possess relevant key material to the transaction. 
 Note the above applies only to native QUIL. wQUIL remains queryable via block explorers.
 
+### Where can I download the logo kits for Quilibrium, Quorum, and Q Community?
+
+Right here! [Quilibrium logo kit](https://quilibrium.com/Quilibrium-logo.zip) - [Quorum logo kit](https://quilibrium.com/Quorum-logo.zip) - [Q Community logo kit](https://quilibrium.com/Q-Community-logo.zip)
+
+---
+
 ## Quilibrium Inc. and Q Storage
 
-Quilibrium Inc. is a company founded by Cassie Heart, Quilibrium's founder. It offers managed services such as the Quorum messenger, Q Storage (S3-compatible), and a Key Management Service (KMS). The company operates separately from the Quilibrium protocol itself. In fact, anyone can establish their own company and leverage the protocol to provide services.
+*Quilibrium Inc. is a company founded by Cassie Heart, Quilibrium's founder. It offers managed services such as the Quorum messenger, Q Storage (S3-compatible), and a Key Management Service (KMS). The company operates separately from the Quilibrium protocol itself. In fact, anyone can establish their own company and leverage the protocol to provide services.*
 
 ### How do customers pay for Quilibrium Inc.’s managed services?
 
-Customers can pay Quilibrium Inc. in fiat or stablecoins for predictable billing in their regional currency, easing the transition from platforms like AWS.
+Customers can pay Q Inc. in fiat or stablecoins for predictable billing in their regional currency, easing the transition from platforms like AWS.
 Quilibrium Inc. uses its own earned QUIL tokens (from running nodes) to settle network fees, ensuring the token retains utility for direct network interactions.
 
 ### How does Q Storage cost compare to AWS S3 or other cloud providers?
 
-Quilibrium aims to be highly competitive with AWS S3, particularly by emulating AWS’s free tier, offering 5 GB of storage at no cost, with additional tiers for subsequent data. Unlike AWS, where egress costs (charges for data retrieval) can escalate quickly, Quilibrium underwrites egress costs through its query execution model and upper-level caching for public S3 buckets. This makes it potentially cheaper than AWS for high-request scenarios, targeting competitiveness with Cloudflare’s R2, currently the cheapest S3 alternative.
+Q aims to be highly competitive with AWS S3, particularly by emulating AWS’s free tier, offering 5 GB of storage at no cost, with additional tiers for subsequent data. Unlike AWS, where egress costs (charges for data retrieval) can escalate quickly, Quilibrium underwrites egress costs through its query execution model and upper-level caching for public S3 buckets. This makes it potentially cheaper than AWS for high-request scenarios, targeting competitiveness with Cloudflare’s R2, currently the cheapest S3 alternative.
 
 ### What are the costs and options for hosting a website on Q Storage?
 
-Hosting a website on Quilibrium’s Q Storage service (provided by Quilibrium Inc.) includes a free tier of 5 GB, sufficient for minimal-payload static sites, with additional costs for larger sites based on tiered pricing. There are no extra fees for security, backups, or performance upgrades—replication and verifiable encryption are built into the protocol as standard features, not add-ons.
+Hosting a website on Q Storage includes a free tier of 5 GB, sufficient for minimal-payload static sites, with additional costs for larger sites based on tiered pricing. There are no extra fees for security, backups, or performance upgrades — replication and verifiable encryption are built into the protocol as standard features, not add-ons.
 
 ### How does Q Storage ensure fast website loading times?
 
@@ -113,6 +122,8 @@ For websites hosted via Q Storage’s public bucket proxy, fast loading relies o
 ### Can users migrate an existing website to Q Storage, and what’s needed?
 
 Yes, existing static websites can be migrated to Q Storage, though dynamic back-end services aren’t yet supported. Users need to buy a domain separately, as Q Storage doesn’t offer domain management, but it provides CNAME values to route the domain to the public bucket.
+
+---
 
 ## Technical Questions
 
@@ -133,9 +144,21 @@ For network native development, QCL, as a subset of GoLang, is the primary langu
 
 These technologies work together to create a secure, private, and efficient decentralized network.
 
+### How are private keys stored on client devices?
+
+The storage of private keys depends on the client implementation. For example, Quilibrium's JavaScript SDK utilizes passkeys, which typically leverage secure enclaves or hardware security modules (HSMs) when available. This provides hardware-level protection for key material.
+
+### How does Quilibrium handle malicious nodes or network trust?
+
+Q uses a zero-trust model and includes one of the most maliciously secure consensus algorithms in the space. It minimizes the impact of adversarial nodes through cryptographic enforcement and protocol-level defenses.
+
+### Is Quilibrium resistant to quantum computing threats?
+
+Q currently uses elliptic curve cryptography (ECC) in some areas, which is not inherently post-quantum secure. However, these implementations use double the bit strength compared to typical networks, greatly increasing the computational cost of quantum attacks. As a result, less robust networks are likely to be compromised first, offering Quilibrium a critical early warning window. Thanks to its use of flexible proof systems like MPC-in-the-head, Quilibrium can migrate to post-quantum algorithms such as PICNIC with minimal disruption when the need arises.
+
 ### How much does CPU power affect reward amounts in Quilibrium 2.0 versus 2.1?
 
-CPU power is just one factor influencing node rewards, and its role shifts significantly between Quilibrium 2.0 and 2.1. In 2.0, a faster, more efficient CPU allows a node to run more workers—additional processes that boost reward generation—making CPU performance a key driver of earnings. The more workers you can stack, the higher the rewards, directly tying output to CPU capability. However, the 2.1 upgrade changes this dynamic. It introduces substantial memory and storage requirements for each worker, shifting the bottleneck away from CPU power. While a more efficient CPU still helps, you can’t simply max out workers to leverage it as in 2.0—memory and storage demands now play a larger role, reducing the CPU’s dominance in determining rewards.
+CPU power is just one factor influencing node rewards, and its role shifts significantly between Quilibrium 2.0 and 2.1. In 2.0, a faster, more efficient CPU allows a node to run more workers — additional processes that boost reward generation — making CPU performance a key driver of earnings. The more workers you can stack, the higher the rewards, directly tying output to CPU capability. However, the 2.1 upgrade changes this dynamic. It introduces substantial memory and storage requirements for each worker, shifting the bottleneck away from CPU power. While a more efficient CPU still helps, you can’t simply max out workers to leverage it as in 2.0 — memory and storage demands now play a larger role, reducing the CPU’s dominance in determining rewards.
 
 ### If Q is fully encrypted, how can you prove that some data actually exists?  
 
@@ -151,24 +174,25 @@ CPU power is just one factor influencing node rewards, and its role shifts signi
 - Imagine cutting a valuable object into multiple pieces.
 - Lock each piece inside its own secure lockbox.
 - Take a picture showing all the closed lockboxes.
-- Split the photo into pieces, where each piece corresponds to a lockbox — like faces on fair dice.
+- Split the photo into pieces, where each piece corresponds to a lockbox  —  like faces on fair dice.
 - Roll the dice to decide which lockboxes to open and reveal.
 - By revealing only certain lockboxes you can't see the whole object, but you have enough proof that the object inside is real and intact, **without** ever needing to fully open or disclose it.
 
+---
 
 ## Quorum Questions
 
 ### What is Quorum Messenger and how do I start using it?
 
-[Quorum Messenger](https://www.quorummessenger.com/) is the world’s first secure, peer-to-peer, end-to-end encrypted (E2EE) group messaging app. It’s free to use, requires no phone number or payment, and lets you join conversations instantly. To start, simply open the app—no sign-up barriers or fees stand in your way, making it accessible for anyone looking to connect securely with groups or communities.
+[Quorum Messenger](https://www.quorummessenger.com/) is the world’s first secure, peer-to-peer, end-to-end encrypted (E2EE) group messaging app. It’s free to use, requires no phone number or payment, and lets you join conversations instantly. To start, simply open the app — no sign-up barriers or fees stand in your way, making it accessible for anyone looking to connect securely with groups or communities.
 
 ### How does Quorum support freedom of speech?
 
-Quorum champions freedom of speech by letting you speak freely within your communities without fear. Its Spaces are self-moderated, meaning your friend groups or communities—whether gamers, crypto enthusiasts, journalists, researchers, religious groups, political affiliates, or those avoiding politics—set their own rules. Unlike platforms with top-down censorship, Quorum hands control to users, ensuring your voice aligns with your community’s standards, not a central authority’s.
+Quorum champions freedom of speech by letting you speak freely within your communities without fear. Its Spaces are self-moderated, meaning your friend groups or communities — whether gamers, crypto enthusiasts, journalists, researchers, religious groups, political affiliates, or those avoiding politics — set their own rules. Unlike platforms with top-down censorship, Quorum hands control to users, ensuring your voice aligns with your community’s standards, not a central authority’s.
 
 ### What does it mean that Quorum is peer-to-peer?
 
-Quorum operates on a peer-to-peer system, meaning your chats don’t rely on a central server that could be shut down. Powered by Quilibrium and the libp2p stack, it connects users directly, letting you message from anywhere, anytime. It supports multiple protocols like TCP, QUIC, Websockets, and even LoRa, offering flexibility and resilience—no single point of failure can disconnect you.
+Quorum operates on a peer-to-peer system, meaning your chats don’t rely on a central server that could be shut down. Powered by Quilibrium and the libp2p stack, it connects users directly, letting you message from anywhere, anytime. It supports multiple protocols like TCP, QUIC, Websockets, and even LoRa, offering flexibility and resilience — no single point of failure can disconnect you.
 
 ### Why is Quorum being open source a big deal?
 
@@ -176,8 +200,8 @@ Quorum’s open-source nature means its code is public, free for anyone to inspe
 
 ### How private are my messages on Quorum?
 
-Quorum keeps your messages private through end-to-end encryption, ensuring only your intended recipients can read them—no one else, not even Quorum itself, can peek inside. Beyond that, its message brokering protocol hides who’s talking to whom, so even your contact list stays confidential. This dual-layer privacy protects both your words and your connections from prying eyes.
+Quorum keeps your messages private through end-to-end encryption, ensuring only your intended recipients can read them — no one else, not even Quorum itself, can peek inside. Beyond that, its message brokering protocol hides who’s talking to whom, so even your contact list stays confidential. This dual-layer privacy protects both your words and your connections from prying eyes.
 
 ### What is Quorum Apex, and how does it work?
 
-Quorum Apex is an alternative to Discord Nitro, offering unique subscriber benefits on the Quorum platform. A key feature is revenue sharing: when a user subscribes to a space with Apex, the subscription fee (paid in QUIL tokens) is split, with a portion going to the space’s community. Users can subscribe to up to four spaces per Apex payment, similar to boosting servers on Discord, but with the added incentive of financially rewarding community creators.
+Quorum Apex is an alternative to Discord Nitro, offering unique subscriber benefits on the Quorum platform. A key feature is revenue sharing: when a user subscribes to a space with Apex, the subscription fee (paid in $QUIL tokens) is split, with a portion going to the space’s community. Users can subscribe to up to four spaces per Apex payment, similar to boosting servers on Discord, but with the added incentive of financially rewarding community creators.

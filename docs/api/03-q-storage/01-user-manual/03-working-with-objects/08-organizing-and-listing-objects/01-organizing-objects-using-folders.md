@@ -13,7 +13,7 @@ For example, you can create a folder in a bucket named `photos` and store an obj
 
 Here are two more examples:
 
-* If you have three objects in your bucket—`logs/date1.txt`, `logs/date2.txt`, and `logs/date3.txt`—QStorage will show a folder named `logs`. If you open the folder, you will see three objects: `date1.txt`, `date2.txt`, and `date3.txt`.
+* If you have three objects in your bucket — `logs/date1.txt`, `logs/date2.txt`, and `logs/date3.txt` — QStorage will show a folder named `logs`. If you open the folder, you will see three objects: `date1.txt`, `date2.txt`, and `date3.txt`.
 * If you have an object named `photos/2023/example.jpg`, QStorage shows you a folder named `photos` that contains the folder `2023`. The folder `2023` contains the object `example.jpg`.
 
 You can have folders within folders, but not buckets within buckets. You can upload and copy objects directly into a folder. Folders can be created, deleted, and made public, but they can't be renamed. Objects can be copied from one folder to another.
