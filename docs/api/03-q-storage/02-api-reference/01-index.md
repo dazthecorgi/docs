@@ -5,37 +5,37 @@ This section provides detailed information about the QStorage API operations. QS
 ## API Categories
 
 ### Bucket Operations
-- [CreateBucket](bucket-operations/create-bucket)
-- [DeleteBucket](bucket-operations/delete-bucket)
-- [ListBuckets](bucket-operations/list-buckets)
-- [HeadBucket](bucket-operations/head-bucket)
+- [CreateBucket](/docs/api/q-storage/api-reference/bucket-operations/create-bucket)
+- [DeleteBucket](/docs/api/q-storage/api-reference/bucket-operations/delete-bucket)
+- [ListBuckets](/docs/api/q-storage/api-reference/bucket-operations/list-buckets)
+- [HeadBucket](/docs/api/q-storage/api-reference/bucket-operations/head-bucket)
 
 ### Object Operations
-- [PutObject](object-operations/put-object)
-- [GetObject](object-operations/get-object)
-- [DeleteObject](object-operations/delete-object)
-- [CopyObject](object-operations/copy-object)
-- [ListObjects](object-operations/list-objects)
-- [HeadObject](object-operations/head-object)
+- [PutObject](/docs/api/q-storage/api-reference/object-operations/put-object)
+- [GetObject](/docs/api/q-storage/api-reference/object-operations/get-object)
+- [DeleteObject](/docs/api/q-storage/api-reference/object-operations/delete-object)
+- [CopyObject](/docs/api/q-storage/api-reference/object-operations/copy-object)
+- [ListObjects](/docs/api/q-storage/api-reference/object-operations/list-objects)
+- [HeadObject](/docs/api/q-storage/api-reference/object-operations/head-object)
 
 ### Multipart Upload Operations
-- [CreateMultipartUpload](multipart-operations/create-multipart-upload)
-- [UploadPart](multipart-operations/upload-part)
-- [CompleteMultipartUpload](multipart-operations/complete-multipart-upload)
-- [AbortMultipartUpload](multipart-operations/abort-multipart-upload)
-- [ListMultipartUploads](multipart-operations/list-multipart-uploads)
-- [ListParts](multipart-operations/list-parts)
+- [CreateMultipartUpload](/docs/api/q-storage/api-reference/multipart-operations/create-multipart-upload)
+- [UploadPart](/docs/api/q-storage/api-reference/multipart-operations/upload-part)
+- [CompleteMultipartUpload](/docs/api/q-storage/api-reference/multipart-operations/complete-multipart-upload)
+- [AbortMultipartUpload](/docs/api/q-storage/api-reference/multipart-operations/abort-multipart-upload)
+- [ListMultipartUploads](/docs/api/q-storage/api-reference/multipart-operations/list-multipart-uploads)
+- [ListParts](/docs/api/q-storage/api-reference/multipart-operations/list-parts)
 
 ### Access Control
-- [GetBucketAcl](bucket-operations/get-bucket-acl)
-- [PutBucketAcl](bucket-operations/put-bucket-acl)
-- [GetObjectAcl](object-operations/get-object-acl)
-- [PutObjectAcl](object-operations/put-object-acl)
+- [GetBucketAcl](/docs/api/q-storage/api-reference/bucket-operations/get-bucket-acl)
+- [PutBucketAcl](/docs/api/q-storage/api-reference/bucket-operations/put-bucket-acl)
+- [GetObjectAcl](/docs/api/q-storage/api-reference/object-operations/get-object-acl)
+- [PutObjectAcl](/docs/api/q-storage/api-reference/object-operations/put-object-acl)
 
 ### Lifecycle Operations
-- [PutBucketLifecycle](bucket-operations/put-bucket-lifecycle)
-- [GetBucketLifecycle](bucket-operations/get-bucket-lifecycle)
-- [DeleteBucketLifecycle](bucket-operations/delete-bucket-lifecycle)
+- [PutBucketLifecycle](/docs/api/q-storage/api-reference/bucket-operations/put-bucket-lifecycle)
+- [GetBucketLifecycle](/docs/api/q-storage/api-reference/bucket-operations/get-bucket-lifecycle)
+- [DeleteBucketLifecycle](/docs/api/q-storage/api-reference/bucket-operations/delete-bucket-lifecycle)
 
 <!-- ### Analytics and Metrics
 - [GetBucketMetrics](analytics-metrics/get-bucket-metrics)
@@ -48,6 +48,6 @@ This section provides detailed information about the QStorage API operations. QS
 - [GetBucketNotification](notification-operations/get-bucket-notification) -->
 
 ### Website Operations
-- [PutBucketWebsite](bucket-operations/put-bucket-website)
-- [GetBucketWebsite](bucket-operations/get-bucket-website)
-- [DeleteBucketWebsite](bucket-operations/delete-bucket-website) 
+- [PutBucketWebsite](/docs/api/q-storage/api-reference/bucket-operations/put-bucket-website)
+- [GetBucketWebsite](/docs/api/q-storage/api-reference/bucket-operations/get-bucket-website)
+- [DeleteBucketWebsite](/docs/api/q-storage/api-reference/bucket-operations/delete-bucket-website) 

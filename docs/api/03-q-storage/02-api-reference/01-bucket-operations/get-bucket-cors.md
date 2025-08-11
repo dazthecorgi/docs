@@ -43,7 +43,7 @@ export const RESPONSE_ELEMENTS = [
   },
   {
     name: "CORSRule",
-    type: "[CORSRule](../data-types/cors-rule)",
+    type: "[CORSRule](/docs/api/q-storage/api-reference/data-types/cors-rule)",
     description: "A set of origins and methods (cross-origin access that you want to allow). You can add up to 100 rules to the configuration.",
     required: "No"
   }
@@ -150,7 +150,7 @@ This operation does not have a request body.
 | Name | Type | Description | Required |
 |------|------|-------------|-----------|
 | CORSConfiguration | Container | Container for the bucket's CORS configuration | Yes |
-| CORSRule | [CORSRule](../data-types/cors-rule) | A set of origins and methods (cross-origin access that you want to allow). You can add up to 100 rules to the configuration. | No |
+| CORSRule | [CORSRule](/docs/api/q-storage/api-reference/data-types/cors-rule) | A set of origins and methods (cross-origin access that you want to allow). You can add up to 100 rules to the configuration. | No |
 
 ## Special Errors
 

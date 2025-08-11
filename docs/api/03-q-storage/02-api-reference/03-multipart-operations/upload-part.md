@@ -189,7 +189,7 @@ export const RESPONSE_HEADERS = [
 
 # UploadPart
 
-Uploads a part in a multipart upload. See [UploadPart](../data-types/upload-part) for more details about the operation and its parameters.
+Uploads a part in a multipart upload. See [UploadPart](/docs/api/q-storage/api-reference/data-types/upload-part) for more details about the operation and its parameters.
 
 ## Description
 

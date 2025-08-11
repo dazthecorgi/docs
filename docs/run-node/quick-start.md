@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## System Requirements
 
-Please see the [system requirements](system-requirements) section for details.
+Please see the [system requirements](/docs/run-node/system-requirements) section for details.
 
 ## Default Ports to Open on Firewall
 
@@ -22,7 +22,7 @@ Please see the [system requirements](system-requirements) section for details.
 
 If you're running the node at your home (on a residential ISP), then you must additionally set up [port forwarding](https://portforward.com/router.htm) in order for your node to be reachable by the network.
 For this use case, it's recommended to use TCP connection for your node.
-This can be achieved by setting `listenMultiaddr` to `/ip4/0.0.0.0/tcp/8336` and `streamListenMultiaddr` to `/ip4/0.0.0.0/tcp/8340` in the [p2p section](./advanced-configuration#peer-to-peer-networking-section) of the config, and `dataWorkerBaseListenMultiaddr` to `/ip4/0.0.0.0/tcp/%d` (don't omit the `%d`) in the [engine section](./advanced-configuration#engine-section).
+This can be achieved by setting `listenMultiaddr` to `/ip4/0.0.0.0/tcp/8336` and `streamListenMultiaddr` to `/ip4/0.0.0.0/tcp/8340` in the [p2p section](/docs/run-node/advanced-configuration#peer-to-peer-networking-section) of the config, and `dataWorkerBaseListenMultiaddr` to `/ip4/0.0.0.0/tcp/%d` (don't omit the `%d`) in the [engine section](/docs/run-node/advanced-configuration#engine-section).
 
 :::
 

@@ -1,7 +1,7 @@
 # Node Commands
 This is a list of node-specific operations for qclient.
 
-For a complete list of all qclient commands, see [QClient Commands](command-list).
+For a complete list of all qclient commands, see [QClient Commands](/docs/run-node/qclient/commands/command-list).
 
 Node commands have a --config param that you can use to specify either a directory path, e.g. `/home/user/my-config/` or a name of a config `my-config` if you've imported the config via QClient import command (see [Import Keysets](/docs/run-node/qclient/node/key-management/import-keysets)).
 

@@ -43,7 +43,7 @@ Container for all website configuration elements.
 
 | Name | Type | Description | Required |
 |------|------|-------------|----------|
-| RedirectAllRequestsTo | [RedirectAllRequestsTo](./redirect-all-requests-to) | Container element that specifies the redirect behavior of all requests to a website endpoint of a bucket. | No |
-| IndexDocument | [IndexDocument](./index-document) | Container element that specifies the name of the index document for the website. | No |
-| ErrorDocument | [ErrorDocument](./error-document) | Container element that specifies the object key name to use when a 4XX class error occurs. | No |
-| RoutingRules | Array of [RoutingRule](./routing-rule) | Container element for a collection of RoutingRule elements. | No | 
+| RedirectAllRequestsTo | [RedirectAllRequestsTo](/docs/api/q-storage/api-reference/data-types/redirect-all-requests-to) | Container element that specifies the redirect behavior of all requests to a website endpoint of a bucket. | No |
+| IndexDocument | [IndexDocument](/docs/api/q-storage/api-reference/data-types/index-document) | Container element that specifies the name of the index document for the website. | No |
+| ErrorDocument | [ErrorDocument](/docs/api/q-storage/api-reference/data-types/error-document) | Container element that specifies the object key name to use when a 4XX class error occurs. | No |
+| RoutingRules | Array of [RoutingRule](/docs/api/q-storage/api-reference/data-types/routing-rule) | Container element for a collection of RoutingRule elements. | No | 

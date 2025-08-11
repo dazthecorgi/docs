@@ -36,14 +36,14 @@ Subsequent installs/updates can be done with:
 ## First-Time Setup
 
 - When you run a qclient command for the first time, it will create a default config/key file containing your keys.
-- If you already have existing keys, you can import them with the `qclient config import` command.  See [Managing Configs](./managing-configs) for more info.
+- If you already have existing keys, you can import them with the `qclient config import` command.  See [Managing Configs](/docs/run-node/qclient/managing-configs) for more info.
 - If your `.config` folder is located elsewhere, you can use the `--config path-to-config` flag in the qclient commands to specify its location.
 - To use the public RPC you can also add the flag `--public-rpc`
 
 :::info
 Pre-2.1 the default config would be created in the .config directory located where you ran the command, currently configs have been moved to be in the `~/.quilibrium/configs` directory.
 
-Qclient is aiming to deliver a toolset to be able use existing installations where an .config folder already exists, but it is recommended to import to the new structure for maximum compatibility and future improvements. See [Managing Configs](./managing-configs) on how to import.
+Qclient is aiming to deliver a toolset to be able use existing installations where an .config folder already exists, but it is recommended to import to the new structure for maximum compatibility and future improvements. See [Managing Configs](/docs/run-node/qclient/managing-configs) on how to import.
 :::
 
 #### Creating an Alias

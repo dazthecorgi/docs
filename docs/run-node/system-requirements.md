@@ -18,7 +18,7 @@ sidebar_position: 1
 
 The following requirements is for a single node.  
 
-Note that this is may be split up across multiple servers with a minimum of one core for the node process, if you are clustering (which is an advanced technique not suited for beginners, read [Advanced Node Management](advanced-node-management) for more details).
+Note that this is may be split up across multiple servers with a minimum of one core for the node process, if you are clustering (which is an advanced technique not suited for beginners, read [Advanced Node Management](/docs/run-node/advanced-node-management) for more details).
 
 Signed pre-built binaries (the node software) for a Quilibrium node is designed to run on the above supported operating systems that meets the following requirements (assuming dedicated resources for the node):
 

@@ -202,8 +202,8 @@ You must have the `s3:CreateBucket` permission.
 
 The following operations are related to CreateBucket:
 
-- [PutObject](../object-operations/put-object)
-- [DeleteBucket](./delete-bucket)
+- [PutObject](/docs/api/q-storage/api-reference/object-operations/put-object)
+- [DeleteBucket](/docs/api/q-storage/api-reference/bucket-operations/delete-bucket)
 
 ## Try It Out
 

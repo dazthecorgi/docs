@@ -1,6 +1,6 @@
 # Run a Node via Service
 
-This guide provides instructions on how to manage a Quilibrium node using service commands through the qclient. For a complete list of all qclient commands, see [QClient Commands](../commands/command-list).
+This guide provides instructions on how to manage a Quilibrium node using service commands through the qclient. For a complete list of all qclient commands, see [QClient Commands](/docs/run-node/qclient/commands/command-list).
 
 ## Overview
 

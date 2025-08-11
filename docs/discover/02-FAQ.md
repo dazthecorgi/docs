@@ -12,7 +12,7 @@ Quilibrium’s origins date back about seven years (2018), starting as a hobby p
 
 ### What is Quilibrium's roadmap?
 
-*See this [detailed article](q-story).*
+*See this [detailed article](/docs/discover/q-story).*
 
 ### What are the official Q socials? How come there is no official Telegram, Discord?
 
@@ -32,7 +32,7 @@ Additionally, node operators can maintain blacklists of troublesome core shards,
 
 Key material is never stored on the network, and nodes operate without access to user data. End-to-end encryption is performed client-side, preserving data integrity and confidentiality.
 
-*See also this [detailed article](how-quilibrium-protects-privacy-without-enabling-crime).*
+*See also this [detailed article](/docs/discover/how-quilibrium-protects-privacy-without-enabling-crime).*
 
 ### Can Quilibrium protect users in restrictive environments from government tracking?
 
@@ -58,7 +58,7 @@ The network has been tested to handle up to 100 million messages per second (MPS
 Q prevents centralization by ensuring consensus doesn’t demand expensive hardware, making it possible for even a Raspberry Pi to handle the necessary calculations. It also embraces a range of hardware types for mining, thanks to the flexible complexity of its applications, opening participation to more users. To maintain decentralization, the network enforces minimum replication thresholds for core shards and halts operations if these drop too low, safeguarding data distribution. 
 Additionally, its tokenomics are crafted to welcome new miners when the network hits specific milestones, keeping entry barriers low and participation broad.
 
-*See also this [detailed article](how-does-quilibrium-maintain-decentralization).*
+*See also this [detailed article](/docs/discover/how-does-quilibrium-maintain-decentralization).*
 
 ### What types of applications can be developed on Quilibrium?
 
@@ -69,7 +69,7 @@ Q will be able to host any type of application, but the first generation of appl
 
 ### What are Quilibrium Tokenomics?
 
-*Please see this [detailed article](quilibrium-tokenomics).*
+*Please see this [detailed article](/docs/discover/quilibrium-tokenomics).*
 
 ### What is the QUIL token?
 

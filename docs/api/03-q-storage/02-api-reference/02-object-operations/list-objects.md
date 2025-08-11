@@ -133,7 +133,7 @@ Returns some or all (up to 1000) of the objects in a bucket.
 
 ## Description
 :::warning Deprecated API
-The `ListObjects` operation is maintained for backwards compatibility. For improved functionality and performance, we recommend using the [ListObjectsV2](./list-objects-v2) operation instead.
+The `ListObjects` operation is maintained for backwards compatibility. For improved functionality and performance, we recommend using the [ListObjectsV2](/docs/api/q-storage/api-reference/object-operations/list-objects-v2) operation instead.
 :::
 
 
@@ -355,8 +355,8 @@ You must have the `s3:ListBucket` permission.
 
 The following operations are related to ListObjects:
 
-- [ListObjectsV2](./list-objects-v2) - The newer, improved version of this operation
-- [GetObject](./get-object) - Retrieves objects from QStorage
-- [PutObject](./put-object) - Adds an object to a bucket
-- [CreateBucket](../bucket-operations/create-bucket) - Creates a new bucket
-- [ListBuckets](../bucket-operations/list-buckets) - Lists all buckets owned by the authenticated sender 
+- [ListObjectsV2](/docs/api/q-storage/api-reference/object-operations/list-objects-v2) - The newer, improved version of this operation
+- [GetObject](/docs/api/q-storage/api-reference/object-operations/get-object) - Retrieves objects from QStorage
+- [PutObject](/docs/api/q-storage/api-reference/object-operations/put-object) - Adds an object to a bucket
+- [CreateBucket](/docs/api/q-storage/api-reference/bucket-operations/create-bucket) - Creates a new bucket
+- [ListBuckets](/docs/api/q-storage/api-reference/bucket-operations/list-buckets) - Lists all buckets owned by the authenticated sender 

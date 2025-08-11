@@ -1,7 +1,7 @@
 # Token Commands
 This is a list of Token specific operations, like querying balances, split/merge, accept/receive.
 
-For a list of all qclient commands, see [QClient Commands](command-list).
+For a list of all qclient commands, see [QClient Commands](/docs/run-node/qclient/commands/command-list).
 
 ## Querying Balance and Account Address
 

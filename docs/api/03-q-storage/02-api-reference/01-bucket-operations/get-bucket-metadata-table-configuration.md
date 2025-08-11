@@ -127,10 +127,10 @@ HTTP/1.1 200
 
 The GetBucketMetadataTableConfiguration API uses the following data types:
 
-- [MetadataTableConfiguration](../data-types/metadata-table-configuration)
-- [MetadataTableConfigurationResult](../data-types/metadata-table-configuration-result)
-- [S3TablesDestinationResult](../data-types/s3-tables-destination-result)
-- [ErrorDetails](../data-types/error-details)
+- [MetadataTableConfiguration](/docs/api/q-storage/api-reference/data-types/metadata-table-configuration)
+- [MetadataTableConfigurationResult](/docs/api/q-storage/api-reference/data-types/metadata-table-configuration-result)
+- [S3TablesDestinationResult](/docs/api/q-storage/api-reference/data-types/s3-tables-destination-result)
+- [ErrorDetails](/docs/api/q-storage/api-reference/data-types/error-details)
 
 ## Examples
 

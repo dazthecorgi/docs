@@ -1,7 +1,7 @@
 # Alias Commands
 This is a list of alias-specific operations for qclient. 
 
-For a complete list of all qclient commands, see [QClient Commands](command-list).
+For a complete list of all qclient commands, see [QClient Commands](/docs/run-node/qclient/commands/command-list).
 
 ## Overview
 Aliases are designed to create shortcuts for referencing commonly used account addresses in token operations and increase confidence that the address is input correctly (if it works the first time it should continue to work correctly in the future).

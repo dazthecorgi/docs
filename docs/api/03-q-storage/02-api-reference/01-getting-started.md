@@ -52,15 +52,15 @@ QStorage supports the following basic API operations (see API Reference sections
 
 ### Object Operations
 
-* [PutObject](./object-operations/put-object) - Adds an object to a bucket
-* [GetObject](./object-operations/get-object) - Retrieves an object from a bucket
-* [CopyObject](./object-operations/copy-object) - Creates a copy of an object
-* [DeleteObject](./object-operations/delete-object) - Removes an object from a bucket
+* [PutObject](/docs/api/q-storage/api-reference/object-operations/put-object) - Adds an object to a bucket
+* [GetObject](/docs/api/q-storage/api-reference/object-operations/get-object) - Retrieves an object from a bucket
+* [CopyObject](/docs/api/q-storage/api-reference/object-operations/copy-object) - Creates a copy of an object
+* [DeleteObject](/docs/api/q-storage/api-reference/object-operations/delete-object) - Removes an object from a bucket
 
 ### Bucket Operations
 
-* [CreateBucket](./bucket-operations/create-bucket) - Creates a new bucket
-* [DeleteBucket](./bucket-operations/delete-bucket) - Deletes a bucket
+* [CreateBucket](/docs/api/q-storage/api-reference/bucket-operations/create-bucket) - Creates a new bucket
+* [DeleteBucket](/docs/api/q-storage/api-reference/bucket-operations/delete-bucket) - Deletes a bucket
 
 ## S3 Compatibility
 
@@ -88,9 +88,9 @@ Example error response:
 
 To get started with QStorage, you can:
 
-1. Create a bucket using the [CreateBucket](./bucket-operations/create-bucket) operation
-2. Upload an object using the [PutObject](./object-operations/put-object) operation
-3. Download an object using the [GetObject](./object-operations/get-object) operation
-4. Copy an object using the [CopyObject](./object-operations/copy-object) operation
-5. Delete an object using the [DeleteObject](./object-operations/delete-object) operation
-6. Delete a bucket using the [DeleteBucket](./bucket-operations/delete-bucket) operation 
+1. Create a bucket using the [CreateBucket](/docs/api/q-storage/api-reference/bucket-operations/create-bucket) operation
+2. Upload an object using the [PutObject](/docs/api/q-storage/api-reference/object-operations/put-object) operation
+3. Download an object using the [GetObject](/docs/api/q-storage/api-reference/object-operations/get-object) operation
+4. Copy an object using the [CopyObject](/docs/api/q-storage/api-reference/object-operations/copy-object) operation
+5. Delete an object using the [DeleteObject](/docs/api/q-storage/api-reference/object-operations/delete-object) operation
+6. Delete a bucket using the [DeleteBucket](/docs/api/q-storage/api-reference/bucket-operations/delete-bucket) operation 

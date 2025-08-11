@@ -95,7 +95,7 @@ When using QKMS (SSE-KMS or DSSE-KMS), QStorage will still encrypt the data an a
 | Name | Type | Description | Required |
 |------|------|-------------|-----------|
 | ServerSideEncryptionConfiguration | Container | Container for server-side encryption configuration rules | Yes |
-| Rule | [ServerSideEncryptionRule](../data-types/server-side-encryption-rule) | Container for a server-side encryption rule. The bucket encryption configuration can include only one rule. | Yes |
+| Rule | [ServerSideEncryptionRule](/docs/api/q-storage/api-reference/data-types/server-side-encryption-rule) | Container for a server-side encryption rule. The bucket encryption configuration can include only one rule. | Yes |
 
 ## Examples
 

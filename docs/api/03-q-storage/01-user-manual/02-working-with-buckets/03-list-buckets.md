@@ -43,9 +43,9 @@ Listing a Bucket's content is a fundamental command to see what currently exists
 
 ## Related Operations
 
-- [Delete A Bucket](delete-a-bucket)
-- [Empty A Bucket](empty-a-bucket)
-- [Using Bucket Tags](using-bucket-tags)
+- [Delete A Bucket](/docs/api/q-storage/user-manual/working-with-buckets/delete-a-bucket)
+- [Empty A Bucket](/docs/api/q-storage/user-manual/working-with-buckets/empty-a-bucket)
+- [Using Bucket Tags](/docs/api/q-storage/user-manual/working-with-buckets/using-bucket-tags)
 - [Listing Bucket Contents](/docs/api/q-storage/user-manual/working-with-objects/list-bucket-contents)
   
 

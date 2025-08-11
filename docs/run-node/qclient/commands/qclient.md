@@ -1,5 +1,5 @@
 # General QClient Commands
-This is a list of general operations for qclient. For a complete list of all qclient commands, see [QClient Commands](command-list).
+This is a list of general operations for qclient. For a complete list of all qclient commands, see [QClient Commands](/docs/run-node/qclient/commands/command-list).
 
 ## Displaying Version Information
 

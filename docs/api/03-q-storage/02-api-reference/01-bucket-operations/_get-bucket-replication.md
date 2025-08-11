@@ -81,7 +81,7 @@ Returns the replication configuration of a bucket.
 
 ## Description
 
-The `GetBucketReplication` operation returns the replication configuration information set on a bucket. For information about replication configuration, see [Replication](../../../concepts/replication.md).
+The `GetBucketReplication` operation returns the replication configuration information set on a bucket.
 
 :::note
 - To use this operation, you must have permission to perform the `s3:GetReplicationConfiguration` action.

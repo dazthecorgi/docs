@@ -15,4 +15,4 @@ There are a few basic commands:
 | **Enable**           | `qclient node service enable`       | Enables the node service to start on boot.   |
 | **Restart**          | `qclient node service restart`      | Restarts the node service.                   |
 
-For a complete list of node service commands, read the [Node Service Commands](commands) page.
+For a complete list of node service commands, read the [Node Service Commands](/docs/run-node/qclient/node/node-service/commands) page.

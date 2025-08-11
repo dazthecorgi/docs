@@ -8,7 +8,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 ## Deleting all Objects in a Bucket
-Before deleting a bucket, you must first empty it by removing all objects. For detailed instructions on emptying a bucket, please refer to [Empty a Bucket](empty-a-bucket).
+Before deleting a bucket, you must first empty it by removing all objects. For detailed instructions on emptying a bucket, please refer to [Empty a Bucket](/docs/api/q-storage/user-manual/working-with-buckets/empty-a-bucket).
 
 You can also delete objects individually before deleting the bucket. For more information on deleting individual objects, see [Delete an Object](/docs/api/q-storage/user-manual/working-with-objects/delete-an-object).
 

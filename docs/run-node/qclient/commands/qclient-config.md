@@ -1,7 +1,7 @@
 # QClient Config Commands
 This is a list of configuration operations for qclient. 
 
-For a complete list of all qclient commands, see [QClient Commands](command-list).
+For a complete list of all qclient commands, see [QClient Commands](/docs/run-node/qclient/commands/command-list).
 
 ## Printing Current Configuration
 
@@ -65,4 +65,4 @@ Use `enable` to enable signature checking or `disable` to disable it.
 
 ## Using Account Aliases
 
-Alias Commands are listed [here](./alias).
+Alias Commands are listed [here](/docs/run-node/qclient/commands/alias).
