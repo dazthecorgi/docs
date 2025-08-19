@@ -16,7 +16,7 @@ const config: Config = {
   favicon: "img/favicon.png",
 
   // Set the production url of your site here
-  url: "https://quilibrium.com",
+  url: "https://docs.quilibrium.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -71,7 +71,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/favicon.png",
+    image: "img/socialcard-docs.png",
     navbar: {
       title: "Quilibrium Docs",
       logo: {
