@@ -112,3 +112,65 @@ By making token issuance responsive to real-world computational advancements rat
 :::info
 To learn more about this adaptive issuance model, see [Quilibrium Tokenomics](/docs/discover/quilibrium-tokenomics).
 :::
+
+## Can Q Be 51% Attacked?
+The short answer is simply, "no."
+
+Quilibrium employs a different model of Proof-of-Work (PoW) that blends long-running positive behaviors that you see with Proof-of-Stake (PoS) networks with an intractably hard trapdoor function of PoW networks.
+
+What this means is that for node runners who have a long-standing history of correct behavior build up a "seniority" score that means a higher chance of securing more rewarding positions in the network, combined with if a node submits some message that does not validate it misses out on rewards and will not accrue seniority after the network rejects it.
+
+If the network finds a node misbehaving (e.g. going in direct opposition to protocol, like equivocation, which is sending conflicting messages/transactions to different parts of the network at the same time), it will be outright blacklisted.
+
+The network also ignores and drops unsupported message types.
+
+Another part of why the 51% attack vector doesn’t work is also due to liveness.
+
+In order to maintain seniority, nodes have to continue to process transactions mutually with its peers under a given shard.
+
+This processing is an MPC protocol itself, more simply: a peer does not get to uniquely decide the order of transactions – it’s a permutation mixnet, so to conduct the equivalent of a 51% attack, they’d have to have sufficient peers collude in a shard to present a different set of transactions from a mixnet.
+
+However, in doing so would immediately identify that they had done so because their results would differ from any one other node who is not colluding in the entire network because detection happens on the individual shard level and also with a secondary check at the global level.
+
+To successfully make such an attack happen, a coordinator would need all provers in a shard, all provers at a global level, and would require cooperation (or be holders of the funds in the given shard) at both source and destination shards to be able to produce a conflicting transaction in order to participate in the mixnet twice.
+
+If it wasn't obvious, you should note that the above means such an attempt would be quite costly.  It would mean that not only do all colluding nodes get seniority stripped, evicted (kicked from the shard), blacklisted from network participation, their attempt would not have any "loot" or payoff.
+
+Reordering transactions, is simply put, not possible.
+
+### Impact of Seniority Loss
+It is also worth exploring the impact of seniority loss in this calculus of risk versus reward.
+
+Seniority is used to determine who wins in competitive "bids" for openings in higher earning shards/ring positions as well as maintaining them over time.
+
+A node's peer ID starts at zero seniority and can only gain seniority by running the node long-term which means long-running operating expenses.  The length of time a node participates fairly and correctly increases it's seniority.  This idea can be correlated to the PoS mechanism, where the more trustworthy the node, the more advantages it has in the network.
+
+Particularly, increased seniority means more odds of winning a bid for consecutively higher earnings as time goes on.
+
+A node-runner who is interested in earning long-term rewards and earning more lucrative/profitable positions would not want to ever lose their seniority under any scenario (particularly on this fool's errand of an idea) as it would be a staggering loss in potential income, as well as a node may not be profitable* for a long period of time while it is accruing seniority.
+
+*Profitability as in being able to pay for it's running costs with proving rewards and/or transaction fees.
+
+Not only is there significant ongoing resource costs to run so many nodes in 51%-like attack on Q, this attempt would guarantee the loss of what is essentially their entire "network stake." In other words, it means the burning of their seniority for each participating node and, along with it, their higher earning rates. They then would have to start over from a seniority score of zero on a fresh peer ID.
+
+### Can node miners change the network by running custom code
+The short answer is, "yes."
+
+This type of event of 51% of nodes running custom code that is not official releases that alters the nature of the network would actually be considered a forked network.
+
+Which, in a sense would lead to the question of, "would it even be Q at that point?"
+
+That said, it should be noted that there is an option for nodes to operate on what we call an "alternative fee basis" with their own non-native applications over Q that are network-adjacent.
+
+This means that while they are integrated into Quilibrium's network they contain additional features that do not conflict with Q's base-functionality.  This could be seen as an expansion pack for a video game.
+
+These types of nodes would be opt-in and paid for separately with a token of the application designer's preference.  These types of functionality may be something like a testnet, pre-releases of Q's future network primitives, a settlement layer for an Ethereum-based network, etc.
+
+#### Does that mean that running custom node code is bad?
+No.  Miners are free to customize and build their own binaries that suit their needs.
+
+The nature of the network is that as long as the core functions of the network are met, optimizations, custom integrations, etc. to clients can be perfectly acceptable.
+
+Benefits of doing such vary from person to person, and could be, although not limited to, customizing personal node analytics, custom node management preferences, or streamlined for joining a pool.
+
+Optimizations for rewards for base network behaviors are estimated to be marginal and due to the project's license being AGPL, node-runners who make direct alterations to the client are legally obligated to share their changes back upstream to the project's code-base.
