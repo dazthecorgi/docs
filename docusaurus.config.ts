@@ -71,7 +71,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: "img/favicon.png",
+    image: "img/socialcard-docs.png",
     navbar: {
       title: "Quilibrium Docs",
       logo: {
