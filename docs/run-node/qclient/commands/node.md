@@ -26,12 +26,28 @@ The `install` command sets up the node application along with all necessary depe
 Command:
 
 ```bash
-qclient node update
+qclient node update [<Version>] [--restart|-r]
 ```
 
 Description:
 
 The `update` command checks for available updates to the node application and applies them if found, ensuring you have the latest features and security patches.
+
+**Parameters:**
+- `[<Version>]`: Optional specific version to update to
+- `[--restart|-r]`: Automatically restart the node after update
+
+**Examples:**
+
+Update to latest version:
+```bash
+qclient node update
+```
+
+Update to specific version with restart:
+```bash
+qclient node update 2.1.1 --restart
+```
 
 ---
 
@@ -40,12 +56,23 @@ The `update` command checks for available updates to the node application and ap
 Command:
 
 ```bash
-qclient node auto-update [enable|disable]
+qclient node auto-update <enable|disable|status>
 ```
 
 Description:
 
-The `auto-update` command allows you to enable or disable automatic updates for the node application via a cron task. Use `enable` to turn on automatic updates or `disable` to turn them off.
+The `auto-update` command manages automatic updates for the node application via a cron task.
+
+**Options:**
+- `enable`: Turn on automatic updates
+- `disable`: Turn off automatic updates
+- `status`: Check current auto-update status
+
+**Examples:**
+```bash
+qclient node auto-update enable
+qclient node auto-update status
+```
 
 ---
 
@@ -54,12 +81,23 @@ The `auto-update` command allows you to enable or disable automatic updates for 
 Command:
 
 ```bash
-qclient node clean
+qclient node clean [--all|--logs|--node]
 ```
 
 Description:
 
 The `clean` command removes unnecessary or temporary files related to the node application, helping to free up space and maintain a clean environment.
+
+**Options:**
+- `--all`: Clean all temporary files and logs
+- `--logs`: Clean only log files
+- `--node`: Clean only old node binaries
+
+**Examples:**
+```bash
+qclient node clean --logs
+qclient node clean --all
+```
 
 ---
 
@@ -226,12 +264,77 @@ The `merge` command consolidates prover seniority data into a single, assigned c
 Command:
 
 ```bash
-qclient node prover pause
+qclient node prover pause [<WorkerId>]
 ```
 
 Description:
 
-The `pause` command issues a notice to the network that a prover or configuration is being paused to avoid penalization.
+The `pause` command issues an emergency pause notice to the network for a prover to avoid penalization.
+
+**Parameters:**
+- `[<WorkerId>]`: Optional specific worker ID to pause
+
+---
+
+### Checking Prover Status
+
+Command:
+
+```bash
+qclient node prover status [<WorkerId>]
+```
+
+Description:
+
+Lists prover worker statuses, shard assignments, and storage availability.
+
+**Parameters:**
+- `[<WorkerId>]`: Optional specific worker ID (shows all workers if omitted)
+
+**Example Output:**
+```
+Worker 1: Active - Shard 0x123 (Ring 0) - Storage: 85% available
+Worker 2: Active - Shard 0x456 (Ring 0) - Storage: 92% available
+```
+
+---
+
+### Initiating Prover Leave
+
+Command:
+
+```bash
+qclient node prover leave [<WorkerId>]
+```
+
+Description:
+
+Initiates a graceful leave process for a prover from the network.
+
+**Parameters:**
+- `[<WorkerId>]`: Optional specific worker ID to remove
+
+---
+
+### Delegating Prover Rewards
+
+Command:
+
+```bash
+qclient node prover delegate [<DestinationAddress>]
+```
+
+Description:
+
+Delegates prover rewards to an alternative address.
+
+**Parameters:**
+- `[<DestinationAddress>]`: Address to receive delegated rewards
+
+**Example:**
+```bash
+qclient node prover delegate 0x[32-byte hex string]
+```
 
 ---
 
@@ -291,12 +394,97 @@ Description:
 
 The `switch` command changes the active configuration set to the specified name. If no name is provided, it lists available configuration options.
 
+---
+
+### Assigning Rewards to Configuration
+
+Command:
+
+```bash
+qclient node config assign-rewards [config-name]
+```
+
+Description:
+
+Assigns reward collection to a specific configuration.
+
+**Parameters:**
+- `[config-name]`: Name of the configuration to assign rewards to
+
+**Example:**
+```bash
+qclient node config assign-rewards my-config
+```
+
 ### Create a Symlink
-You can create a symlink by running:
+
+Command:
+
+```bash
+qclient node link [--version|-v <Version>]
+```
+
+Description:
+
+Creates a version-specific symlink for the node binary.
+
+**Parameters:**
+- `[--version|-v <Version>]`: Specific version to link
+
+**Examples:**
 ```bash
 qclient node link
+qclient node link --version 2.1.0
 ```
-or optionally (if you have multiple version) to specify which version:
+
+---
+
+### Getting Node Information
+
+Command:
+
 ```bash
-qclient node link 2.1.0
+qclient node info [<ConfigName>] [--latest-version|-l]
 ```
+
+Description:
+
+Displays detailed information about the node.
+
+**Parameters:**
+- `[<ConfigName>]`: Configuration name to check (defaults to active config)
+- `[--latest-version|-l]`: Show latest available version
+
+**Examples:**
+```bash
+qclient node info
+qclient node info my-config --latest-version
+```
+
+---
+
+### Uninstalling the Node
+
+Command:
+
+```bash
+qclient node uninstall [--force]
+```
+
+Description:
+
+Completely removes the node application from your system.
+
+**Parameters:**
+- `[--force]`: Force uninstall without confirmation prompts
+
+**Example:**
+```bash
+qclient node uninstall
+qclient node uninstall --force
+```
+
+:::warning
+Uninstalling the node will stop all node operations and may affect your rewards.
+Ensure you have backed up any important data before uninstalling.
+:::

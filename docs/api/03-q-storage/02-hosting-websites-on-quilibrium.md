@@ -16,11 +16,11 @@ No backend server is needed for serving static content.
 
 ## Building Dynamic Websites
 
-Dynamic behavior — like reading from or writing to storage, or performing private computations — is handled differently. Rather than maintaining a traditional backend server, your frontend can communicate directly with Quilibrium services using the provided SDKs:
+Dynamic behavior — like reading from or writing to storage, or performing private computation — is handled differently. Rather than maintaining a traditional backend server, your frontend can communicate directly with Quilibrium services using the provided SDKs:
 
 - **QStorage SDK**: for interacting with stored objects.
 - **QKMS SDK**: for managing key-based authentication and authorization.
-- **Q MPC SDK**: for private, multiparty computations if needed.
+- **Q MPC SDK**: for private, multi-party computation if needed.
 
 This approach lets you build full-featured dynamic applications without traditional cloud servers.
 

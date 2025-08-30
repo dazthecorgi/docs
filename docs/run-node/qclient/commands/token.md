@@ -3,7 +3,30 @@ This is a list of Token specific operations, like querying balances, split/merge
 
 For a list of all qclient commands, see [QClient Commands](/docs/run-node/qclient/commands/command-list).
 
-## Querying Balance and Account Address
+## Parent Command
+
+```bash
+qclient token
+```
+
+The parent command for all token operations. When used alone, displays available token subcommands.
+
+## Account Information
+
+### Query Account Address
+
+Display the managing account address without balance information.
+
+```bash
+qclient token account
+```
+
+Response:
+```bash
+Account: 0x23c0f3...0a55a90
+```
+
+### Query Balance and Account
 
 The command line tool accepts arguments in either decimal (xx.xxxxx) format or raw unit (0x00000) format. Note that raw units are a multiple of QUIL: 1 QUIL = 0x1DCD65000 units
 
@@ -16,7 +39,7 @@ qclient token balance
 Response:
 
 ```bash
-50.0 QUIL (Account 0x23c0f371e9faa7be4ffedd616361e0c9aeb776ae4d7f3a37605ecbfa40a55a90)
+50.0 QUIL (Account 0x23c0f3...0a55a90)
 ```
 ---
 ### Querying Individual Coins
@@ -30,8 +53,8 @@ qclient token coins
 Response:
 
 ```bash
-25.0 QUIL (Coin 0x1148092cdce78c721835601ef39f9c2cd8b48b7787cbea032dd3913a4106a58d)
-25.0 QUIL (Coin 0x2dda9dc9770a1e5a01974fcd5af2a77147d0f19fb4935a1df677ec6050be0a9e)
+25.0 QUIL (Coin 0x1148092cdce78...913a4106a58d)
+25.0 QUIL (Coin 0x2dda9dc9770a1...ec6050be0a9e)
 ```
 
 To see all metadata associated with each coin (frame number and timestamp):
@@ -45,11 +68,17 @@ qclient token coins metadata
 
 Quilibrium's token application has two modes: a two-stage transfer/accept (or reject), or a single-stage mutual transfer.
 
-### Command:
+### Standard Transfer
 
 ```bash
-qclient token transfer <ToAccount> <RefundAccount> <Amount|OfCoin>
+qclient token transfer <ToAccount> [<RefundAccount>] [--expiration|-e <Expiration>] <Amount|OfCoin>
 ```
+
+**Parameters:**
+- `<ToAccount>`: Recipient's account address
+- `[<RefundAccount>]`: Optional refund account (defaults to sender's account)
+- `[--expiration|-e <Expiration>]`: Optional expiration time for the transfer
+- `<Amount|OfCoin>`: Amount to send or specific coin address
 
 Response:
 
@@ -81,13 +110,52 @@ Both `token merge` and `token split` support also operating on up to 100 coins o
 ### Split command:
 
 ```bash
-qclient token split <OfCoin> <LeftAmount> <RightAmount>
+qclient token split <OfCoin> <Amounts>... [--parts|-p <n>] [--part-amount|-a <amount>]
+```
+
+**Parameters:**
+- `<OfCoin>`: The coin address to split
+- `<Amounts>...`: Specific amounts for each split (can specify multiple)
+- `[--parts|-p <n>]`: Split into n equal parts
+- `[--part-amount|-a <amount>]`: Amount for each part when using --parts
+
+**Examples:**
+
+Split into specific amounts:
+```bash
+qclient token split 0xcoin123 10.0 15.0 25.0
+```
+
+Split into equal parts:
+```bash
+qclient token split 0xcoin123 --parts 4
+```
+
+Split into parts with specific amount each:
+```bash
+qclient token split 0xcoin123 --parts 3 --part-amount 10.0
 ```
 
 ### Merge command:
 
 ```bash
-qclient token merge <LeftCoin> <RightCoin>
+qclient token merge [all|<CoinAddresses>...]
+```
+
+**Parameters:**
+- `all`: Merge all coins in your account
+- `<CoinAddresses>...`: Specific coin addresses to merge (can specify multiple)
+
+**Examples:**
+
+Merge all coins:
+```bash
+qclient token merge all
+```
+
+Merge specific coins:
+```bash
+qclient token merge 0xcoin1 0xcoin2 0xcoin3
 ```
 ---
 
@@ -148,4 +216,31 @@ Pending transactions add friction, but without it, users risk receiving unwanted
 
 This will likely be the first unique experience Quilibrium provides to users already familiar with other networks, as privacy preservation is an immediately obvious and first class experience here by showing the user what it can (or _cannot_) see.
 
+:::
+
+## Minting Tokens
+
+Mint new tokens using a proof (for mintable tokens only).
+
+```bash
+qclient token mint <ProofHex> [<RecipientAccount>]
+```
+
+**Parameters:**
+- `<ProofHex>`: Hexadecimal proof authorizing the mint
+- `[<RecipientAccount>]`: Optional recipient (defaults to minter's account)
+
+**Example:**
+```bash
+qclient token mint 0xproof1234...abcd
+```
+
+Mint to specific recipient:
+```bash
+qclient token mint 0xproof1234...abcd 0xrecipient456...def
+```
+
+:::note
+Minting is only available for tokens deployed with mintable behavior.
+The proof requirements depend on the token's mint strategy configuration.
 :::
