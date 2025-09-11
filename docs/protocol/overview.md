@@ -57,5 +57,5 @@ The protocol implements multiple layers of security:
 ## Next Steps
 
 Explore the specific protocol components in detail:
-- [Consensus Mechanism](./consensus) - How the network reaches agreement
-- [Data Structures](./data-structures) - How information is organized and stored
+- [Consensus Mechanism](/docs/protocol/consensus) - How the network reaches agreement
+- [Data Structures](/docs/protocol/data-structures) - How information is organized and stored
