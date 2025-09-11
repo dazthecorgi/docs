@@ -98,7 +98,12 @@ const config: Config = {
           position: "left",
           label: "Build",
         },
-
+        {
+          type: "docSidebar",
+          sidebarId: "protocol",
+          position: "left",
+          label: "Protocol"
+        },
         {
           type: "docSidebar",
           sidebarId: "run",

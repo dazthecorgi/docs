@@ -374,6 +374,6 @@ Common deployment errors:
 ## Related Commands
 
 - [Hypergraph Commands](/docs/run-node/qclient/commands/hypergraph) - Interact with deployed hypergraph data
-- [Compute Commands](/docs/run-node/qclient/commands/compute) - Execute deployed computations
+- [Compute Commands](/docs/run-node/qclient/commands/compute) - Execute deployed applications
 - [Token Commands](/docs/run-node/qclient/commands/token) - Manage deployed tokens
 - [Key Commands](/docs/run-node/qclient/commands/key) - Manage deployment keys

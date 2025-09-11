@@ -28,7 +28,12 @@ const features = [
     title: "Run",
     description: "How to run a node on the Quilibrium network",
   },
-
+  {
+    href: "/docs/protocol/overview",
+    icon: "screwdriverwrench",
+    title: "Protocol",
+    description: "Deeper protocol-specific details",
+  }
 ];
 
 export default function HomepageFeatures(): JSX.Element {
