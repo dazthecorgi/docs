@@ -6,6 +6,7 @@
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "USE_SIMPLE_CSS_MINIFIER=true docusaurus build",
+    "postbuild": "./hyperlink.sh --check-anchors build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
