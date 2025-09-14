@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const RDFStorage = () => {
   return <div className="learn-page text-left flex md:flex-row flex-col text-slate">
     <div className="flex-1">
-      <p className="text-justify">The construction is described in the paper <a href="https://ieeexplore.ieee.org/document/7218100/">"Hypergraph Based Query Optimization"</a>, which we will use by translating the logic to OT circuits, starting with decryption into the circuit using the extended decryption process of the address content. We adopt their term definitions in this section, <Link to="/docs/hypergraph/queryplanner">Query Planner</Link>, and <Link to="/docs/hypergraph/queryevaluator">Query Evaluator</Link>. their definitions provided here roughly verbatim for convenience:</p>
+      <p className="text-justify">The construction is described in the paper <a href="https://ieeexplore.ieee.org/document/7218100/">"Hypergraph Based Query Optimization"</a>, which we will use by translating the logic to OT circuits, starting with decryption into the circuit using the extended decryption process of the address content. We adopt their term definitions in this section, <Link to="/docs/learn/oblivious-hypergraph/query-planner">Query Planner</Link>, and <Link to="/docs/learn/oblivious-hypergraph/query-evaluator">Query Evaluator</Link>. their definitions provided here roughly verbatim for convenience:</p>
       <div className="p-6 my-6 block rounded-xl dark:bg-white/10 bg-pink-50 drop-shadow-xl font-['ui-serif']">
         <div>Notation:</div>
         <ol className="list-decimal pl-6">

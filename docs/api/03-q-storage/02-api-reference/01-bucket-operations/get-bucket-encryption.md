@@ -43,7 +43,7 @@ export const RESPONSE_BODY_ELEMENTS = [
   },
   {
     name: "Rule",
-    type: "<a href=\"/docs/api/q-storage/data-types/server-side-encryption-rule\">ServerSideEncryptionRule</a>",
+    type: "<a href=\"/docs/api/q-storage/api-reference/data-types/server-side-encryption-rule\">ServerSideEncryptionRule</a>",
     description: "Container for a server-side encryption rule. The bucket encryption configuration can include only one rule.",
     required: true
   }

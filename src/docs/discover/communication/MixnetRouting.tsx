@@ -20,7 +20,7 @@ const MixnetRouting = () => {
         <li><b>Internal, Passive</b> – the attacker operates as a normal mixnet node to decrypt one or more hops of the traffic.</li>
       </ul>
       <p className="py-4 text-justify">
-        Our approach to solving these problems is through economic <Link to="/docs/discover/operating-system/universal-resources">disincentives</Link> making it too expensive to broadly interrupt traffic flow at the external active attacker level, our direct routing strategy through RPM detailed further below to completely make the internal active/passive attacker models fail, as they would identify the bad actor through protocol aborts, and finally through our gossip layer <Link to="/docs/communication/gossip">BlossomSub</Link> to make the external passive model infeasible.
+        Our approach to solving these problems is through economic <Link to="/docs/learn/operating-system/universal-resources">disincentives</Link> making it too expensive to broadly interrupt traffic flow at the external active attacker level, our direct routing strategy through RPM detailed further below to completely make the internal active/passive attacker models fail, as they would identify the bad actor through protocol aborts, and finally through our gossip layer <Link to="/docs/learn/communication/p2p-communication">BlossomSub</Link> to make the external passive model infeasible.
       </p>
       <h2 className="text-xl pt-10 pb-4 font-medium">RPM</h2>
       <p className="pb-4 text-justify">
@@ -85,7 +85,7 @@ const MixnetRouting = () => {
       </div>
       <h2 className="text-xl pt-10 pb-4 font-medium">Broadcast</h2>
       <p className="pb-4 text-justify">
-        All messages are broadcast, to be retrieved by their intended recipients, following <Link to="/docs/communication/gossip">BlossomSub</Link>.
+        All messages are broadcast, to be retrieved by their intended recipients, following <Link to="/docs/learn/communication/p2p-communication">BlossomSub</Link>.
       </p>
       <h2 className="text-xl pt-10 pb-4 font-medium">Processing/Acknowledgement</h2>
       <p className="pb-4 text-justify">

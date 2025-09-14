@@ -139,7 +139,7 @@ By default, all QStorage objects are persistently stored; however, you can use o
 
 <ParamsTable parameters={REQUEST_ELEMENTS} type="request" />
 
-For details about the elements within the Rule type, see <a href="/docs/api/q-storage/data-types/rule">Rule</a>.
+For details about the elements within the Rule type, see <a href="/docs/api/q-storage/api-reference/data-types/rule">Rule</a>.
 
 ## Examples
 

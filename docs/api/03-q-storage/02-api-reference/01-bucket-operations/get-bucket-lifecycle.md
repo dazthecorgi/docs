@@ -43,7 +43,7 @@ export const RESPONSE_ELEMENTS = [
   },
   {
     name: "Rule",
-    type: "<a href=\"/docs/api/q-storage/data-types/rule\">Rule</a>",
+    type: "<a href=\"/docs/api/q-storage/api-reference/data-types/rule\">Rule</a>",
     description: "Container for a lifecycle rule. The bucket can have zero or more lifecycle rules.",
     required: true
   }
@@ -183,7 +183,7 @@ This operation does not have a request body.
 
 <ParamsTable parameters={RESPONSE_ELEMENTS} type="response" />
 
-For details about the elements within the Rule type, see <a href="/docs/api/q-storage/data-types/rule">Rule</a>. The response format follows the [AWS S3 GetBucketLifecycle API](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketLifecycle.html) specification.
+For details about the elements within the Rule type, see <a href="/docs/api/q-storage/api-reference/data-types/rule">Rule</a>. The response format follows the [AWS S3 GetBucketLifecycle API](https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketLifecycle.html) specification.
 
 ## Special Errors
 

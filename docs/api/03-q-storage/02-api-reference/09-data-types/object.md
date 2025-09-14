@@ -39,7 +39,7 @@ export const OBJECT_PROPERTIES = [
   },
   {
     name: "Owner",
-    type: "<a href=\"/docs/api/q-storage/data-types/owner\">Owner</a>",
+    type: "<a href=\"/docs/api/q-storage/api-reference/data-types/owner\">Owner</a>",
     description: "The owner of the object",
     required: false
   },
