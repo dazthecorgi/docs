@@ -44,6 +44,12 @@ const config: Config = {
   // plugin.
   onDuplicateRoutes: 'throw',
 
+  // Make Docusaurus add a trailing slash to the URLs so that links like `/docs/foo` 
+  // will be rewritten to `/docs/foo/`.
+  // This is necessary to make the local environment match the production environment 
+  // as GitHub Pages that adds trailing slashes to URLs unless they have an extension.
+  trailingSlash: true,
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
