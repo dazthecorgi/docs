@@ -48,7 +48,7 @@ export const responseElements = [
   {
     name: 'MetadataTableConfigurationResult',
     description: 'The metadata table configuration for a general purpose bucket',
-    type: '<a href="../data-types/metadata-table-configuration-result">MetadataTableConfigurationResult</a>',
+    type: '<a href="/docs/api/q-storage/api-reference/data-types/metadata-table-configuration-result">MetadataTableConfigurationResult</a>',
     required: true
   },
   {
@@ -60,7 +60,7 @@ export const responseElements = [
   {
     name: 'Error',
     description: 'Contains error information if the table creation fails',
-    type: '<a href="../data-types/error-details">ErrorDetails</a>',
+    type: '<a href="/docs/api/q-storage/api-reference/data-types/error-details">ErrorDetails</a>',
     required: false
   }
 ];

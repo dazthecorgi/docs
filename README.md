@@ -12,6 +12,13 @@ Please write one sentence per line in the markdown files for easy reviewing.
 
 In addition to the Markdown changes, the PR should explain the motivation for the change and any other information that is necessary for reviewing it.
 
+
+### Links
+
+Docusaurus [supports](https://docusaurus.io/docs/markdown-features/links) two types of links in Markdown: URL paths (e.g. `./installation`) and file paths (`./installation.md`).
+When editing Markdown files in the `docs` directory, prefer to use relative file path links to other documentation files (e.g. `./installation.md`).
+Docusaurus will turn these into absolue URL paths under the hood in the generated HTML, but using relative Markdown paths in the source files has the advantage of links working in Markdown editors, and IDEs with refactoring support can update paths automatically when things are moved around.
+
 ## UI Development
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.

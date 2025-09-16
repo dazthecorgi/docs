@@ -32,8 +32,23 @@ const config: Config = {
   organizationName: "QuilibriumNetwork", // Usually your GitHub org/user name.
   projectName: "docs", // Usually your repo name.
 
+  // Fail the build for broken anchor (e.g. `/broken-link#anchor`) declared with 
+  // the Heading component of Docusaurus.
+  onBrokenAnchors: "throw",
+  // Fail the build for broken links (e.g. `./broken-link`)
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  // Fail the build for broken markdown links. Note that this only applies to links 
+  // that have `.md` or `.mdx` extensions.
+  onBrokenMarkdownLinks: "throw",
+  // Applies to duplicate routes created with the `@docusaurus/plugin-content-pages` 
+  // plugin.
+  onDuplicateRoutes: 'throw',
+
+  // Make Docusaurus add a trailing slash to the URLs so that links like `/docs/foo` 
+  // will be rewritten to `/docs/foo/`.
+  // This is necessary to make the local environment match the production environment 
+  // as GitHub Pages that adds trailing slashes to URLs unless they have an extension.
+  trailingSlash: true,
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
